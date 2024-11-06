@@ -1,10 +1,12 @@
 {
-	"required": true,
-	"package": "cc.unilock.unipack.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
-	"client": [],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "cc.unilock.unipack.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MappedRegistryMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

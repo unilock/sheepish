@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 @Mod(UniPack.MOD_ID)
 public class UniPack {
     public static final String MOD_ID = "unipack";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public UniPack(IEventBus modEventBus) {
         modEventBus.addListener(this::fmlCommonSetup);
