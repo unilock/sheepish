@@ -3,7 +3,6 @@
   "package": "cc.unilock.unipack.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "LivingEntityMixin",
     "MappedRegistryMixin"
   ],
   "client": [],
