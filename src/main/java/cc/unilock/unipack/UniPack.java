@@ -8,6 +8,7 @@ import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.level.BlockDropsEvent;
 import org.slf4j.Logger;
 
@@ -20,7 +21,7 @@ public class UniPack {
 
     public UniPack(IEventBus modEventBus) {
         if (ALMOSTUNIFIED) {
-            modEventBus.addListener(EventPriority.HIGHEST, this::blockDrops);
+            NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, this::blockDrops);
         }
     }
 
