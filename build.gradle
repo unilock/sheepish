@@ -22,6 +22,10 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com/'
+    }
     mavenLocal()
 }
 
@@ -70,6 +74,8 @@ configurations {
 }
 
 dependencies {
+    compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
+    runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
