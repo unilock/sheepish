@@ -6,7 +6,9 @@
     "MappedRegistryMixin",
     "TreasureMapForEmeraldsMixin"
   ],
-  "client": [],
+  "client": [
+    "client.WindowMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
 	}
