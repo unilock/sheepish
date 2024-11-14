@@ -26,7 +26,21 @@ repositories {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com/'
     }
-    mavenLocal()
+    maven {
+        name = 'Sinytra'
+        url = 'https://maven.su5ed.dev/releases/'
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven/'
+            }
+        }
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
 }
 
 neoForge {
@@ -76,6 +90,9 @@ configurations {
 dependencies {
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
+
+    implementation "org.sinytra:forgified-fabric-loader:$project.ffloader"
+    implementation "maven.modrinth:owo-lib:${project.owolib}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
