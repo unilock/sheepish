@@ -106,13 +106,15 @@ dependencies {
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
 
+    implementation "org.sinytra.forgified-fabric-api:forgified-fabric-api:${project.ffapi}"
+    implementation "org.sinytra:forgified-fabric-loader:${project.ffloader}"
+
     implementation "dev.architectury:architectury-neoforge:${project.architectury}"
 
     implementation "curse.maven:catalogue-459701:5893750"
 
     implementation "maven.modrinth:jade:${project.jade}"
 
-    implementation "org.sinytra:forgified-fabric-loader:${project.ffloader}"
     implementation "maven.modrinth:owo-lib:${project.owolib}"
 }
 

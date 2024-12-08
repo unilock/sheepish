@@ -5,10 +5,13 @@
   "mixins": [
     "MappedRegistryMixin",
     "ModDataLoaderMixin",
+    "PlatformImplMixin",
+    "RegistrarManagerImplMixin",
     "TreasureMapForEmeraldsMixin",
     "WailaConfigGeneralMixin"
   ],
   "client": [
+    "client.EntityRendererRegistryImplMixin",
     "client.NeoForgePlatformHelperMixin",
     "client.WailaConfigScreenMixin",
     "client.WindowMixin"
