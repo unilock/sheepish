@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.42-beta'
+    id 'net.neoforged.moddev' version '2.0.57-beta'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -22,6 +22,10 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
+    maven {
+        name = 'Architectury'
+        url = 'https://maven.architectury.dev/'
+    }
     maven {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com/'
@@ -101,6 +105,8 @@ configurations {
 dependencies {
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
+
+    implementation "dev.architectury:architectury-neoforge:${project.architectury}"
 
     implementation "curse.maven:catalogue-459701:5893750"
 
