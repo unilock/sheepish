@@ -23,10 +23,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
     maven {
-        name = 'Architectury'
-        url = 'https://maven.architectury.dev/'
-    }
-    maven {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com/'
     }
@@ -106,8 +102,6 @@ dependencies {
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
 
-    implementation "dev.architectury:architectury-neoforge:${project.architectury}"
-
     implementation "curse.maven:catalogue-459701:5893750"
 
     implementation "maven.modrinth:jade:${project.jade}"
@@ -117,6 +111,8 @@ dependencies {
 
     implementation "org.sinytra:forgified-fabric-loader:${project.ffloader}"
     implementation "maven.modrinth:owo-lib:${project.owolib}"
+
+    implementation "maven.modrinth:accessories-tc-layer:${project.tclayer}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

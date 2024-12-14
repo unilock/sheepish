@@ -5,7 +5,6 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
@@ -19,7 +18,7 @@ public class UniPack {
 
     private static final boolean ALMOSTUNIFIED = ModList.get().isLoaded("almostunified");
 
-    public UniPack(IEventBus modEventBus) {
+    public UniPack() {
         if (ALMOSTUNIFIED) {
             NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, this::blockDrops);
         }
