@@ -112,6 +112,9 @@ dependencies {
 
     implementation "maven.modrinth:jade:${project.jade}"
 
+    implementation "maven.modrinth:extended-industrialization:${project.ei}"
+    implementation "maven.modrinth:modern-industrialization:${project.mi}"
+
     implementation "org.sinytra:forgified-fabric-loader:${project.ffloader}"
     implementation "maven.modrinth:owo-lib:${project.owolib}"
 }

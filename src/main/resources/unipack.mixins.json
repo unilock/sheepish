@@ -3,7 +3,9 @@
   "package": "cc.unilock.unipack.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EIArmorMaterialsMixin",
     "MappedRegistryMixin",
+    "MIArmorMaterialsMixin",
     "ModDataLoaderMixin",
     "TreasureMapForEmeraldsMixin",
     "WailaConfigGeneralMixin"
