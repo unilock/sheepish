@@ -8,8 +8,7 @@
     "MIArmorMaterialsMixin",
     "ModDataLoaderMixin",
     "TreasureMapForEmeraldsMixin",
-    "WailaConfigGeneralMixin",
-    "WrappedTrinketComponentMixin"
+    "WailaConfigGeneralMixin"
   ],
   "client": [
     "client.NeoForgePlatformHelperMixin",

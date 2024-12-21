@@ -111,8 +111,6 @@ dependencies {
 
     implementation "org.sinytra:forgified-fabric-loader:${project.ffloader}"
     implementation "maven.modrinth:owo-lib:${project.owolib}"
-
-    implementation "maven.modrinth:accessories-tc-layer:${project.tclayer}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
