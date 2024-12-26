@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "EIArmorMaterialsMixin",
+    "FoodDataMixinLogicMixin",
     "MappedRegistryMixin",
     "MIArmorMaterialsMixin",
     "ModDataLoaderMixin",
