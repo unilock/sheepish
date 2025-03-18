@@ -8,12 +8,15 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockDropsEvent;
 import org.slf4j.Logger;
 
 import java.util.Collection;
+import java.util.NoSuchElementException;
 
 @Mod(EternalDeer.MOD_ID)
 public class EternalDeer {
@@ -21,12 +24,21 @@ public class EternalDeer {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     private static final boolean ALMOSTUNIFIED = ModList.get().isLoaded("almostunified");
+    private static final boolean ANSHAR = ModList.get().isLoaded("anshar");
 
     public EternalDeer() {
         if (ALMOSTUNIFIED) {
             NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, this::blockDrops);
             NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, this::livingDrops);
         }
+        if (ANSHAR) {
+            try {
+                ModConfigSpec spec = (ModConfigSpec) Class.forName("com.lgmrszd.anshar.config.ServerConfig").getDeclaredField("CONFIG_SPEC").get(null);
+                ModList.get().getModContainerById("anshar").orElseThrow().registerConfig(ModConfig.Type.SERVER, spec);
+            } catch (ClassNotFoundException | IllegalAccessException | NoSuchElementException | NoSuchFieldException e) {
+                throw new RuntimeException("Failed to reflect Anshar config", e);
+            }
+		}
     }
 
     private void blockDrops(BlockDropsEvent event) {
