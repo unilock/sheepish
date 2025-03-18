@@ -1,6 +1,6 @@
-package cc.unilock.unipack.mixin.client;
+package cc.unilock.eternaldeer.mixin.client;
 
-import cc.unilock.unipack.UniPack;
+import cc.unilock.eternaldeer.EternalDeer;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mrcrayfish.catalogue.platform.NeoForgePlatformHelper;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 public class NeoForgePlatformHelperMixin {
 	@Inject(method = "loadNativeImage", at = @At(value = "NEW", target = "(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"), cancellable = true)
 	private void loadNativeImage(String modId, String resource, Consumer<NativeImage> consumer, CallbackInfo ci) {
-		UniPack.LOGGER.error("Catalogue failed to load modId [{}] resource [{}]", modId, resource);
+		EternalDeer.LOGGER.error("Catalogue failed to load modId [{}] resource [{}]", modId, resource);
 		ci.cancel();
 	}
 }

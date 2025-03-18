@@ -1,4 +1,4 @@
-package cc.unilock.unipack.mixin.client;
+package cc.unilock.eternaldeer.mixin.client;
 
 import com.mojang.blaze3d.platform.Window;
 import org.spongepowered.asm.mixin.Mixin;

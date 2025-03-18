@@ -1,6 +1,6 @@
-package cc.unilock.unipack.mixin;
+package cc.unilock.eternaldeer.mixin;
 
-import cc.unilock.unipack.UniPack;
+import cc.unilock.eternaldeer.EternalDeer;
 import net.minecraft.core.Holder;
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
@@ -23,7 +23,7 @@ public class MappedRegistryMixin<T> {
 	private void preThrow(CallbackInfoReturnable<Registry<T>> cir) {
 		assert this.unregisteredIntrusiveHolders != null;
 		for (Holder.Reference<T> reference : this.unregisteredIntrusiveHolders.values()) {
-			UniPack.LOGGER.info("UNREGISTERED INTRUSIVE HOLDER VALUE: {}", reference.value().getClass());
+			EternalDeer.LOGGER.info("UNREGISTERED INTRUSIVE HOLDER VALUE: {}", reference.value().getClass());
 		}
 	}
 }

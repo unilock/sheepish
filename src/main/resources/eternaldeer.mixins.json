@@ -1,18 +1,18 @@
 {
   "required": true,
-  "package": "cc.unilock.unipack.mixin",
+  "package": "cc.unilock.eternaldeer.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "EIArmorMaterialsMixin",
     "MappedRegistryMixin",
     "MIArmorMaterialsMixin",
     "ModDataLoaderMixin",
+    "NeoForgePlatformHelperMixin",
     "TreasureMapForEmeraldsMixin",
-    "WailaConfigGeneralMixin"
+    "WailaConfigConfigGeneralMixin"
   ],
   "client": [
     "client.NeoForgePlatformHelperMixin",
-    "client.WailaConfigScreenMixin",
     "client.WindowMixin"
   ],
   "injectors": {

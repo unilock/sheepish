@@ -1,4 +1,4 @@
-package cc.unilock.unipack.mixin;
+package cc.unilock.eternaldeer.mixin;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

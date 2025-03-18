@@ -1,4 +1,4 @@
-package cc.unilock.unipack.mixin;
+package cc.unilock.eternaldeer.mixin;
 
 import com.google.gson.JsonObject;
 import io.wispforest.owo.Owo;
@@ -30,7 +30,7 @@ public abstract class ModDataLoaderMixin {
 
 	/**
 	 * @author unilock
-	 * @reason use fabric code on neoforge
+	 * @reason fabric code on neoforge
 	 */
 	@Overwrite
 	public static void load(ModDataConsumer consumer) {

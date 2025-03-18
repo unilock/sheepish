@@ -1,14 +1,9 @@
 plugins {
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.57-beta'
+    id 'net.neoforged.moddev' version '2.0.78'
 }
 
 tasks.named('wrapper', Wrapper).configure {
-    // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
-    // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
-    // documentation attached on cursor hover of gradle classes and methods. However, this comes with increased
-    // file size for Gradle. If you do switch this to ALL, run the Gradle wrapper task twice afterwards.
-    // (Verify by checking gradle/wrapper/gradle-wrapper.properties to see if distributionUrl now points to `-all`)
     distributionType = Wrapper.DistributionType.BIN
 }
 
@@ -101,6 +96,8 @@ configurations {
 dependencies {
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
+    
+    implementation "maven.modrinth:biolith:${project.biolith}"
 
     implementation "curse.maven:catalogue-459701:5893750"
 
