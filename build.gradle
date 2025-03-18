@@ -18,6 +18,10 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
     maven {
+        name = 'Bawnorton'
+        url = 'https://maven.bawnorton.com/releases/'
+    }
+    maven {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com/'
     }
@@ -94,6 +98,9 @@ configurations {
 }
 
 dependencies {
+    compileOnly(annotationProcessor('com.github.bawnorton.mixinsquared:mixinsquared-common:0.2.0'))
+    implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.2.0'))
+
     compileOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}:api"
     runtimeOnly "com.almostreliable.mods:almostunified-neoforge:${project.almostunified}"
     

@@ -1,19 +1,21 @@
 {
   "required": true,
   "package": "cc.unilock.eternaldeer.mixin",
+  "plugin": "cc.unilock.eternaldeer.EternalDeerMixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "EIArmorMaterialsMixin",
-    "MappedRegistryMixin",
-    "MIArmorMaterialsMixin",
-    "ModDataLoaderMixin",
-    "NeoForgePlatformHelperMixin",
-    "TreasureMapForEmeraldsMixin",
-    "WailaConfigConfigGeneralMixin"
+    "biolith.NeoForgePlatformHelperMixin",
+    "extended_industrialization.EIArmorMaterialsMixin",
+    "jade.WailaConfigConfigGeneralMixin",
+    "minecraft.MappedRegistryMixin",
+    "minecraft.TreasureMapForEmeraldsMixin",
+    "modern_industrialization.MIArmorMaterialsMixin",
+    "owo.ModDataLoaderMixin"
   ],
   "client": [
-    "client.NeoForgePlatformHelperMixin",
-    "client.WindowMixin"
+    "catalogue.NeoForgePlatformHelperMixin",
+    "minecraft.WindowMixin",
+    "mythicmetals.ElytraLayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

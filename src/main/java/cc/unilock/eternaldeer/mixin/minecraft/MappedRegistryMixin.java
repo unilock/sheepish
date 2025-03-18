@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.minecraft;
 
 import cc.unilock.eternaldeer.EternalDeer;
 import net.minecraft.core.Holder;

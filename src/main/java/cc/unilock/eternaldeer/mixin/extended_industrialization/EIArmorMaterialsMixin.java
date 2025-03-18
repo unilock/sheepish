@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.extended_industrialization;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import net.swedz.extended_industrialization.EIArmorMaterials;

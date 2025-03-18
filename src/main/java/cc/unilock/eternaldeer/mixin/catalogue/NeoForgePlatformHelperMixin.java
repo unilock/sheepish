@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin.client;
+package cc.unilock.eternaldeer.mixin.catalogue;
 
 import cc.unilock.eternaldeer.EternalDeer;
 import com.mojang.blaze3d.platform.NativeImage;

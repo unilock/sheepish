@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.owo;
 
 import com.google.gson.JsonObject;
 import io.wispforest.owo.Owo;

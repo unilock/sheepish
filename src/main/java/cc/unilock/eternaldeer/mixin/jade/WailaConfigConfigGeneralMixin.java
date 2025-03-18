@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.jade;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

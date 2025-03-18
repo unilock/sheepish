@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.modern_industrialization;
 
 import aztech.modern_industrialization.items.armor.MIArmorMaterials;
 import net.minecraft.world.item.crafting.Ingredient;

@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer.mixin.biolith;
 
 import com.terraformersmc.biolith.impl.platform.NeoForgePlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
