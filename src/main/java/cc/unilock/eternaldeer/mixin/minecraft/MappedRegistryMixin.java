@@ -15,9 +15,7 @@ import java.util.Map;
 
 @Mixin(MappedRegistry.class)
 public class MappedRegistryMixin<T> {
-	@Shadow
-	@Nullable
-	private Map<T, Holder.Reference<T>> unregisteredIntrusiveHolders;
+	@Shadow @Nullable private Map<T, Holder.Reference<T>> unregisteredIntrusiveHolders;
 
 	@Inject(method = "freeze", at = @At(value = "NEW", target = "(Ljava/lang/String;)Ljava/lang/IllegalStateException;", ordinal = 1))
 	private void preThrow(CallbackInfoReturnable<Registry<T>> cir) {

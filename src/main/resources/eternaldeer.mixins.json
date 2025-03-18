@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "biolith.NeoForgePlatformHelperMixin",
+    "cerulean.EntityMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "jade.WailaConfigConfigGeneralMixin",
     "minecraft.MappedRegistryMixin",
@@ -14,6 +15,7 @@
   ],
   "client": [
     "catalogue.NeoForgePlatformHelperMixin",
+    "cerulean.MinecraftMixin",
     "minecraft.WindowMixin",
     "mythicmetals.ElytraLayerMixin"
   ],

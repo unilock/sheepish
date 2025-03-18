@@ -19,9 +19,7 @@ import java.util.Map;
 
 @Mixin(value = ModDataLoader.class, remap = false)
 public abstract class ModDataLoaderMixin {
-	@Shadow
-	@Final
-	private static Path DATA_PATH;
+	@Shadow @Final private static Path DATA_PATH;
 
 	@Shadow
 	private static void tryLoadFilesFrom(Map<ResourceLocation, JsonObject> foundFiles, String namespace, Path targetPath) {

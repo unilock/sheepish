@@ -1,5 +1,7 @@
 package cc.unilock.eternaldeer;
 
+import cc.unilock.eternaldeer.mixin.EternalDeerMixinAnnotationAdjuster;
+import com.bawnorton.mixinsquared.adjuster.MixinAnnotationAdjusterRegistrar;
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
 import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.tree.ClassNode;
@@ -12,6 +14,7 @@ import java.util.Set;
 public class EternalDeerMixin implements IMixinConfigPlugin {
 	@Override
 	public void onLoad(String mixinPackage) {
+		MixinAnnotationAdjusterRegistrar.register(new EternalDeerMixinAnnotationAdjuster());
 		MixinCancellerRegistrar.register(new EternalDeerMixinCanceller());
 	}
 

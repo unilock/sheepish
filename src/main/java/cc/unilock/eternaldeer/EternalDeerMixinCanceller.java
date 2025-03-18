@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class EternalDeerMixinCanceller implements MixinCanceller {
 	private static final Set<String> CANCEL = Set.of(
+			"fmt.cerulean.mixin.MixinEntity",
 			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
 	);
 

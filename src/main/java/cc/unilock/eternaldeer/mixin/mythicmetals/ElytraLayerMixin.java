@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 @Mixin(ElytraLayer.class)
 public class ElytraLayerMixin {
 	@Unique
-	private static final Method isWearing;
+	private static final Method IS_WEARING;
 	@Unique
 	private static final Item CELESTIUM_ELYTRA;
 	@Unique
@@ -24,7 +24,7 @@ public class ElytraLayerMixin {
 
 	static {
 		try {
-			isWearing = Class.forName("nourl.mythicmetals.armor.CelestiumElytra").getDeclaredMethod("isWearing", LivingEntity.class);
+			IS_WEARING = Class.forName("nourl.mythicmetals.armor.CelestiumElytra").getDeclaredMethod("isWearing", LivingEntity.class);
 		} catch (ClassNotFoundException | NoSuchMethodException e) {
 			throw new RuntimeException("Failed to reflect CelestiumElytra#isWearing", e);
 		}
@@ -38,7 +38,7 @@ public class ElytraLayerMixin {
 	@Unique
 	private boolean isWearing(LivingEntity entity) {
 		try {
-			return (boolean) isWearing.invoke(null, entity);
+			return (boolean) IS_WEARING.invoke(null, entity);
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			throw new RuntimeException("Failed to invoke CelestiumElytra#isWearing", e);
 		}
