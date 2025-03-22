@@ -15,8 +15,8 @@ import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockDropsEvent;
 import org.slf4j.Logger;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Collection;
-import java.util.NoSuchElementException;
 
 @Mod(EternalDeer.MOD_ID)
 public class EternalDeer {
@@ -33,10 +33,10 @@ public class EternalDeer {
         }
         if (ANSHAR) {
             try {
-                ModConfigSpec spec = (ModConfigSpec) Class.forName("com.lgmrszd.anshar.config.ServerConfig").getDeclaredField("CONFIG_SPEC").get(null);
+                ModConfigSpec spec = (ModConfigSpec) MethodHandles.publicLookup().findStaticGetter(Class.forName("com.lgmrszd.anshar.config.ServerConfig"), "CONFIG_SPEC", ModConfigSpec.class).invoke(); 
                 ModList.get().getModContainerById("anshar").orElseThrow().registerConfig(ModConfig.Type.SERVER, spec);
-            } catch (ClassNotFoundException | IllegalAccessException | NoSuchElementException | NoSuchFieldException e) {
-                throw new RuntimeException("Failed to reflect Anshar config", e);
+            } catch (Throwable e) {
+                throw new RuntimeException("Failed to find handle for Anshar's ServerConfig.CONFIG_SPEC", e);
             }
 		}
     }

@@ -22,6 +22,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.lang.invoke.MethodHandles;
+
 @Mixin(Entity.class)
 public abstract class EntityMixin implements PlasticSwimming {
 	@Shadow public abstract Level level();
@@ -37,24 +39,12 @@ public abstract class EntityMixin implements PlasticSwimming {
 
 	static {
 		try {
-			SKIES = (ResourceLocation) CeruleanDimensions.class.getDeclaredField("SKIES").get(null);
-		} catch (IllegalAccessException | NoSuchFieldException e) {
-			throw new RuntimeException(e);
-		}
-		try {
-			POLYETHYLENE = (Fluid) CeruleanFluids.class.getDeclaredField("POLYETHYLENE").get(null);
-		} catch (IllegalAccessException | NoSuchFieldException e) {
-			throw new RuntimeException(e);
-		}
-		try {
-			REALIZED_POLYETHYLENE = (Fluid) CeruleanFluids.class.getDeclaredField("REALIZED_POLYETHYLENE").get(null);
-		} catch (IllegalAccessException | NoSuchFieldException e) {
-			throw new RuntimeException(e);
-		}
-		try {
-			REALIZED_POLYETHYLENE_FLOWING = (Fluid) CeruleanFluids.class.getDeclaredField("REALIZED_POLYETHYLENE_FLOWING").get(null);
-		} catch (IllegalAccessException | NoSuchFieldException e) {
-			throw new RuntimeException(e);
+			SKIES = (ResourceLocation) MethodHandles.publicLookup().findStaticGetter(CeruleanDimensions.class, "SKIES", ResourceLocation.class).invoke();
+			POLYETHYLENE = (Fluid) MethodHandles.publicLookup().findStaticGetter(CeruleanFluids.class, "POLYETHYLENE", Fluid.class).invoke();
+			REALIZED_POLYETHYLENE = (Fluid) MethodHandles.publicLookup().findStaticGetter(CeruleanFluids.class, "REALIZED_POLYETHYLENE", Fluid.class).invoke();
+			REALIZED_POLYETHYLENE_FLOWING = (Fluid) MethodHandles.publicLookup().findStaticGetter(CeruleanFluids.class, "REALIZED_POLYETHYLENE_FLOWING", Fluid.class).invoke();
+		} catch (Throwable e) {
+			throw new RuntimeException("Failed to find handle for Cerulean's SKIES or POLYETHYLENE", e);
 		}
 	}
 

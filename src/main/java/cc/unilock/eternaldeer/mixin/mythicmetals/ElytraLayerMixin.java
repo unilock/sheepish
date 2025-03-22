@@ -10,13 +10,14 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.MethodType;
 
 @Mixin(ElytraLayer.class)
 public class ElytraLayerMixin {
 	@Unique
-	private static final Method IS_WEARING;
+	private static final MethodHandle IS_WEARING;
 	@Unique
 	private static final Item CELESTIUM_ELYTRA;
 	@Unique
@@ -24,29 +25,21 @@ public class ElytraLayerMixin {
 
 	static {
 		try {
-			IS_WEARING = Class.forName("nourl.mythicmetals.armor.CelestiumElytra").getDeclaredMethod("isWearing", LivingEntity.class);
-		} catch (ClassNotFoundException | NoSuchMethodException e) {
-			throw new RuntimeException("Failed to reflect CelestiumElytra#isWearing", e);
+			IS_WEARING = MethodHandles.publicLookup().findStatic(Class.forName("nourl.mythicmetals.armor.CelestiumElytra"), "isWearing", MethodType.methodType(boolean.class, LivingEntity.class));
+		} catch (ClassNotFoundException | IllegalAccessException | NoSuchMethodException e) {
+			throw new RuntimeException("Failed to find handle for Mythic Metals' CelestiumElytra#isWearing", e);
 		}
 		try {
-			CELESTIUM_ELYTRA = (Item) Class.forName("nourl.mythicmetals.armor.MythicArmor").getDeclaredField("CELESTIUM_ELYTRA").get(null);
-		} catch (ClassNotFoundException | IllegalAccessException | NoSuchFieldException e) {
-			throw new RuntimeException("Failed to reflect MythicArmor.CELESTIUM_ELYTRA", e);
-		}
-	}
-
-	@Unique
-	private boolean isWearing(LivingEntity entity) {
-		try {
-			return (boolean) IS_WEARING.invoke(null, entity);
-		} catch (IllegalAccessException | InvocationTargetException e) {
-			throw new RuntimeException("Failed to invoke CelestiumElytra#isWearing", e);
+			CELESTIUM_ELYTRA = (Item) MethodHandles.publicLookup().findStaticGetter(Class.forName("nourl.mythicmetals.armor.MythicArmor"), "CELESTIUM_ELYTRA", Item.class).invoke();
+		} catch (Throwable e) {
+			throw new RuntimeException("Failed to find handle for Mythic Metals' MythicArmor.CELESTIUM_ELYTRA", e);
 		}
 	}
 
 	@ModifyReturnValue(method = "shouldRender", at = @At("RETURN"))
 	private boolean shouldRender(boolean original, ItemStack stack, LivingEntity entity) {
-		return original || isWearing(entity);
+		boolean celestium = false; try { celestium = (boolean) IS_WEARING.invoke(entity); } catch (Throwable e) { e.printStackTrace(); }
+		return original || celestium;
 	}
 
 	@ModifyReturnValue(method = "getElytraTexture", at = @At("RETURN"))
