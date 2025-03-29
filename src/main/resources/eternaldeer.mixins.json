@@ -11,7 +11,8 @@
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
-    "owo.ModDataLoaderMixin"
+    "owo.ModDataLoaderMixin",
+    "splinecart.EntityMixinSquared"
   ],
   "client": [
     "catalogue.NeoForgePlatformHelperMixin",
