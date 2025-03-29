@@ -1,6 +1,7 @@
 plugins {
+    id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.78'
+    id 'net.neoforged.moddev' version '2.0.80'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -138,4 +139,12 @@ neoForge.ideSyncTask generateModMetadata
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
+}
+
+// IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
 }
