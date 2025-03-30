@@ -17,6 +17,8 @@
   "client": [
     "catalogue.NeoForgePlatformHelperMixin",
     "cerulean.MinecraftMixin",
+    "fabric.BlockColorsMixin",
+    "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
     "mythicmetals.ElytraLayerMixin"
   ],

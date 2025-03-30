@@ -20,8 +20,7 @@ public class EternalDeerMixin implements IMixinConfigPlugin {
 
 	@Override
 	public String getRefMapperConfig() {
-		// NO-OP
-		return null;
+		return null; // NO-OP
 	}
 
 	@Override
@@ -38,8 +37,7 @@ public class EternalDeerMixin implements IMixinConfigPlugin {
 
 	@Override
 	public List<String> getMixins() {
-		// NO-OP
-		return null;
+		return null; // NO-OP
 	}
 
 	@Override
