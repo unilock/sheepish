@@ -9,10 +9,12 @@
     "cerulean.EntityMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "jade.WailaConfigConfigGeneralMixin",
+    "minecraft.CreativeModeTabAccessor",
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "owo.ModDataLoaderMixin",
+    "owo.OwoItemGroupMixin",
     "splinecart.EntityMixinSquared"
   ],
   "client": [
@@ -20,6 +22,7 @@
     "cerulean.MinecraftMixin",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
+    "minecraft.CreativeModeInventoryScreenMixin",
     "minecraft.WindowMixin",
     "mythicmetals.ElytraLayerMixin"
   ],

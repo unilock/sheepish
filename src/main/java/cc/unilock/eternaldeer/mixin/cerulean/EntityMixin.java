@@ -44,7 +44,7 @@ public abstract class EntityMixin implements PlasticSwimming {
 			REALIZED_POLYETHYLENE = (Fluid) MethodHandles.publicLookup().findStaticGetter(CeruleanFluids.class, "REALIZED_POLYETHYLENE", Fluid.class).invoke();
 			REALIZED_POLYETHYLENE_FLOWING = (Fluid) MethodHandles.publicLookup().findStaticGetter(CeruleanFluids.class, "REALIZED_POLYETHYLENE_FLOWING", Fluid.class).invoke();
 		} catch (Throwable e) {
-			throw new RuntimeException("Failed to find handle for Cerulean's SKIES or POLYETHYLENE", e);
+			throw new RuntimeException("Failed to find handle for Cerulean's SKIES or POLYETHYLENE(s)", e);
 		}
 	}
 
