@@ -4,6 +4,7 @@
   "plugin": "cc.unilock.eternaldeer.EternalDeerMixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "armistice.ArmisticeCreativeModeTabRegistrarMixin",
     "biolith.NeoForgePlatformHelperMixin",
     "cerulean.EntityMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
