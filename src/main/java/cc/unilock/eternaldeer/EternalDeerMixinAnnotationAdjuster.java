@@ -1,4 +1,4 @@
-package cc.unilock.eternaldeer.mixin;
+package cc.unilock.eternaldeer;
 
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAnnotationNode;
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableInjectNode;

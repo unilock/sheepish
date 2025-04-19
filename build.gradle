@@ -107,14 +107,14 @@ dependencies {
 
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'
     compileOnly 'curse.maven:catalogue-459701:5893750'
-    compileOnly 'maven.modrinth:biolith:5P2awS2z'
+    compileOnly 'maven.modrinth:biolith:A5iiNQYF'
     compileOnly 'maven.modrinth:armistice:1.0.0-SNAPSHOT25'
-    compileOnly 'maven.modrinth:extended-industrialization:1.14.7-1.21.1'
+    compileOnly 'maven.modrinth:extended-industrialization:1.14.9-1.21.1'
     compileOnly 'maven.modrinth:jade:15.10.0+neoforge'
-    compileOnly 'maven.modrinth:modern-industrialization:2.3.1'
-    compileOnly 'maven.modrinth:owo-lib:0.12.15.1-beta.2+1.21'
+    compileOnly 'maven.modrinth:modern-industrialization:2.3.3'
+    compileOnly 'maven.modrinth:owo-lib:0.12.15.1-beta.3+1.21'
 
-    compileOnly 'maven.modrinth:cerulean:1.1.1'
+    compileOnly 'maven.modrinth:cerulean:1.1.4'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

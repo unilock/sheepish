@@ -1,6 +1,5 @@
 package cc.unilock.eternaldeer;
 
-import cc.unilock.eternaldeer.mixin.EternalDeerMixinAnnotationAdjuster;
 import com.bawnorton.mixinsquared.adjuster.MixinAnnotationAdjusterRegistrar;
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
 import net.fabricmc.loader.api.FabricLoader;
