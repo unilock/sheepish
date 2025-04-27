@@ -1,7 +1,7 @@
 plugins {
     id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.80'
+    id 'net.neoforged.moddev' version '2.0.82'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -106,7 +106,6 @@ dependencies {
     implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.107.0+2.0.26+1.21.1'
 
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'
-    compileOnly 'curse.maven:catalogue-459701:5893750'
     compileOnly 'maven.modrinth:biolith:A5iiNQYF'
     compileOnly 'maven.modrinth:armistice:1.0.0-SNAPSHOT25'
     compileOnly 'maven.modrinth:extended-industrialization:1.14.9-1.21.1'
