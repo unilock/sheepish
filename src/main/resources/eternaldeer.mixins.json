@@ -15,7 +15,6 @@
     "splinecart.EntityMixinSquared"
   ],
   "client": [
-    "catalogue.NeoForgePlatformHelperMixin",
     "cerulean.MinecraftMixin",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
