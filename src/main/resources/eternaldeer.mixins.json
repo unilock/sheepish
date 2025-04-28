@@ -20,6 +20,7 @@
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
+    "minestuck.GoButtonMixin",
     "mythicmetals.ElytraLayerMixin"
   ],
   "injectors": {
