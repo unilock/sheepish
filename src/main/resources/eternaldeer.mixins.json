@@ -4,6 +4,8 @@
   "plugin": "cc.unilock.eternaldeer.EternalDeerMixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "affinity.EntityMixin",
+    "affinity.PotionContentsMixin",
     "armistice.ArmisticeCreativeModeTabRegistrarMixin",
     "biolith.NeoForgePlatformHelperMixin",
     "cerulean.EntityMixin",
@@ -16,6 +18,9 @@
     "splinecart.EntityMixinSquared"
   ],
   "client": [
+    "affinity.client.HumanoidArmorLayerMixin",
+    "affinity.client.VillagerArmsItemRenderer",
+    "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
