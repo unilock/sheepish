@@ -11,6 +11,7 @@
     "cerulean.EntityMixin",
     "enderio_base.AlphaWarningMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
+    "joy.LivingEntityMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",

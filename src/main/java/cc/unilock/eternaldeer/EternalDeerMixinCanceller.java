@@ -8,6 +8,7 @@ import java.util.Set;
 public class EternalDeerMixinCanceller implements MixinCanceller {
 	private static final Set<String> CANCEL = Set.of(
 			"fmt.cerulean.mixin.MixinEntity",
+			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
 			"io.wispforest.affinity.mixin.VillagerClothingFeatureRendererAccessor",
 			"io.wispforest.affinity.mixin.client.ArmorFeatureRendererMixin",
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",

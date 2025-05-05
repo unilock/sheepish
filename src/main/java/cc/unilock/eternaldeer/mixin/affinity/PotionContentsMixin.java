@@ -23,7 +23,8 @@ import java.util.function.Consumer;
 
 @Mixin(PotionContents.class)
 public class PotionContentsMixin implements ExtendedPotionContentsComponent {
-    @Unique private WeakReference<ItemStack> affinity$stackRef;
+    @Unique
+    private WeakReference<ItemStack> affinity$stackRef;
 
     @Override
     public void affinity$attackStack(ItemStack stack) {
