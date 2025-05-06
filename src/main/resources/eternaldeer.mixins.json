@@ -29,7 +29,8 @@
     "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
-    "mythicmetals.ElytraLayerMixin"
+    "mythicmetals.ElytraLayerMixin",
+    "spectrum.SpectrumColorProvidersMixin"
   ],
   "injectors": {
     "defaultRequire": 1
