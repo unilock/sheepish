@@ -6,6 +6,7 @@
   "mixins": [
     "affinity.EntityMixin",
     "affinity.PotionContentsMixin",
+    "anthropophagy.AbstractFurnaceBlockEntityMixin",
     "armistice.ArmisticeCreativeModeTabRegistrarMixin",
     "biolith.NeoForgePlatformHelperMixin",
     "cerulean.EntityMixin",
@@ -16,7 +17,8 @@
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
-    "splinecart.EntityMixinSquared"
+    "splinecart.EntityMixinSquared",
+    "wiretap.AnvilMenuMixin"
   ],
   "client": [
     "affinity.client.HumanoidArmorLayerMixin",

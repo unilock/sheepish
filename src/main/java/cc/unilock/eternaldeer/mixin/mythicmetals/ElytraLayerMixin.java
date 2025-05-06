@@ -38,7 +38,7 @@ public class ElytraLayerMixin {
 
 	@ModifyReturnValue(method = "shouldRender", at = @At("RETURN"))
 	private boolean shouldRender(boolean original, ItemStack stack, LivingEntity entity) {
-		boolean celestium = false; try { celestium = (boolean) IS_WEARING.invoke(entity); } catch (Throwable e) { e.printStackTrace(); }
+		boolean celestium; try { celestium = (boolean) IS_WEARING.invoke(entity); } catch (Throwable e) { throw new RuntimeException(e); }
 		return original || celestium;
 	}
 
