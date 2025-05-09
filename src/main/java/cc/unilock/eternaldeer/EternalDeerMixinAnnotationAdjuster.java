@@ -25,6 +25,10 @@ public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjust
 			return null;
 		}
 
+		if ("xyz.nucleoid.fantasy.mixin.ServerWorldMixin".equals(mixinClassName) && "dontSendRainPacketsToAllWorlds".equals(handlerNode.name)) {
+			return null;
+		}
+
 		return annotationNode;
 	}
 }
