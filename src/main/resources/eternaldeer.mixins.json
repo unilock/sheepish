@@ -3,6 +3,7 @@
   "package": "cc.unilock.eternaldeer.mixin",
   "plugin": "cc.unilock.eternaldeer.EternalDeerMixin",
   "compatibilityLevel": "JAVA_21",
+  "mixinextras": {"minVersion": "0.5.0-rc.1"},
   "mixins": [
     "affinity.EntityMixin",
     "affinity.PotionContentsMixin",
@@ -13,6 +14,7 @@
     "enderio_base.AlphaWarningMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "joy.LivingEntityMixin",
+    "minecraft.CreativeModeTabItemDisplayBuilderMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",
