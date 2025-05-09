@@ -26,7 +26,7 @@ public class SpectrumColorProvidersMixin {
 	private static BlockColor fernBlock;
 	@Unique
 	private static BlockColor shortGrassBlock;
-	
+
 	@Redirect(method = "registerColoredLeaves", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/client/rendering/v1/ColorProviderRegistry;get(Ljava/lang/Object;)Ljava/lang/Object;", ordinal = 0))
 	private static Object oakLeavesBlock(ColorProviderRegistry<Block, BlockColor> instance, Object obj) {
 		return oakLeavesBlock = (state, level, pos, tintIndex) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor();
