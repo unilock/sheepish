@@ -13,11 +13,19 @@ public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjust
 			return null;
 		}
 
-		if ("io.wispforest.affinity.mixin.EntityMixin".equals(mixinClassName) && "invokeFadeTickEvent".equals(handlerNode.name)) {
+		if ("io.wispforest.affinity.mixin.EntityMixin".equals(mixinClassName) && ("invokeFadeTickEvent".equals(handlerNode.name) || "updateFadeState".equals(handlerNode.name))) {
 			return null;
 		}
 
-		if ("io.wispforest.affinity.mixin.EntityMixin".equals(mixinClassName) && "updateFadeState".equals(handlerNode.name)) {
+		if ("io.wispforest.affinity.mixin.client.ItemRendererMixin".equals(mixinClassName) && "punchAHoleIntoYourInventory".equals(handlerNode.name)) {
+			return null;
+		}
+
+		if ("io.wispforest.affinity.mixin.client.WorldRendererMixin".equals(mixinClassName) && ("initSkyBuffer".equals(handlerNode.name) || "captureSky".equals(handlerNode.name) || "renderSkyStencilLayer".equals(handlerNode.name) || "drawSkyAfter".equals(handlerNode.name) || "drawSkyAfter_iris".equals(handlerNode.name))) {
+			return null;
+		}
+
+		if ("io.wispforest.affinity.mixin.client.sodium.DefaultTerrainRenderPassesMixin".equals(mixinClassName) && "punchAHoleIntoYourInventory".equals(handlerNode.name)) {
 			return null;
 		}
 

@@ -12,7 +12,11 @@ public class EternalDeerMixinCanceller implements MixinCanceller {
 			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
 			"io.wispforest.affinity.mixin.VillagerClothingFeatureRendererAccessor",
 			"io.wispforest.affinity.mixin.client.ArmorFeatureRendererMixin",
+			"io.wispforest.affinity.mixin.client.BufferBuilderStorageMixin",
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",
+			"io.wispforest.affinity.mixin.client.sodium.DefaultMaterialsMixin",
+			"io.wispforest.affinity.mixin.client.sodium.DefaultTerrainRenderPassesMixin",
+			"io.wispforest.affinity.mixin.client.sodium.SodiumWorldRendererMixin",
 			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
 	);
 

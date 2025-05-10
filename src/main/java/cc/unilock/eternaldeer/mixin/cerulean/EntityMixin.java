@@ -52,7 +52,7 @@ public abstract class EntityMixin implements PlasticSwimming {
 	private boolean cerulean$inFakePlastic = false;
 
 	@Inject(method = "doWaterSplashEffect", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;floor(D)I"), cancellable = true)
-	public void cerulean(CallbackInfo ci) {
+	private void cerulean(CallbackInfo ci) {
 		if (!this.level().dimensionTypeRegistration().unwrapKey().orElseThrow().location().equals(SKIES)) {
 			return;
 		}
@@ -63,7 +63,7 @@ public abstract class EntityMixin implements PlasticSwimming {
 	}
 
 	@Inject(method = "updateFluidHeightAndDoFluidPushing(Lnet/minecraft/tags/TagKey;D)Z", at = @At("HEAD"))
-	public void cerulean$resetPlasticState(TagKey<Fluid> tag, double speed, CallbackInfoReturnable<Boolean> cir, @Share("water") LocalBooleanRef cerulean$inWater) {
+	private void cerulean$resetPlasticState(TagKey<Fluid> tag, double speed, CallbackInfoReturnable<Boolean> cir, @Share("water") LocalBooleanRef cerulean$inWater) {
 		if (FluidTags.WATER.equals(tag)) {
 			cerulean$inPlastic = false;
 			cerulean$inFakePlastic = false;
@@ -72,7 +72,7 @@ public abstract class EntityMixin implements PlasticSwimming {
 	}
 
 	@Inject(method = "updateFluidHeightAndDoFluidPushing()V", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(DD)D"))
-	public void cerulean$setPlasticState(CallbackInfo ci, @Local FluidState fluidState, @Share("water") LocalBooleanRef cerulean$water) {
+	private void cerulean$setPlasticState(CallbackInfo ci, @Local FluidState fluidState, @Share("water") LocalBooleanRef cerulean$water) {
 		if (cerulean$water.get()) {
 			Fluid fluid = fluidState.getType();
 			if (fluid == POLYETHYLENE) {
@@ -88,7 +88,7 @@ public abstract class EntityMixin implements PlasticSwimming {
 	}
 
 	@Inject(method = "onGround", at = @At("HEAD"), cancellable = true)
-	public void cerulean$itemMovement(CallbackInfoReturnable<Boolean> cir) {
+	private void cerulean$itemMovement(CallbackInfoReturnable<Boolean> cir) {
 		if (ItemEntity.class.isAssignableFrom(this.getClass()) && cerulean$inPlastic) {
 			cir.setReturnValue(false);
 		}

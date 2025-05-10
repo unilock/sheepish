@@ -3,10 +3,13 @@
   "package": "cc.unilock.eternaldeer.mixin",
   "plugin": "cc.unilock.eternaldeer.EternalDeerMixin",
   "compatibilityLevel": "JAVA_21",
-  "mixinextras": {"minVersion": "0.5.0-rc.1"},
+  "mixinextras": {
+    "minVersion": "0.5.0-rc.1"
+  },
   "mixins": [
     "affinity.EntityMixin",
     "affinity.PotionContentsMixin",
+    "affinity.client.AffinityClientMixin",
     "anthropophagy.AbstractFurnaceBlockEntityMixin",
     "armistice.ArmisticeCreativeModeTabRegistrarMixin",
     "biolith.NeoForgePlatformHelperMixin",
@@ -24,6 +27,7 @@
   ],
   "client": [
     "affinity.client.HumanoidArmorLayerMixin",
+    "affinity.client.RenderBuffersMixin",
     "affinity.client.VillagerArmsItemRenderer",
     "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",

@@ -56,7 +56,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
 	}
 
 	@Inject(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/inventory/ResultContainer;setItem(ILnet/minecraft/world/item/ItemStack;)V", ordinal = 4, shift = At.Shift.AFTER))
-	public void createResult(CallbackInfo ci, @Local ItemStack itemStack) {
+	private void createResult(CallbackInfo ci, @Local ItemStack itemStack) {
 		if (!Wiretap.SERVER_CONFIG.anvilCrafting.get()) {
 			return;
 		}
@@ -78,7 +78,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
 	}
 
 	@Inject(method = "onTake", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/Container;setItem(ILnet/minecraft/world/item/ItemStack;)V", ordinal = 0, shift = At.Shift.AFTER))
-	public void onTake(Player player, ItemStack result, CallbackInfo ci) {
+	private void onTake(Player player, ItemStack result, CallbackInfo ci) {
 		if (!Wiretap.SERVER_CONFIG.anvilCrafting.get()) {
 			return;
 		}
