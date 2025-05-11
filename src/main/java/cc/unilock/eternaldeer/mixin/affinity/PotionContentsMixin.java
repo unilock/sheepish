@@ -1,14 +1,18 @@
 package cc.unilock.eternaldeer.mixin.affinity;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import com.mojang.datafixers.util.Pair;
 import io.wispforest.affinity.misc.MixinHooks;
 import io.wispforest.affinity.misc.potion.PotionMixture;
 import io.wispforest.affinity.misc.quack.ExtendedPotionContentsComponent;
+import io.wispforest.affinity.object.AffinityStatusEffects;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.util.StringUtil;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionContents;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +23,9 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.StreamSupport;
 
 @Mixin(PotionContents.class)
 public class PotionContentsMixin implements ExtendedPotionContentsComponent {
@@ -45,7 +51,7 @@ public class PotionContentsMixin implements ExtendedPotionContentsComponent {
 
     @ModifyArg(method = "addPotionTooltip(Ljava/lang/Iterable;Ljava/util/function/Consumer;FF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;", ordinal = 1), index = 1)
     private static Object[] addLengthMultiplier(Object[] args, @Local(argsOnly = true, ordinal = 0) float durationMultiplier, @Local(argsOnly = true, ordinal = 1) float tickRate, @Local MobEffectInstance effectInst) {
-        if (!(args[1] instanceof MutableComponent text && text.getContents() instanceof PlainTextContents.LiteralContents literal)) {
+        if (!(args[1] instanceof PlainTextContents literal)) {
             return args;
         }
         String durationText = literal.text();
@@ -65,18 +71,16 @@ public class PotionContentsMixin implements ExtendedPotionContentsComponent {
         return args;
     }
 
-    // this doesn't work even on Fabric LOL
-    // "statusEffectInstance.getEffect() == AffinityStatusEffects.FLIGHT" should be "statusEffectInstance.getEffect().value() == AffinityStatusEffects.FLIGHT"
-//    @Inject(method = "addPotionTooltip(Ljava/lang/Iterable;Ljava/util/function/Consumer;FF)V", at = @At("TAIL"))
-//    private static void addFuniFlightText(Iterable<MobEffectInstance> effects, Consumer<Component> tooltip, float durationMultiplier, float tickRate, CallbackInfo ci, @Local List<Pair<Attribute, AttributeModifier>> attributeModifiers) {
-//        if (StreamSupport.stream(effects.spliterator(), false).noneMatch(statusEffectInstance -> statusEffectInstance.getEffect() == AffinityStatusEffects.FLIGHT)) {
-//            return;
-//        }
-//
-//        if (attributeModifiers.isEmpty()) {
-//            tooltip.accept(Component.empty());
-//            tooltip.accept((Component.translatable("potion.whenDrank")).withStyle(ChatFormatting.DARK_PURPLE));
-//        }
-//        tooltip.accept(Component.translatable("effect.affinity.gravity_modifier").withStyle(ChatFormatting.BLUE));
-//    }
+    @Inject(method = "addPotionTooltip(Ljava/lang/Iterable;Ljava/util/function/Consumer;FF)V", at = @At("TAIL"))
+    private static void addFuniFlightText(Iterable<MobEffectInstance> effects, Consumer<Component> tooltip, float durationMultiplier, float tickRate, CallbackInfo ci, @Local List<Pair<Attribute, AttributeModifier>> attributeModifiers) {
+        if (StreamSupport.stream(effects.spliterator(), false).noneMatch(statusEffectInstance -> statusEffectInstance.getEffect().value() == AffinityStatusEffects.FLIGHT)) {
+            return;
+        }
+
+        if (attributeModifiers.isEmpty()) {
+            tooltip.accept(Component.empty());
+            tooltip.accept((Component.translatable("potion.whenDrank")).withStyle(ChatFormatting.DARK_PURPLE));
+        }
+        tooltip.accept(Component.translatable("effect.affinity.gravity_modifier").withStyle(ChatFormatting.BLUE));
+    }
 }
