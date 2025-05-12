@@ -115,6 +115,7 @@ dependencies {
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'
     compileOnly 'maven.modrinth:armistice:1.0.0-SNAPSHOT25'
     compileOnly 'maven.modrinth:biolith:A5iiNQYF'
+    compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:extended-industrialization:1.14.9-1.21.1'
     compileOnly 'curse.maven:minestuck-224635:6421096'
     compileOnly 'maven.modrinth:modern-industrialization:2.3.3'

@@ -31,6 +31,7 @@
     "affinity.client.VillagerArmsItemRenderer",
     "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
+    "dsurround.VillageScannerMixin",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
