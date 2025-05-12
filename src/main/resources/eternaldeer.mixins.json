@@ -36,6 +36,7 @@
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "mythicmetals.ElytraLayerMixin",
+    "spectrum.GuiMixin",
     "spectrum.SpectrumColorProvidersMixin"
   ],
   "injectors": {

@@ -9,6 +9,10 @@ import java.util.List;
 public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjuster {
 	@Override
 	public AdjustableAnnotationNode adjust(List<String> targetClassNames, String mixinClassName, MethodNode handlerNode, AdjustableAnnotationNode annotationNode) {
+		if ("de.dafuqs.spectrum.mixin.client.InGameHudMixin".equals(mixinClassName) && "spectrum$renderAzureDikeBar".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("fmt.cerulean.mixin.client.MixinMinecraftClient".equals(mixinClassName) && "cerulean$starwellBreaking".equals(handlerNode.name)) {
 			return null;
 		}
