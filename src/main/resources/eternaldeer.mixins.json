@@ -34,6 +34,7 @@
     "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
     "dsurround.VillageScannerMixin",
+    "electromechanics.ColoredVariantsModelLoaderMixin",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
