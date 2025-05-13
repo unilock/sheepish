@@ -1,7 +1,9 @@
 package cc.unilock.eternaldeer;
 
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAnnotationNode;
+import com.bawnorton.mixinsquared.adjuster.tools.AdjustableWrapOperationNode;
 import com.bawnorton.mixinsquared.api.MixinAnnotationAdjuster;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.util.List;
@@ -9,6 +11,29 @@ import java.util.List;
 public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjuster {
 	@Override
 	public AdjustableAnnotationNode adjust(List<String> targetClassNames, String mixinClassName, MethodNode handlerNode, AdjustableAnnotationNode annotationNode) {
+		if ("com.chyzman.electromechanics.mixin.PistonHandlerMixin".equals(mixinClassName)) {
+			if ("checkIfSlabsStick".equals(handlerNode.name) || "test".equals(handlerNode.name)) {
+				AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
+				wrap.applyRefmap();
+
+				return wrap.withAt(ats -> {
+					ats.set(0, ats.getFirst().withTarget(s -> "Lnet/minecraft/world/level/block/state/BlockState;canStickTo(Lnet/minecraft/world/level/block/state/BlockState;)Z"));
+					return ats;
+				});
+			}
+			if ("isAdjacentBlockStuckExt".equals(handlerNode.name)) {
+				return null;
+			}
+		}
+
+		if ("com.chyzman.electromechanics.mixin.RedstoneWireBlockMixin".equals(mixinClassName) && annotationNode.is(WrapOperation.class)) {
+			AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
+
+			if ("getRenderConnectionType(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Z)Lnet/minecraft/block/enums/WireConnection;".equals(wrap.getMethod().getFirst())) {
+				return null;
+			}
+		}
+
 		if ("de.dafuqs.spectrum.mixin.client.InGameHudMixin".equals(mixinClassName) && "spectrum$renderAzureDikeBar".equals(handlerNode.name)) {
 			return null;
 		}

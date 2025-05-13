@@ -14,6 +14,8 @@
     "armistice.ArmisticeCreativeModeTabRegistrarMixin",
     "biolith.NeoForgePlatformHelperMixin",
     "cerulean.EntityMixin",
+    "electromechanics.IBlockStateExtensionMixin",
+    "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "joy.LivingEntityMixin",
