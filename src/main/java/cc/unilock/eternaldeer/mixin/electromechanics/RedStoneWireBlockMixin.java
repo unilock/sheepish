@@ -29,22 +29,26 @@ public class RedStoneWireBlockMixin {
 	}
 
 	@WrapOperation(method = "getConnectingSide(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Z)Lnet/minecraft/world/level/block/state/properties/RedstoneSide;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;canRedstoneConnectTo(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z", ordinal = 0))
-	private boolean validConnectionCheckUp(BlockState instance, BlockGetter blockGetter, BlockPos blockPos, Direction direction, Operation<Boolean> original, @Local(argsOnly = true) BlockGetter level, @Local(argsOnly = true) Direction face, @Local(argsOnly = true) BlockPos pos){
-		try {
-			if(!(boolean) IS_VALID.invoke(this, level, direction, pos, Direction.UP)) return false;
-		} catch (Throwable e) {
-			throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+	private boolean validConnectionCheckUp(BlockState instance, BlockGetter blockGetter, BlockPos blockPos, Direction direction, Operation<Boolean> original, @Local(argsOnly = true) BlockPos pos){
+		if (direction != null) {
+			try {
+				if(!(boolean) IS_VALID.invoke(this, blockGetter, direction, pos, Direction.UP)) return false;
+			} catch (Throwable e) {
+				throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+			}
 		}
 
 		return original.call(instance, blockGetter, blockPos, direction);
 	}
 
 	@WrapOperation(method = "getConnectingSide(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Z)Lnet/minecraft/world/level/block/state/properties/RedstoneSide;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;canRedstoneConnectTo(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z", ordinal = 1))
-	private boolean validConnectionCheckDown(BlockState instance, BlockGetter blockGetter, BlockPos blockPos, Direction direction, Operation<Boolean> original, @Local(argsOnly = true) BlockGetter level, @Local(argsOnly = true) Direction face, @Local(argsOnly = true) BlockPos pos){
-		try {
-			if(!(boolean) IS_VALID.invoke(this, level, direction, pos, Direction.DOWN)) return false;
-		} catch (Throwable e) {
-			throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+	private boolean validConnectionCheckDown(BlockState instance, BlockGetter blockGetter, BlockPos blockPos, Direction direction, Operation<Boolean> original, @Local(argsOnly = true) BlockPos pos){
+		if (direction != null) {
+			try {
+				if(!(boolean) IS_VALID.invoke(this, blockGetter, direction, pos, Direction.DOWN)) return false;
+			} catch (Throwable e) {
+				throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+			}
 		}
 
 		return original.call(instance, blockGetter, blockPos, direction);
