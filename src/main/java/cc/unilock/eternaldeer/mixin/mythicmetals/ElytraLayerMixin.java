@@ -38,8 +38,11 @@ public class ElytraLayerMixin {
 
 	@ModifyReturnValue(method = "shouldRender", at = @At("RETURN"))
 	private boolean shouldRender(boolean original, ItemStack stack, LivingEntity entity) {
-		boolean celestium; try { celestium = (boolean) IS_WEARING.invoke(entity); } catch (Throwable e) { throw new RuntimeException(e); }
-		return original || celestium;
+		try {
+			return original || (boolean) IS_WEARING.invoke(entity);
+		} catch (Throwable e) {
+			throw new RuntimeException("Failed to invoke handle for Mythic Metals' CelestiumElytra#isWearing", e);
+		}
 	}
 
 	@ModifyReturnValue(method = "getElytraTexture", at = @At("RETURN"))

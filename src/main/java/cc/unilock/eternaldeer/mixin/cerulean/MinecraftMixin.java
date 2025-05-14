@@ -1,5 +1,6 @@
 package cc.unilock.eternaldeer.mixin.cerulean;
 
+import cc.unilock.eternaldeer.EternalDeer;
 import com.llamalad7.mixinextras.sugar.Local;
 import fmt.cerulean.block.entity.WellBlockEntity;
 import fmt.cerulean.client.particle.StarParticleType;
@@ -59,9 +60,9 @@ public class MinecraftMixin {
 			double z = pos.getZ() + 0.5;
 			FlowState state;
 			try {
-				state = (FlowState) GET_EXPORTED_STATE.invoke(Direction.UP);
+				state = (FlowState) GET_EXPORTED_STATE.invoke((FlowOutreach) be, Direction.UP);
 			} catch (Throwable e) {
-				e.printStackTrace();
+				EternalDeer.LOGGER.error("Failed to invoke handle for Cerulean's FlowOutreach#getExportedState", e);
 				return;
 			}
 			if (state == null) {
@@ -73,7 +74,7 @@ public class MinecraftMixin {
 				try {
 					star = (ParticleOptions) CREATE_PARTICLE.invoke(state, true, random);
 				} catch (Throwable e) {
-					e.printStackTrace();
+					EternalDeer.LOGGER.error("Failed to invoke handle for Cerulean's WellBlockEntity#createParticle", e);
 					continue;
 				}
 				double vx = random.nextGaussian() * 0.15;
