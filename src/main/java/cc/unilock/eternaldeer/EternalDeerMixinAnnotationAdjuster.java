@@ -12,6 +12,7 @@ public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjust
 	@Override
 	public AdjustableAnnotationNode adjust(List<String> targetClassNames, String mixinClassName, MethodNode handlerNode, AdjustableAnnotationNode annotationNode) {
 		if ("com.chyzman.electromechanics.mixin.PistonHandlerMixin".equals(mixinClassName)) {
+			// TODO: this does not appear to make slime slabs sticky
 			if ("checkIfSlabsStick".equals(handlerNode.name) || "test".equals(handlerNode.name)) {
 				AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
 				wrap.applyRefmap();
@@ -21,6 +22,7 @@ public class EternalDeerMixinAnnotationAdjuster implements MixinAnnotationAdjust
 					return ats;
 				});
 			}
+
 			if ("isAdjacentBlockStuckExt".equals(handlerNode.name)) {
 				return null;
 			}
