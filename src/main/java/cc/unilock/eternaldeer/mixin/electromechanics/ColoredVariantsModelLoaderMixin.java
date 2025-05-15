@@ -10,8 +10,8 @@ import java.io.PrintStream;
 @Mixin(targets = "com/chyzman/electromechanics/client/ColoredVariantsModelLoader")
 @Pseudo
 public class ColoredVariantsModelLoaderMixin {
-	@Redirect(method = "resolveBlockStates", at = @At(value = "INVOKE", target = "Ljava/io/PrintStream;println(Ljava/lang/String;)V"))
-	private static void resolveBlockStates$cancelPrintln(PrintStream instance, String x) {
+	@Redirect(method = "resolveBlockStates", at = @At(value = "INVOKE", target = "Ljava/io/PrintStream;println(Ljava/lang/Object;)V"))
+	private void resolveBlockStates$cancelPrintln(PrintStream instance, Object x) {
 		// NO-OP
 	}
 }
