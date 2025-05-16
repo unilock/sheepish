@@ -36,6 +36,7 @@
     "cerulean.MinecraftMixin",
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",
+    "enderscape.LevelRendererMixinSquared",
     "fabric.BlockColorsMixin",
     "fabric.ItemColorsMixin",
     "minecraft.WindowMixin",
