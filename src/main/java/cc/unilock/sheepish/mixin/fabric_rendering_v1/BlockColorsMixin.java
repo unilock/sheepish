@@ -1,4 +1,4 @@
-package cc.unilock.sheepish.mixin.fabric;
+package cc.unilock.sheepish.mixin.fabric_rendering_v1;
 
 import net.fabricmc.fabric.impl.client.rendering.ColorProviderRegistryImpl;
 import net.minecraft.client.color.block.BlockColor;

@@ -18,11 +18,14 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"io.wispforest.affinity.mixin.client.sodium.DefaultTerrainRenderPassesMixin",
 			"io.wispforest.affinity.mixin.client.sodium.SodiumWorldRendererMixin",
 			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
+			"net.modfest.fireblanket.mixin.entity_ticking.MixinEntity",
+			"net.modfest.fireblanket.mixin.entity_ticking.MixinPlayerLookup",
+			"net.modfest.fireblanket.mixin.mods.mythicmetals.MixinCarmotShield",
 			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
 	);
 
 	@Override
 	public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
-		return CANCEL.contains(mixinClassName) || mixinClassName.startsWith("net.joefoxe.hexerei.mixin.light.");
+		return CANCEL.contains(mixinClassName) || mixinClassName.startsWith("net.joefoxe.hexerei.mixin.light.") || mixinClassName.equals("net.modfest.fireblanket.mixin.client.color.") || mixinClassName.startsWith("net.modfest.fireblanket.mixin.mods.create.");
 	}
 }
