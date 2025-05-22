@@ -17,6 +17,7 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"io.wispforest.affinity.mixin.client.sodium.DefaultMaterialsMixin",
 			"io.wispforest.affinity.mixin.client.sodium.DefaultTerrainRenderPassesMixin",
 			"io.wispforest.affinity.mixin.client.sodium.SodiumWorldRendererMixin",
+			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
 			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
 	);
 
