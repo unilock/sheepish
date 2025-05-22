@@ -1,7 +1,7 @@
 package cc.unilock.sheepish.mixin.biolith;
 
 import com.terraformersmc.biolith.impl.platform.NeoForgePlatformHelper;
-import net.fabricmc.loader.api.FabricLoader;
+import net.neoforged.fml.loading.LoadingModList;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
@@ -9,10 +9,10 @@ import org.spongepowered.asm.mixin.Overwrite;
 public class NeoForgePlatformHelperMixin {
 	/**
 	 * @author unilock
-	 * @reason fabric code on neoforge
+	 * @reason ModList ==> LoadingModList
 	 */
 	@Overwrite
 	public boolean isModLoaded(String modId) {
-		return FabricLoader.getInstance().isModLoaded(modId);
+		return LoadingModList.get().getModFileById(modId) != null;
 	}
 }

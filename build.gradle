@@ -109,7 +109,6 @@ dependencies {
     implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.3-beta.1'))
 
     implementation files('libs/org.sinytra.connector-2.0.0-beta.8+1.21.1+dev-g6f0f6a0-mod.jar')
-    implementation 'org.sinytra:forgified-fabric-loader:2.5.34+0.16.0+1.21.1'
     implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.107.0+2.0.26+1.21.1'
 
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'

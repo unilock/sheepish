@@ -9,6 +9,7 @@ import net.neoforged.bus.api.EventPriority;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.loading.LoadingModList;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
@@ -23,8 +24,8 @@ public class Sheepish {
     public static final String MOD_ID = "sheepish";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    private static final boolean ALMOSTUNIFIED = ModList.get().isLoaded("almostunified");
-    private static final boolean ANSHAR = ModList.get().isLoaded("anshar");
+    private static final boolean ALMOSTUNIFIED = LoadingModList.get().getModFileById("almostunified") != null;
+    private static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
 
     public Sheepish() {
         if (ALMOSTUNIFIED) {

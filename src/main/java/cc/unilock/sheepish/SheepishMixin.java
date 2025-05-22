@@ -2,7 +2,7 @@ package cc.unilock.sheepish;
 
 import com.bawnorton.mixinsquared.adjuster.MixinAnnotationAdjusterRegistrar;
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
-import net.fabricmc.loader.api.FabricLoader;
+import net.neoforged.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -26,7 +26,7 @@ public class SheepishMixin implements IMixinConfigPlugin {
 	public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
 		String id = mixinClassName.split("\\.")[4];
 
-		return FabricLoader.getInstance().isModLoaded(id);
+		return LoadingModList.get().getModFileById(id) != null;
 	}
 
 	@Override
