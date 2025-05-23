@@ -116,12 +116,14 @@ dependencies {
     compileOnly 'maven.modrinth:biolith:A5iiNQYF'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:extended-industrialization:1.14.9-1.21.1'
+    compileOnly 'maven.modrinth:forge-config-api-port:v21.1.3-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'curse.maven:minestuck-224635:6421096'
     compileOnly 'maven.modrinth:modern-industrialization:2.3.3'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.1-beta.3+1.21'
 
     compileOnly 'maven.modrinth:cerulean:1.1.5'
+    compileOnly 'maven.modrinth:excessive-building:3.3.10'
     compileOnly 'maven.modrinth:wiretap:1.2.0+1.21.1.fabric'
 }
 

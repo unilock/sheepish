@@ -18,6 +18,7 @@
     "electromechanics.IBlockStateExtensionMixin",
     "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
+    "excessive_building.ExcessiveBuildingMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "hexerei.LightManagerMixin",
     "joy.LivingEntityMixin",

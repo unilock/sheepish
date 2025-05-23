@@ -2,9 +2,11 @@ package cc.unilock.sheepish;
 
 import com.almostreliable.unified.api.AlmostUnified;
 import com.mojang.logging.LogUtils;
+import fuzs.forgeconfigapiport.neoforge.api.forge.v4.ForgeConfigRegistry;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
@@ -26,6 +28,7 @@ public class Sheepish {
 
     private static final boolean ALMOSTUNIFIED = LoadingModList.get().getModFileById("almostunified") != null;
     private static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
+    private static final boolean EXCESSIVE_BUILDING = LoadingModList.get().getModFileById("excessive_building") != null;
 
     public Sheepish() {
         if (ALMOSTUNIFIED) {
@@ -37,9 +40,23 @@ public class Sheepish {
                 ModConfigSpec spec = (ModConfigSpec) MethodHandles.publicLookup().findStaticGetter(Class.forName("com.lgmrszd.anshar.config.ServerConfig"), "CONFIG_SPEC", ModConfigSpec.class).invoke(); 
                 ModList.get().getModContainerById("anshar").orElseThrow().registerConfig(ModConfig.Type.SERVER, spec);
             } catch (Throwable e) {
-                throw new RuntimeException("Failed to find handle for Anshar's ServerConfig.CONFIG_SPEC", e);
+                throw new RuntimeException("Failed to find / invoke handle for Anshar's ServerConfig.CONFIG_SPEC", e);
             }
 		}
+        if (EXCESSIVE_BUILDING) {
+            try {
+                ForgeConfigSpec spec = (ForgeConfigSpec) MethodHandles.publicLookup().findStaticGetter(Class.forName("net.yirmiri.excessive_building.EBConfig"), "COMMON", ForgeConfigSpec.class).invoke();
+                ForgeConfigRegistry.INSTANCE.register("excessive_building", ModConfig.Type.COMMON, spec, "excessive_building-config.toml");
+            } catch (Throwable e) {
+                throw new RuntimeException("Failed to find / invoke handle for Excessive Building's EBConfig.COMMON", e);
+            }
+            try {
+                ForgeConfigSpec spec = (ForgeConfigSpec) MethodHandles.publicLookup().findStaticGetter(Class.forName("net.yirmiri.excessive_building.EBClientConfig"), "CLIENT", ForgeConfigSpec.class).invoke();
+                ForgeConfigRegistry.INSTANCE.register("excessive_building", ModConfig.Type.CLIENT, spec, "excessive_building-config-client.toml");
+            } catch (Throwable e) {
+                throw new RuntimeException("Failed to find / invoke handle for Excessive Building's EBClientConfig.CLIENT", e);
+            }
+        }
     }
 
     private void blockDrops(BlockDropsEvent event) {
