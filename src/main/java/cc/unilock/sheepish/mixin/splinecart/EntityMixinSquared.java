@@ -19,8 +19,6 @@ public abstract class EntityMixinSquared {
 	)
 	@Inject(method = "@MixinSquared:Handler", at = @At("HEAD"), cancellable = true)
 	private void splinecart$getOnTrackIfNecessary(CallbackInfo ci) {
-		if (level() == null) {
-			ci.cancel();
-		}
+		if (level() == null) ci.cancel();
 	}
 }

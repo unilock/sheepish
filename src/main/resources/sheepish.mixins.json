@@ -45,7 +45,8 @@
     "minestuck.GoButtonMixin",
     "mythicmetals.ElytraLayerMixin",
     "spectrum.GuiMixin",
-    "spectrum.SpectrumColorProvidersMixin"
+    "spectrum.SpectrumColorProvidersMixin",
+    "splinecart.CameraMixinSquared"
   ],
   "injectors": {
     "defaultRequire": 1

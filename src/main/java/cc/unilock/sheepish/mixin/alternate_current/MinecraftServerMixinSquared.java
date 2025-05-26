@@ -19,8 +19,6 @@ public abstract class MinecraftServerMixinSquared {
 	)
 	@Inject(method = "@MixinSquared:Handler", at = @At("HEAD"))
 	private void save(CallbackInfo ci) {
-		if (this.overworld() == null) {
-			ci.cancel();
-		}
+		if (this.overworld() == null) ci.cancel();
 	}
 }
