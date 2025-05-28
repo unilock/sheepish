@@ -20,6 +20,11 @@
     "enderio_base.AlphaWarningMixin",
     "excessive_building.ExcessiveBuildingMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
+    "frozenlib.BoneMealItemMixin",
+    "frozenlib.ItemValueMixin",
+    "frozenlib.LivingEntityMixin",
+    "frozenlib.ServerPlayerGameModeMixin",
+    "frozenlib.ShovelItemMixin",
     "hexerei.LightManagerMixin",
     "joy.LivingEntityMixin",
     "minecraft.ItemDisplayBuilderMixin",
@@ -28,6 +33,7 @@
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "splinecart.EntityMixinSquared",
+    "wilderwild.EntityMixin",
     "wiretap.AnvilMenuMixin"
   ],
   "client": [
@@ -41,6 +47,7 @@
     "enderscape.LevelRendererMixinSquared",
     "fabric_rendering_v1.BlockColorsMixin",
     "fabric_rendering_v1.ItemColorsMixin",
+    "frozenlib.MultiPlayerGameModeMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "mythicmetals.ElytraLayerMixin",

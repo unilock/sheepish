@@ -17,12 +17,17 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"io.wispforest.affinity.mixin.client.sodium.DefaultMaterialsMixin",
 			"io.wispforest.affinity.mixin.client.sodium.DefaultTerrainRenderPassesMixin",
 			"io.wispforest.affinity.mixin.client.sodium.SodiumWorldRendererMixin",
+			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
 			"net.frozenblock.lib.feature_flag.mixin.FeatureFlagBuilderMixin",
+			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
+			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
+			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
 			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
 			"net.modfest.fireblanket.mixin.entity_ticking.MixinEntity",
 			"net.modfest.fireblanket.mixin.entity_ticking.MixinPlayerLookup",
 			"net.modfest.fireblanket.mixin.mods.mythicmetals.MixinCarmotShield",
-			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
+			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin",
+			"org.quiltmc.qsl.frozenblock.core.registry.mixin.MappedRegistryMixin"
 	);
 
 	@Override

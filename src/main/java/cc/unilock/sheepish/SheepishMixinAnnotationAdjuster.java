@@ -64,6 +64,18 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("net.frozenblock.lib.item.mixin.shovel.ShovelItemMixin".equals(mixinClassName) && "frozenlib$removeOtherBehaviorsB".equals(handlerNode.name)) {
+			return null;
+		}
+
+		if ("net.frozenblock.wilderwild.mixin.block.block_break.ServerPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
+			return null;
+		}
+
+		if ("net.frozenblock.wilderwild.mixin.client.block_break.MultiPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("org.ladysnake.satin.mixin.client.gl.JsonEffectGlShaderMixin".equals(mixinClassName) && "constructProgramIdentifier".equals(handlerNode.name)) {
 			return null;
 		}
