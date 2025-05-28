@@ -22,7 +22,7 @@
     "extended_industrialization.EIArmorMaterialsMixin",
     "hexerei.LightManagerMixin",
     "joy.LivingEntityMixin",
-    "minecraft.CreativeModeTabItemDisplayBuilderMixin",
+    "minecraft.ItemDisplayBuilderMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",

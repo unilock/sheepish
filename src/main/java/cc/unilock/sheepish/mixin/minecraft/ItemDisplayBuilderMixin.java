@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(targets = "net/minecraft/world/item/CreativeModeTab$ItemDisplayBuilder")
-public class CreativeModeTabItemDisplayBuilderMixin {
+public class ItemDisplayBuilderMixin {
 	@Shadow @Final private CreativeModeTab tab;
 
 	@Inject(method = "accept", at = @At(value = "NEW", target = "(Ljava/lang/String;)Ljava/lang/IllegalStateException;"), cancellable = true)
