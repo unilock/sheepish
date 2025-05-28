@@ -2,7 +2,6 @@ package cc.unilock.sheepish.mixin.frozenlib;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.llamalad7.mixinextras.sugar.Local;
 import net.frozenblock.wilderwild.block.EchoGlassBlock;
 import net.frozenblock.wilderwild.block.MesogleaBlock;
 import net.frozenblock.wilderwild.block.impl.SnowloggingUtils;
@@ -36,7 +35,7 @@ public abstract class ServerPlayerGameModeMixin {
 			)
 	)
 	public boolean wilderWild$destroyBlockB(
-			ServerPlayerGameMode instance, BlockPos pos, BlockState state, boolean canHarvest, Operation<Boolean> original, @Local(ordinal = 1) BlockState destroyedState
+			ServerPlayerGameMode instance, BlockPos pos, BlockState destroyedState, boolean canHarvest, Operation<Boolean> original
 	) {
 		if (SnowloggingUtils.isSnowlogged(destroyedState)) {
 			return original.call(instance, pos, destroyedState.setValue(SnowloggingUtils.SNOW_LAYERS, 0), canHarvest);
@@ -51,6 +50,6 @@ public abstract class ServerPlayerGameModeMixin {
 				return original.call(instance, pos, destroyedState, canHarvest);
 			}
 		}
-		return original.call(instance, pos, state, canHarvest);
+		return original.call(instance, pos, destroyedState, canHarvest);
 	}
 }

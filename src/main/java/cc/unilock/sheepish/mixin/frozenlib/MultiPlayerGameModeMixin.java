@@ -2,8 +2,6 @@ package cc.unilock.sheepish.mixin.frozenlib;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.llamalad7.mixinextras.sugar.Share;
-import com.llamalad7.mixinextras.sugar.ref.LocalRef;
 import net.frozenblock.wilderwild.block.EchoGlassBlock;
 import net.frozenblock.wilderwild.block.MesogleaBlock;
 import net.frozenblock.wilderwild.block.impl.SnowloggingUtils;
@@ -37,10 +35,8 @@ public abstract class MultiPlayerGameModeMixin {
 			)
 	)
 	public void wilderWild$destroyBlockB(
-			Block instance, LevelAccessor level, BlockPos pos, BlockState state, Operation<Void> original,
-			@Share("wilderWild$destroyedState") LocalRef<BlockState> destroyedStateRef
+			Block instance, LevelAccessor level, BlockPos pos, BlockState destroyedState, Operation<Void> original
 	) {
-		BlockState destroyedState = destroyedStateRef.get();
 		if (SnowloggingUtils.isSnowlogged(destroyedState)) {
 			original.call(instance, level, pos, destroyedState.setValue(SnowloggingUtils.SNOW_LAYERS, 0));
 		}
@@ -53,6 +49,6 @@ public abstract class MultiPlayerGameModeMixin {
 			original.call(instance, level, pos, destroyedState);
 			return;
 		}
-		original.call(instance, level, pos, state);
+		original.call(instance, level, pos, destroyedState);
 	}
 }
