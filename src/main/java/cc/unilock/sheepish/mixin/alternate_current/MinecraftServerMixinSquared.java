@@ -17,7 +17,7 @@ public abstract class MinecraftServerMixinSquared {
 			mixin = "alternate.current.mixin.MinecraftServerMixin",
 			name = "alternate_current$save(ZZZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V"
 	)
-	@Inject(method = "@MixinSquared:Handler", at = @At("HEAD"))
+	@Inject(method = "@MixinSquared:Handler", at = @At("HEAD"), cancellable = true)
 	private void save(CallbackInfo ci) {
 		if (this.overworld() == null) ci.cancel();
 	}
