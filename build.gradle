@@ -111,6 +111,7 @@ dependencies {
     implementation files('libs/org.sinytra.connector-2.0.0-beta.8+1.21.1+dev-g6f0f6a0-mod.jar')
     implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.107.0+2.0.26+1.21.1'
 
+    compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-29'
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'
     compileOnly 'maven.modrinth:armistice:1.0.0-SNAPSHOT25'
     compileOnly 'maven.modrinth:biolith:A5iiNQYF'
