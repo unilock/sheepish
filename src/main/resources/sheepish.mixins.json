@@ -9,7 +9,6 @@
   "mixins": [
     "affinity.EntityMixin",
     "affinity.PotionContentsMixin",
-    "affinity.client.AffinityClientMixin",
     "alternate_current.MinecraftServerMixinSquared",
     "anthropophagy.AbstractFurnaceBlockEntityMixin",
     "armistice.ArmisticeCreativeModeTabRegistrarMixin",
@@ -37,6 +36,7 @@
     "wiretap.AnvilMenuMixin"
   ],
   "client": [
+    "affinity.client.AffinityClientMixin",
     "affinity.client.HumanoidArmorLayerMixin",
     "affinity.client.RenderBuffersMixin",
     "affinity.client.VillagerArmsItemRenderer",
