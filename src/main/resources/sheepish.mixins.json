@@ -22,7 +22,6 @@
     "frozenlib.BoneMealItemMixin",
     "frozenlib.ItemValueMixin",
     "frozenlib.LivingEntityMixin",
-    "frozenlib.ServerPlayerGameModeMixin",
     "frozenlib.ShovelItemMixin",
     "hexerei.LightManagerMixin",
     "joy.LivingEntityMixin",
@@ -33,6 +32,7 @@
     "modern_industrialization.MIArmorMaterialsMixin",
     "splinecart.EntityMixinSquared",
     "wilderwild.EntityMixin",
+    "wilderwild.ServerPlayerGameModeMixin",
     "wiretap.AnvilMenuMixin"
   ],
   "client": [
@@ -47,13 +47,13 @@
     "enderscape.LevelRendererMixinSquared",
     "fabric_rendering_v1.BlockColorsMixin",
     "fabric_rendering_v1.ItemColorsMixin",
-    "frozenlib.MultiPlayerGameModeMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "mythicmetals.ElytraLayerMixin",
     "spectrum.GuiMixin",
     "spectrum.SpectrumColorProvidersMixin",
-    "splinecart.CameraMixinSquared"
+    "splinecart.CameraMixinSquared",
+    "wilderwild.MultiPlayerGameModeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

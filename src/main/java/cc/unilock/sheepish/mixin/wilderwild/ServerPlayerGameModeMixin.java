@@ -1,4 +1,4 @@
-package cc.unilock.sheepish.mixin.frozenlib;
+package cc.unilock.sheepish.mixin.wilderwild;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
