@@ -36,10 +36,6 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			}
 		}
 
-		if ("de.dafuqs.spectrum.mixin.client.InGameHudMixin".equals(mixinClassName) && "spectrum$renderAzureDikeBar".equals(handlerNode.name)) {
-			return null;
-		}
-
 		if ("fmt.cerulean.mixin.client.MixinMinecraftClient".equals(mixinClassName) && "cerulean$starwellBreaking".equals(handlerNode.name)) {
 			return null;
 		}
