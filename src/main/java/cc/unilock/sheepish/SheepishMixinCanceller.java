@@ -21,8 +21,7 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
 			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
-			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
-			"nourl.mythicmetals.mixin.ElytraFeatureRendererMixin"
+			"net.modfest.fireblanket.mixin.annoyances.MixinUtil"
 	);
 
 	@Override

@@ -126,6 +126,8 @@ dependencies {
     compileOnly 'maven.modrinth:cerulean:1.1.5'
     compileOnly 'maven.modrinth:excessive-building:3.3.10'
     compileOnly 'maven.modrinth:wiretap:1.2.0+1.21.1.fabric'
+    
+    compileOnly 'com.github.luben:zstd-jni:1.5.7-3'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

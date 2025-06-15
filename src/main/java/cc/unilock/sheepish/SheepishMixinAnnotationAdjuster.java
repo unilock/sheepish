@@ -80,6 +80,20 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("net.modfest.fireblanket.mixin.zstd.MixinPersistentState".equals(mixinClassName)) {
+			AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
+			wrap.applyRefmap();
+
+			return wrap.withMethod(methods -> {
+				methods.set(0, "lambda$save$0");
+				return methods;
+			})
+			.withAt(ats -> {
+				ats.set(0, ats.getFirst().withTarget(s -> "Lnet/neoforged/neoforge/common/IOUtilities;writeNbtCompressed(Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V"));
+				return ats;
+			});
+		}
+
 		if ("xyz.nucleoid.fantasy.mixin.ServerWorldMixin".equals(mixinClassName) && "dontSendRainPacketsToAllWorlds".equals(handlerNode.name)) {
 			return null;
 		}

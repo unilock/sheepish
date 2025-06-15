@@ -47,7 +47,6 @@
     "enderscape.LevelRendererMixinSquared",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
-    "mythicmetals.ElytraLayerMixin",
     "spectrum.GuiMixin",
     "spectrum.SpectrumColorProvidersMixin",
     "splinecart.CameraMixinSquared",
