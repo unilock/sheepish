@@ -25,12 +25,12 @@ public class ElytraLayerMixin {
 
 	static {
 		try {
-			IS_WEARING = MethodHandles.publicLookup().findStatic(Class.forName("nourl.mythicmetals.armor.CelestiumElytra"), "isWearing", MethodType.methodType(boolean.class, LivingEntity.class));
+			IS_WEARING = MethodHandles.publicLookup().findStatic(Class.forName("com.mythicmetals.armor.CelestiumElytra"), "isWearing", MethodType.methodType(boolean.class, LivingEntity.class));
 		} catch (ClassNotFoundException | IllegalAccessException | NoSuchMethodException e) {
 			throw new RuntimeException("Failed to find handle for Mythic Metals' CelestiumElytra#isWearing", e);
 		}
 		try {
-			CELESTIUM_ELYTRA = (Item) MethodHandles.publicLookup().findStaticGetter(Class.forName("nourl.mythicmetals.armor.MythicArmor"), "CELESTIUM_ELYTRA", Item.class).invoke();
+			CELESTIUM_ELYTRA = (Item) MethodHandles.publicLookup().findStaticGetter(Class.forName("com.mythicmetals.armor.MythicArmor"), "CELESTIUM_ELYTRA", Item.class).invoke();
 		} catch (Throwable e) {
 			throw new RuntimeException("Failed to find handle for Mythic Metals' MythicArmor.CELESTIUM_ELYTRA", e);
 		}
