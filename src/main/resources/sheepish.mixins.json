@@ -47,8 +47,6 @@
     "enderscape.LevelRendererMixinSquared",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
-    "spectrum.GuiMixin",
-    "spectrum.SpectrumColorProvidersMixin",
     "splinecart.CameraMixinSquared",
     "wilderwild.MultiPlayerGameModeMixin"
   ],
