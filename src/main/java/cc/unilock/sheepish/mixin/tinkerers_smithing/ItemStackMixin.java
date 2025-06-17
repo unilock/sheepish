@@ -61,16 +61,16 @@ public class ItemStackMixin {
 		if (isKeeper() && isBroken()) ci.cancel();
 	}
 
-	@WrapOperation(method = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;damageItem(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)I", remap = false), require = 0)
+	@WrapOperation(method = "hurtAndBreak(ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;damageItem(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)I", remap = false), require = 0)
 	private int dontBreakDamageItemKeepers(Item instance, ItemStack stack, int amount, LivingEntity entity, Consumer<Item> onBreak, Operation<Integer> original) {
-		if (isKeeper()) {
+		if (isKeeper() && isBroken()) {
 			return 0;
 		} else {
 			return original.call(instance, stack, amount, entity, onBreak);
 		}
 	}
 
-	@WrapWithCondition(method = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;shrink(I)V"))
+	@WrapWithCondition(method = "hurtAndBreak(ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;shrink(I)V"))
 	private boolean dontBreakShrinkKeepers(ItemStack instance, int amount) {
 		return !isKeeper();
 	}
