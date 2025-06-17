@@ -31,6 +31,7 @@
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "splinecart.EntityMixinSquared",
+    "tinkerers_smithing.ItemStackMixin",
     "wilderwild.EntityMixin",
     "wilderwild.ServerPlayerGameModeMixin",
     "wiretap.AnvilMenuMixin"

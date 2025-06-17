@@ -40,6 +40,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("folk.sisby.tinkerers_smithing.mixin.ItemStackMixin".equals(mixinClassName) && ("brokenNoDamage".equals(handlerNode.name) || "dontBreakDecrementKeepers".equals(handlerNode.name) || "dontBreakResetKeepers".equals(handlerNode.name))) {
+			return null;
+		}
+
 		if ("io.wispforest.affinity.mixin.EntityMixin".equals(mixinClassName) && ("invokeFadeTickEvent".equals(handlerNode.name) || "updateFadeState".equals(handlerNode.name))) {
 			return null;
 		}
