@@ -37,9 +37,9 @@
     "wiretap.AnvilMenuMixin"
   ],
   "client": [
-    "affinity.client.AffinityClientMixin",
     "affinity.client.HumanoidArmorLayerMixin",
     "affinity.client.RenderBuffersMixin",
+    "affinity.client.RenderTypeMixin",
     "affinity.client.VillagerArmsItemRenderer",
     "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
