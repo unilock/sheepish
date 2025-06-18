@@ -25,6 +25,7 @@
     "frozenlib.ShovelItemMixin",
     "hexerei.LightManagerMixin",
     "joy.LivingEntityMixin",
+    "minecraft.AbstractHorseMixin",
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
