@@ -8,8 +8,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.LoadingModList;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.slf4j.Logger;
 
 @Mod(Sheepish.MOD_ID)
@@ -24,7 +22,6 @@ public class Sheepish {
 
     public Sheepish(ModContainer container) {
         container.registerConfig(ModConfig.Type.COMMON, SheepishConfig.CONFIG_SPEC);
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 
         if (ALMOSTUNIFIED) {
             AlmostUnifiedCompat.init();
