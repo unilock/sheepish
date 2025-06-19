@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class SheepishMixinCanceller implements MixinCanceller {
 	private static final Set<String> CANCEL = Set.of(
+			"com.terraformersmc.cinderscapes.mixin.MixinAlterGroundTreeDecorator",
 			"de.maxhenkel.wiretap.mixin.AnvilMenuMixin",
 			"fmt.cerulean.mixin.MixinEntity",
 			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
