@@ -127,7 +127,7 @@ dependencies {
     compileOnly 'maven.modrinth:excessive-building:3.3.10'
     compileOnly 'maven.modrinth:tinkerers-smithing:2.7.1+1.21'
     compileOnly 'maven.modrinth:wiretap:1.2.0+1.21.1.fabric'
-    
+
     compileOnly 'com.github.luben:zstd-jni:1.5.7-3'
 }
 

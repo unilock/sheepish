@@ -35,6 +35,7 @@
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "splinecart.EntityMixinSquared",
+    "terraform_wood_api_v1.TerraformBoatTypeRegistryMixin",
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.EntityMixin",
     "wilderwild.GameDataMixin",
