@@ -37,6 +37,7 @@
     "splinecart.EntityMixinSquared",
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.EntityMixin",
+    "wilderwild.GameDataMixin",
     "wilderwild.ServerPlayerGameModeMixin",
     "wiretap.AnvilMenuMixin"
   ],

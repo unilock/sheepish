@@ -16,6 +16,7 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"io.wispforest.affinity.mixin.client.BufferBuilderStorageMixin",
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",
 			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
+			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
 			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
