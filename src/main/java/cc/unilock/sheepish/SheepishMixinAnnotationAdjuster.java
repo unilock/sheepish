@@ -1,6 +1,7 @@
 package cc.unilock.sheepish;
 
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAnnotationNode;
+import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAtNode;
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableWrapOperationNode;
 import com.bawnorton.mixinsquared.api.MixinAnnotationAdjuster;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -18,7 +19,12 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 				wrap.applyRefmap();
 
 				return wrap.withAt(ats -> {
-					ats.set(0, ats.getFirst().withTarget(s -> "Lnet/minecraft/world/level/block/state/BlockState;canStickTo(Lnet/minecraft/world/level/block/state/BlockState;)Z"));
+					AdjustableAtNode at = ats.getFirst();
+					at.applyRefmap();
+
+					at.setTarget("Lnet/minecraft/world/level/block/state/BlockState;canStickTo(Lnet/minecraft/world/level/block/state/BlockState;)Z");
+
+					ats.set(0, at);
 					return ats;
 				});
 			}
@@ -37,6 +43,19 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 		}
 
 		if ("fmt.cerulean.mixin.client.MixinMinecraftClient".equals(mixinClassName) && "cerulean$starwellBreaking".equals(handlerNode.name)) {
+			// TODO: not working due to invalid parameters
+//			AdjustableInjectNode wrap = annotationNode.as(AdjustableInjectNode.class);
+//
+//			return wrap.withAt(ats -> {
+//				AdjustableAtNode at = ats.getFirst();
+//				at.applyRefmap();
+//
+//				at.setTarget("Lnet/minecraft/client/particle/ParticleEngine;addBlockHitEffects(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/BlockHitResult;)V");
+//				at.setOrdinal(1);
+//
+//				ats.set(0, at);
+//				return ats;
+//			});
 			return null;
 		}
 
@@ -77,7 +96,12 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 				return methods;
 			})
 			.withAt(ats -> {
-				ats.set(0, ats.getFirst().withTarget(s -> "Lnet/neoforged/neoforge/common/IOUtilities;writeNbtCompressed(Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V"));
+				AdjustableAtNode at = ats.getFirst();
+				at.applyRefmap();
+
+				at.setTarget("Lnet/neoforged/neoforge/common/IOUtilities;writeNbtCompressed(Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V");
+
+				ats.set(0, at);
 				return ats;
 			});
 		}
