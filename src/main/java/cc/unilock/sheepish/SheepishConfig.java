@@ -3,6 +3,8 @@ package cc.unilock.sheepish;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.util.List;
+
 public class SheepishConfig {
 	public static final SheepishConfig CONFIG;
 	public static final ModConfigSpec CONFIG_SPEC;
@@ -12,12 +14,17 @@ public class SheepishConfig {
 		CONFIG = pair.getLeft();
 		CONFIG_SPEC = pair.getRight();
 	}
-	
+
+	public final ModConfigSpec.ConfigValue<List<? extends String>> ignoredEnchantments;
 	public final ModConfigSpec.BooleanValue horseStonks;
 
 	private SheepishConfig(ModConfigSpec.Builder builder) {
-		this.horseStonks = builder.comment("Horse Stonks")
-				.translation("sheepish.config.horse_stonks")
+		this.ignoredEnchantments = builder.comment("Enchantments to ignore when randomly enchanting loot")
+				.defineList("ignored_enchantments", List.of(
+						"nova_structures:shulker_boss",
+						"nova_structures:shulker_miniboss"
+				), () -> "namespace:path", obj -> (obj instanceof String str && str.indexOf(':') > -1));
+		this.horseStonks = builder.comment("Prevent AbstractHorse offspring from having lesser stats than either of its parents")
 				.define("horse_stonks", false);
 	}
 }
