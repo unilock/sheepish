@@ -52,7 +52,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
 
 	public AnvilMenuMixin(@Nullable MenuType<?> type, int containerId, Inventory playerInventory, ContainerLevelAccess access) {
 		super(type, containerId, playerInventory, access);
-		throw new IllegalStateException();
+		throw new AssertionError();
 	}
 
 	@Inject(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/inventory/ResultContainer;setItem(ILnet/minecraft/world/item/ItemStack;)V", ordinal = 4, shift = At.Shift.AFTER))
