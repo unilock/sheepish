@@ -52,6 +52,7 @@
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "enderscape.LevelRendererMixinSquared",
+    "frozenlib.PackRepositoryMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "splinecart.CameraMixinSquared",
