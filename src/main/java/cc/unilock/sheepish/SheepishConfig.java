@@ -9,6 +9,9 @@ import net.neoforged.fml.loading.FMLPaths;
 public class SheepishConfig extends ReflectiveConfig {
 	public static final SheepishConfig CONFIG = SheepishConfig.createToml(FMLPaths.CONFIGDIR.get(), "", "sheepish", SheepishConfig.class);
 
+	@Comment("Disable custom splash texts from various mods")
+	public final TrackedValue<Boolean> disableSplashes = value(false);
+
 	@Comment("Prevent AbstractHorse offspring from having lesser stats than either of its parents")
 	public final TrackedValue<Boolean> horseStonks = value(false);
 

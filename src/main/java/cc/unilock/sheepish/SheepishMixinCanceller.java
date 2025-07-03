@@ -1,32 +1,52 @@
 package cc.unilock.sheepish;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
+import com.google.common.collect.Sets;
 
+import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
+import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 
 public class SheepishMixinCanceller implements MixinCanceller {
-	private static final Set<String> CANCEL = Set.of(
+	private static final HashSet<String> CANCEL = Sets.newHashSet(
 			"com.terraformersmc.cinderscapes.mixin.MixinAlterGroundTreeDecorator",
+
 			"de.maxhenkel.wiretap.mixin.AnvilMenuMixin",
+
 			"fmt.cerulean.mixin.MixinEntity",
+
 			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
+
 			"io.wispforest.affinity.mixin.VillagerClothingFeatureRendererAccessor",
 			"io.wispforest.affinity.mixin.client.ArmorFeatureRendererMixin",
 			"io.wispforest.affinity.mixin.client.BufferBuilderStorageMixin",
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",
+
 			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
 			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
 			"net.frozenblock.lib.resource_pack.mixin.client.PackRepositoryMixin",
 			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
+			"org.quiltmc.qsl.frozenblock.core.registry.mixin.MappedRegistryMixin",
+
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
-			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
-			"org.quiltmc.qsl.frozenblock.core.registry.mixin.MappedRegistryMixin"
+
+			"net.modfest.fireblanket.mixin.annoyances.MixinUtil"
 	);
+	static {
+		if (CONFIG.disableSplashes.value()) {
+			CANCEL.add("com.teamabnormals.blueprint.core.mixin.client.SplashManagerMixin");
+			CANCEL.add("net.frozenblock.lib.menu.mixin.client.SplashManagerMixin");
+			CANCEL.add("net.hecco.bountifulfares.mixin.misc.SplashTextMixin");
+		}
+	}
 
 	@Override
 	public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
-		return CANCEL.contains(mixinClassName) || mixinClassName.startsWith("net.joefoxe.hexerei.mixin.light.") || mixinClassName.equals("net.modfest.fireblanket.mixin.client.color.") || mixinClassName.startsWith("net.modfest.fireblanket.mixin.mods.create.");
+		return CANCEL.contains(mixinClassName)
+				|| mixinClassName.startsWith("net.joefoxe.hexerei.mixin.light.")
+				|| mixinClassName.equals("net.modfest.fireblanket.mixin.client.color.")
+				|| mixinClassName.startsWith("net.modfest.fireblanket.mixin.mods.create.");
 	}
 }

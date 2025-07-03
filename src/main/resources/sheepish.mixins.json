@@ -12,6 +12,7 @@
     "alternate_current.MinecraftServerMixinSquared",
     "anthropophagy.AbstractFurnaceBlockEntityMixin",
     "biolith.NeoForgePlatformHelperMixin",
+    "blueprint.BlueprintSplashManagerMixin",
     "cerulean.EntityMixin",
     "cinderscapes.AlterGroundDecoratorMixin",
     "electromechanics.IBlockStateExtensionMixin",
