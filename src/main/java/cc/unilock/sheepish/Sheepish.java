@@ -6,7 +6,6 @@ import cc.unilock.sheepish.compat.ExcessiveBuildingCompat;
 import com.mojang.logging.LogUtils;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.LoadingModList;
 import org.slf4j.Logger;
 
@@ -22,8 +21,6 @@ public class Sheepish {
     protected static final boolean EXCESSIVE_BUILDING = LoadingModList.get().getModFileById("excessive_building") != null;
 
     public Sheepish(ModContainer container) {
-        container.registerConfig(ModConfig.Type.COMMON, SheepishConfig.CONFIG_SPEC);
-
         if (ALMOSTUNIFIED) {
             AlmostUnifiedCompat.init();
         }

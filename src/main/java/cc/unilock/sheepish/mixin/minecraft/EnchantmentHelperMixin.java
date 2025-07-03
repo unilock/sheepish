@@ -13,7 +13,7 @@ import java.util.List;
 public class EnchantmentHelperMixin {
 	@ModifyReturnValue(method = "selectEnchantment", at = @At(value = "RETURN"))
 	private static List<EnchantmentInstance> filterEnchants(List<EnchantmentInstance> original) {
-		original.removeIf(instance -> SheepishConfig.CONFIG.ignoredEnchantments.get().contains(instance.enchantment.getRegisteredName()));
+		original.removeIf(instance -> SheepishConfig.CONFIG.ignoredEnchantments.value().contains(instance.enchantment.getRegisteredName()));
 		return original;
 	}
 }
