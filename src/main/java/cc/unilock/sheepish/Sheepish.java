@@ -18,6 +18,7 @@ public class Sheepish {
     protected static final boolean ALMOSTUNIFIED = LoadingModList.get().getModFileById("almostunified") != null;
     protected static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
     protected static final boolean CERULEAN = LoadingModList.get().getModFileById("cerulean") != null;
+    protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
     protected static final boolean EXCESSIVE_BUILDING = LoadingModList.get().getModFileById("excessive_building") != null;
 
     public Sheepish(ModContainer container) {

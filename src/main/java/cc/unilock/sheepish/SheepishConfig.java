@@ -12,6 +12,12 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Disable custom splash texts from various mods")
 	public final TrackedValue<Boolean> disableSplashes = value(false);
 
+	@Comment({
+			"Enable Emojiful's pixelated Twemoji set, without the \"Blobs\", \"Discord\", or \"Pepe\" categories",
+			"Requires \"Emojiful.EmojiTypes.custom = false\" in \"emojiful-client.toml\""
+	})
+	public final TrackedValue<Boolean> emojifulPixelatedTwemoji = value(false);
+
 	@Comment("Prevent AbstractHorse offspring from having lesser stats than either of its parents")
 	public final TrackedValue<Boolean> horseStonks = value(false);
 
