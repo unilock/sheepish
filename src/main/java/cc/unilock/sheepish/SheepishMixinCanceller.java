@@ -46,7 +46,6 @@ public class SheepishMixinCanceller implements MixinCanceller {
 	public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
 		return CANCEL.contains(mixinClassName)
 				|| mixinClassName.startsWith("net.joefoxe.hexerei.mixin.light.")
-				|| mixinClassName.equals("net.modfest.fireblanket.mixin.client.color.")
 				|| mixinClassName.startsWith("net.modfest.fireblanket.mixin.mods.create.");
 	}
 }
