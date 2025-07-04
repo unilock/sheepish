@@ -54,6 +54,7 @@
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "enderscape.LevelRendererMixinSquared",
     "frozenlib.PackRepositoryMixin",
+    "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "splinecart.CameraMixinSquared",
