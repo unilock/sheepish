@@ -4,9 +4,13 @@ import cc.unilock.sheepish.compat.AlmostUnifiedCompat;
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.ExcessiveBuildingCompat;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.RegistryAccess;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.LoadingModList;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.slf4j.Logger;
 
 @Mod(Sheepish.MOD_ID)
@@ -31,5 +35,16 @@ public class Sheepish {
         if (EXCESSIVE_BUILDING) {
             ExcessiveBuildingCompat.init();
         }
+    }
+    
+    public static RegistryAccess getRegistryAccess() {
+        if (ServerLifecycleHooks.getCurrentServer() == null) {
+            if (FMLLoader.getDist().isClient() && Minecraft.getInstance().level != null) {
+                return Minecraft.getInstance().level.registryAccess();
+            }
+        } else {
+            return ServerLifecycleHooks.getCurrentServer().registryAccess();
+        }
+        throw new IllegalStateException();
     }
 }
