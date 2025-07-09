@@ -14,6 +14,8 @@ public class SheepishMixinCanceller implements MixinCanceller {
 
 			"de.maxhenkel.wiretap.mixin.AnvilMenuMixin",
 
+			"dev.spiritstudios.specter.mixin.serialization.LanguageMixin",
+
 			"fmt.cerulean.mixin.MixinEntity",
 
 			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
