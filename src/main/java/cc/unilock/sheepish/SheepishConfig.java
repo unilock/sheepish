@@ -9,6 +9,9 @@ import net.neoforged.fml.loading.FMLPaths;
 public class SheepishConfig extends ReflectiveConfig {
 	public static final SheepishConfig CONFIG = SheepishConfig.createToml(FMLPaths.CONFIGDIR.get(), "", "sheepish", SheepishConfig.class);
 
+	@Comment("Disable Actually Additions and Farmer's Delight JEI plugins")
+	public final TrackedValue<Boolean> disableJeiPlugins = value(false);
+
 	@Comment("Disable custom splash texts from various mods")
 	public final TrackedValue<Boolean> disableSplashes = value(false);
 

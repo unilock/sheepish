@@ -117,6 +117,7 @@ dependencies {
     implementation files('libs/org.sinytra.connector-2.0.0-beta.8+1.21.1-mod.jar')
     implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.115.6+2.1.1+1.21.1'
 
+    compileOnly 'maven.modrinth:actually-additions:1.3.19'
     compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-29'
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.2.3:api'
     compileOnly 'maven.modrinth:armistice:1.0.0-SNAPSHOT25'
@@ -125,6 +126,7 @@ dependencies {
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:emojiful:drIeVIkS'
     compileOnly 'maven.modrinth:extended-industrialization:1.14.14-1.21.1'
+    compileOnly 'maven.modrinth:farmers-delight:1.21.1-1.2.8'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.3-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'curse.maven:minestuck-224635:6421096'

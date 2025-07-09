@@ -46,6 +46,7 @@
     "wiretap.AnvilMenuMixin"
   ],
   "client": [
+    "actuallyadditions.JEIActuallyAdditionsPluginMixin",
     "affinity.client.HumanoidArmorLayerMixin",
     "affinity.client.RenderBuffersMixin",
     "affinity.client.RenderTypeMixin",
@@ -55,6 +56,7 @@
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "enderscape.LevelRendererMixinSquared",
+    "farmersdelight.JEIPluginMixin",
     "frozenlib.PackRepositoryMixin",
     "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
