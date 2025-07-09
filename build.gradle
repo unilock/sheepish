@@ -97,6 +97,9 @@ neoForge {
         "${mod_id}" {
             sourceSet(sourceSets.main)
         }
+        "sheepish-asm" {
+            sourceSet(project(":sheepish-asm").sourceSets.main)
+        }
     }
 }
 
@@ -145,6 +148,8 @@ dependencies {
     // Compile-time dependencies
     compileOnly 'com.esotericsoftware.yamlbeans:yamlbeans:1.15'
     compileOnly 'com.github.luben:zstd-jni:1.5.7-3'
+
+    jarJar project(":sheepish-asm")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
