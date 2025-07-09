@@ -32,6 +32,7 @@
     "minecraft.EnchantmentHelperMixin",
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.MappedRegistryMixin",
+    "minecraft.PlayerMixin",
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",

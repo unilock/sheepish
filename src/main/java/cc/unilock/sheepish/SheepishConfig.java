@@ -9,6 +9,9 @@ import net.neoforged.fml.loading.FMLPaths;
 public class SheepishConfig extends ReflectiveConfig {
 	public static final SheepishConfig CONFIG = SheepishConfig.createToml(FMLPaths.CONFIGDIR.get(), "", "sheepish", SheepishConfig.class);
 
+	@Comment("Allow players to eat food regardless of hunger bar fullness")
+	public final TrackedValue<Boolean> alwaysEat = value(false);
+
 	@Comment("Disable Actually Additions and Farmer's Delight JEI plugins")
 	public final TrackedValue<Boolean> disableJeiPlugins = value(false);
 
