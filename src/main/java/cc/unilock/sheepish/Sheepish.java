@@ -6,12 +6,16 @@ import cc.unilock.sheepish.compat.ExcessiveBuildingCompat;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
-import net.neoforged.fml.ModContainer;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.LoadingModList;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.slf4j.Logger;
+
+import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 
 @Mod(Sheepish.MOD_ID)
 public class Sheepish {
@@ -25,7 +29,11 @@ public class Sheepish {
     protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
     protected static final boolean EXCESSIVE_BUILDING = LoadingModList.get().getModFileById("excessive_building") != null;
 
-    public Sheepish(ModContainer container) {
+    public Sheepish() {
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, BlockEvent.FarmlandTrampleEvent.class, event -> {
+            if (CONFIG.noTrample.value()) event.setCanceled(true);
+        });
+
         if (ALMOSTUNIFIED) {
             AlmostUnifiedCompat.init();
         }

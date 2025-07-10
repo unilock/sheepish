@@ -33,4 +33,7 @@ public class SheepishConfig extends ReflectiveConfig {
 			"nova_structures:shulker_boss",
 			"nova_structures:shulker_miniboss"
 	);
+
+	@Comment("Prevent all entities from trampling farmland")
+	public final TrackedValue<Boolean> noTrample = value(false);
 }
