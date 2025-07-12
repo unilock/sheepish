@@ -63,6 +63,7 @@
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "splinecart.CameraMixinSquared",
+    "toughnessbar.ToughnessBarMixin",
     "wilderwild.MultiPlayerGameModeMixin"
   ],
   "injectors": {
