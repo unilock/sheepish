@@ -11,8 +11,7 @@ import java.util.Set;
 
 @Mixin(PackRepository.class)
 public class PackRepositoryMixin implements PackRepositoryInterface {
-	@Shadow
-	private @Final Set<RepositorySource> sources;
+	@Shadow @Final private Set<RepositorySource> sources;
 
 	@Override
 	public void frozenLib$addRepositorySource(RepositorySource repositorySource) {

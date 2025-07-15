@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(targets = "com.terraformersmc.terraform.boat.api.TerraformBoatTypeRegistry")
+@Mixin(targets = "com/terraformersmc/terraform/boat/api/TerraformBoatTypeRegistry")
 @Pseudo
 public class TerraformBoatTypeRegistryMixin {
 	@WrapOperation(method = "<clinit>", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;buildAndRegister()Lnet/minecraft/core/WritableRegistry;"))

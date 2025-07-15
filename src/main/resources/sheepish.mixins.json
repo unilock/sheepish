@@ -49,8 +49,10 @@
   "client": [
     "actuallyadditions.JEIActuallyAdditionsPluginMixin",
     "affinity.client.HumanoidArmorLayerMixin",
+    "affinity.client.PostEffectBufferMixin",
     "affinity.client.RenderBuffersMixin",
     "affinity.client.RenderTypeMixin",
+    "affinity.client.SkyCaptureBufferMixin",
     "affinity.client.VillagerArmsItemRenderer",
     "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
