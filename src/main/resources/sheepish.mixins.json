@@ -39,6 +39,7 @@
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",
     "specter_serialization.LanguageMixin",
     "splinecart.EntityMixinSquared",
+    "surveyor.MinecraftServerMixinSquared",
     "terraform_wood_api_v1.TerraformBoatTypeRegistryMixin",
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.EntityMixin",
