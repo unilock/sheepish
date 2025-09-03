@@ -4,7 +4,7 @@
   "plugin": "cc.unilock.sheepish.SheepishMixin",
   "compatibilityLevel": "JAVA_21",
   "mixinextras": {
-    "minVersion": "0.5.0-rc.1"
+    "minVersion": "0.5.0"
   },
   "mixins": [
     "affinity.EntityMixin",
@@ -46,7 +46,7 @@
     "wilderwild.EntityMixin",
     "wilderwild.GameDataMixin",
     "wilderwild.ServerPlayerGameModeMixin",
-    "wiretap.AnvilMenuMixin"
+    "yumi_mc_core.YumiFoundationModMixin"
   ],
   "client": [
     "actuallyadditions.JEIActuallyAdditionsPluginMixin",
