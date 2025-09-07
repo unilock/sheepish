@@ -12,8 +12,8 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Allow players to eat food regardless of hunger bar fullness")
 	public final TrackedValue<Boolean> alwaysEat = value(false);
 
-	@Comment("Disable Actually Additions and Farmer's Delight JEI plugins")
-	public final TrackedValue<Boolean> disableJeiPlugins = value(false);
+	@Comment("Disable Sodium's core shader resource pack warning")
+	public final TrackedValue<Boolean> disableSodiumCoreShaderWarning = value(false);
 
 	@Comment("Disable custom splash texts from Blueprint, Bountiful Fares, and FrozenLib")
 	public final TrackedValue<Boolean> disableSplashes = value(false);
@@ -31,8 +31,7 @@ public class SheepishConfig extends ReflectiveConfig {
 	public final TrackedValue<Boolean> horseStonks = value(false);
 
 	@Comment("Enchantments to ignore when randomly enchanting loot")
-	public final TrackedValue<ValueList<String>> ignoredEnchantments = list(
-			"",
+	public final TrackedValue<ValueList<String>> ignoredEnchantments = list("",
 			"nova_structures:boss_behavior",
 			"nova_structures:shulker_boss",
 			"nova_structures:shulker_miniboss",
@@ -57,6 +56,12 @@ public class SheepishConfig extends ReflectiveConfig {
 			"pastel:treasure_hunter",
 			"pastel:voiding"
 	);
+
+	@Comment("TooManyRecipeViewers: Log fully qualified class names of all classes implementing JeiPlugin")
+	public final TrackedValue<Boolean> tmrvLog = value(false);
+
+	@Comment("TooManyRecipeViewers: Fully qualified class names of classes implementing JeiPlugin to skip loading")
+	public final TrackedValue<ValueList<String>> tmrvSkip = list("");
 
 	@Comment("Prevent all entities from trampling farmland")
 	public final TrackedValue<Boolean> noTrample = value(false);

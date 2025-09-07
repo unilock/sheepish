@@ -51,7 +51,6 @@
     "yumi_mc_core.YumiFoundationModMixin"
   ],
   "client": [
-    "actuallyadditions.JEIActuallyAdditionsPluginMixin",
     "affinity.client.HumanoidArmorLayerMixin",
     "affinity.client.PostEffectBufferMixin",
     "affinity.client.RenderBuffersMixin",
@@ -64,12 +63,13 @@
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "enderscape.LevelRendererMixinSquared",
     "fabric_resource_loader_v0.OptionsMixin",
-    "farmersdelight.JEIPluginMixin",
     "frozenlib.PackRepositoryMixin",
     "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
+    "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
+    "toomanyrecipeviewers.JEIPluginsMixin",
     "toughnessbar.ToughnessBarMixin",
     "wilderwild.MultiPlayerGameModeMixin"
   ],
