@@ -39,6 +39,7 @@
     "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
+    "nomansland.CreativeModeTabHandlerMixin",
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",
     "specter_serialization.LanguageMixin",
     "splinecart.EntityMixinSquared",
