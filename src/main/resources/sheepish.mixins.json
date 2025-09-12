@@ -47,8 +47,7 @@
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.EntityMixin",
     "wilderwild.GameDataMixin",
-    "wilderwild.ServerPlayerGameModeMixin",
-    "yumi_mc_core.YumiFoundationModMixin"
+    "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
     "affinity.client.HumanoidArmorLayerMixin",

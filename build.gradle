@@ -139,13 +139,6 @@ dependencies {
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
     compileOnly 'maven.modrinth:tmrv:0.6.3+mc.21.1'
 
-    compileOnly('dev.yumi.mc.core:yumi-mc-foundation:1.0.0-alpha.9+1.21.1') {
-        capabilities {
-            requireCapability 'dev.yumi.mc.core:yumi-mc-foundation-mojmap'
-        }
-        exclude group: 'org.slf4j'
-    }
-
     // Fabric
     compileOnly 'folk.sisby:surveyor:1.0.0-alpha.10+1.21'
     compileOnly 'maven.modrinth:cerulean:1.1.5'
