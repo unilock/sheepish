@@ -15,7 +15,7 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Disable Sodium's core shader resource pack warning")
 	public final TrackedValue<Boolean> disableSodiumCoreShaderWarning = value(false);
 
-	@Comment("Disable custom splash texts from Blueprint, Bountiful Fares, and FrozenLib")
+	@Comment("Disable custom splash texts from Blueprint, FrozenLib, and NeoForge")
 	public final TrackedValue<Boolean> disableSplashes = value(false);
 
 	@Comment("From Fabrication: \"When dropping items of the same type they don't merge into a bigger stack.\"")
@@ -56,12 +56,6 @@ public class SheepishConfig extends ReflectiveConfig {
 			"pastel:treasure_hunter",
 			"pastel:voiding"
 	);
-
-	@Comment("TooManyRecipeViewers: Log fully qualified class names of all classes implementing JeiPlugin")
-	public final TrackedValue<Boolean> tmrvLog = value(false);
-
-	@Comment("TooManyRecipeViewers: Fully qualified class names of classes implementing JeiPlugin to skip loading")
-	public final TrackedValue<ValueList<String>> tmrvSkip = list("");
 
 	@Comment("Prevent all entities from trampling farmland")
 	public final TrackedValue<Boolean> noTrample = value(false);

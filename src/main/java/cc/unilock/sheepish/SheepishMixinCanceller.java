@@ -40,7 +40,6 @@ public class SheepishMixinCanceller implements MixinCanceller {
 		if (CONFIG.disableSplashes.value()) {
 			CANCEL.add("com.teamabnormals.blueprint.core.mixin.client.SplashManagerMixin");
 			CANCEL.add("net.frozenblock.lib.menu.mixin.client.SplashManagerMixin");
-			CANCEL.add("net.hecco.bountifulfares.mixin.misc.SplashTextMixin");
 		}
 	}
 

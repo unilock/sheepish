@@ -36,7 +36,6 @@
     "minecraft.ItemEntityMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.PlayerMixin",
-    "minecraft.TreasureMapForEmeraldsMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "nomansland.CreativeModeTabHandlerMixin",
@@ -69,7 +68,6 @@
     "minestuck.GoButtonMixin",
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
-    "toomanyrecipeviewers.JEIPluginsMixin",
     "toughnessbar.ToughnessBarMixin",
     "wilderwild.MultiPlayerGameModeMixin"
   ],

@@ -59,7 +59,7 @@ public class Sheepish {
             ExcessiveBuildingCompat.init();
         }
     }
-	
+
 	private static void separate(Collection<ItemEntity> drops) {
 		List<ItemEntity> singleItemEntities = new ArrayList<>();
 		Iterator<ItemEntity> it = drops.iterator();
@@ -79,7 +79,7 @@ public class Sheepish {
 		}
 		drops.addAll(singleItemEntities);
 	}
-    
+
     public static RegistryAccess getRegistryAccess() {
         if (ServerLifecycleHooks.getCurrentServer() == null) {
             if (FMLLoader.getDist().isClient() && Minecraft.getInstance().level != null) {

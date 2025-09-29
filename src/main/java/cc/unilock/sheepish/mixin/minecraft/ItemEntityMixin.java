@@ -10,7 +10,7 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
 	@ModifyReturnValue(method = "isMergable", at = @At("RETURN"))
-	private boolean isMergeable(boolean original) {
+	private boolean isMergable(boolean original) {
 		if (CONFIG.droppedItemsDoNotStack.value()) {
 			return false;
 		} else {

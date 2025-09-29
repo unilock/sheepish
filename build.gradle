@@ -27,10 +27,6 @@ repositories {
         url = 'https://maven.blamejared.com/'
     }
     maven {
-        name = 'Ladysnake'
-        url = 'https://maven.ladysnake.org/releases/'
-    }
-    maven {
         name = 'Sinytra'
         url = 'https://maven.su5ed.dev/releases/'
     }
@@ -113,32 +109,31 @@ configurations {
 dependencies {
     compileOnly(annotationProcessor('io.github.llamalad7:mixinextras-neoforge:0.5.0'))
     implementation(jarJar('io.github.llamalad7:mixinextras-neoforge:0.5.0'))
-    compileOnly(annotationProcessor('com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.4'))
-    implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.4'))
+    compileOnly(annotationProcessor('com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.6-beta.1'))
+    implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.6-beta.1'))
 
     implementation(jarJar('folk.sisby:kaleido-config:0.3.3+1.3.2'))
 
-    implementation files('libs/org.sinytra.connector-2.0.0-beta.9+1.21.1-mod.jar')
+    implementation files('libs/org.sinytra.connector-2.0.0-beta.10+1.21.1-mod.jar')
     implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.115.6+2.1.1+1.21.1'
 
     // NeoForge
     compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-29'
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.3.0:api'
     compileOnly 'maven.modrinth:armor-toughness-bar,-again:9473L0CF'
-    compileOnly 'maven.modrinth:biolith:hd0IDIF5'
-    compileOnly 'maven.modrinth:blueprint:8.0.5'
+    compileOnly 'maven.modrinth:biolith:4TK7ape6'
+    compileOnly 'maven.modrinth:blueprint:8.0.6'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:emojiful:drIeVIkS'
-    compileOnly 'maven.modrinth:extended-industrialization:1.15.6-1.21.1'
+    compileOnly 'maven.modrinth:extended-industrialization:1.15.9-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.4-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'curse.maven:minestuck-224635:6421096'
     compileOnly 'maven.modrinth:modern-industrialization:2.3.11'
-    compileOnly 'maven.modrinth:no-mans-land:1.3.3'
+    compileOnly 'maven.modrinth:no-mans-land:1.4.1'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
-    compileOnly 'maven.modrinth:tmrv:0.6.3+mc.21.1'
 
     // Fabric
     compileOnly 'folk.sisby:surveyor:1.0.0-alpha.10+1.21'

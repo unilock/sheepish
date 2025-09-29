@@ -34,8 +34,8 @@ jobs:
 
       - name: Download Sinytra Connector mod
         run: |
-          curl -L -o 'SinytraConnector.jar' 'https://cdn.modrinth.com/data/u58R1TMW/versions/leZwcwvX/connector-2.0.0-beta.9%2B1.21.1-full.jar'
-          7z e -o'libs/' 'SinytraConnector.jar' 'META-INF/jarjar/org.sinytra.connector-2.0.0-beta.9+1.21.1-mod.jar'
+          curl -L -o 'SinytraConnector.jar' 'https://cdn.modrinth.com/data/u58R1TMW/versions/a4IkLwwg/connector-2.0.0-beta.10%2B1.21.1-full.jar'
+          7z e -o'libs/' 'SinytraConnector.jar' 'META-INF/jarjar/org.sinytra.connector-2.0.0-beta.10+1.21.1-mod.jar'
 
       - name: Build
         run: ./gradlew build
