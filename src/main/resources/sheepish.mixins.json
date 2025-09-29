@@ -20,6 +20,7 @@
     "enderio_base.AlphaWarningMixin",
     "excessive_building.ExcessiveBuildingMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
+    "frozenlib.AxeItemMixin",
     "frozenlib.BoneMealItemMixin",
     "frozenlib.ItemValueMixin",
     "frozenlib.LivingEntityMixin",
