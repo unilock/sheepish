@@ -1,4 +1,4 @@
-package cc.unilock.sheepish.mixin.wilderwild;
+package cc.unilock.sheepish.mixin.frozenlib;
 
 import net.frozenblock.lib.event.api.RegistryFreezeEvents;
 import net.neoforged.neoforge.registries.GameData;

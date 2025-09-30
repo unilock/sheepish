@@ -22,9 +22,11 @@
     "extended_industrialization.EIArmorMaterialsMixin",
     "frozenlib.AxeItemMixin",
     "frozenlib.BoneMealItemMixin",
+    "frozenlib.GameDataMixin",
     "frozenlib.ItemValueMixin",
     "frozenlib.LivingEntityMixin",
     "frozenlib.MappedRegistryMixin",
+    "frozenlib.RegistryDataLoaderMixin",
     "frozenlib.ShovelItemMixin",
     "frozenlib.accessor.HolderReferenceAccessor",
     "hexerei.LightManagerMixin",
@@ -48,7 +50,6 @@
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.BlockItemMixin",
     "wilderwild.EntityMixin",
-    "wilderwild.GameDataMixin",
     "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
@@ -71,6 +72,7 @@
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",
+    "trailiertales.BoatRendererMixin",
     "wilderwild.MultiPlayerGameModeMixin"
   ],
   "injectors": {
