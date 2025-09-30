@@ -18,7 +18,7 @@ public class ShovelItemMixin {
 			)
 	)
 	public BlockState frozenlib$removeOtherBehaviorsB(
-			BlockState original, @Share("frozenLib$isCustomBehavior") LocalBooleanRef isCustomBehavior
+			BlockState original, @Share(namespace = "net.frozenblock.lib.item.mixin.shovel.ShovelItemMixin", value = "frozenLib$isCustomBehavior") LocalBooleanRef isCustomBehavior
 	) {
 		if (isCustomBehavior.get()) return null;
 		return original;
