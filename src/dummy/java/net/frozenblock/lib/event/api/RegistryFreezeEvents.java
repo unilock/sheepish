@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.event.Event;
 import net.frozenblock.lib.entrypoint.api.CommonEventEntrypoint;
 import net.minecraft.core.Registry;
 
-import javax.annotation.Nullable;
-
 public class RegistryFreezeEvents {
 	public static final Event<StartRegistryFreeze> START_REGISTRY_FREEZE = FrozenEvents.createEnvironmentEvent(StartRegistryFreeze.class,
 			callbacks -> (registry, allRegistries) -> {
@@ -23,11 +21,11 @@ public class RegistryFreezeEvents {
 
 	@FunctionalInterface
 	public interface StartRegistryFreeze extends CommonEventEntrypoint {
-		void onStartRegistryFreeze(@Nullable Registry<?> registry, boolean allRegistries);
+		void onStartRegistryFreeze(Registry<?> registry, boolean allRegistries);
 	}
 
 	@FunctionalInterface
 	public interface EndRegistryFreeze extends CommonEventEntrypoint {
-		void onEndRegistryFreeze(@Nullable Registry<?> registry, boolean allRegistries);
+		void onEndRegistryFreeze(Registry<?> registry, boolean allRegistries);
 	}
 }

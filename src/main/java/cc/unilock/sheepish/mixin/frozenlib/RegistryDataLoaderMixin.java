@@ -18,7 +18,6 @@ import java.util.Optional;
 @Mixin(value = RegistryDataLoader.class, priority = 50)
 public class RegistryDataLoaderMixin {
 	@WrapOperation(
-			//lambda$loadElementFromResource$13
 			method = {"loadContentsFromNetwork", "lambda$loadElementFromResource$13"},
 			at = @At(
 					value = "INVOKE",
