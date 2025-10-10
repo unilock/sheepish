@@ -38,6 +38,7 @@
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.ItemEntityMixin",
     "minecraft.MappedRegistryMixin",
+    "minecraft.PlayerAdvancementsMixin",
     "minecraft.PlayerMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
