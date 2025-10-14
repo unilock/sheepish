@@ -1,14 +1,10 @@
 package cc.unilock.sheepish.module;
 
-import cc.unilock.sheepish.Sheepish;
 import net.minecraft.client.gui.screens.ChatScreen;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderFrameEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 
-@EventBusSubscriber(value = Dist.CLIENT, modid = Sheepish.MOD_ID)
 public class Mc122477Fix {
 	private boolean freeze = false;
 	private byte ticks = 0;
