@@ -3,7 +3,6 @@ package cc.unilock.sheepish;
 import cc.unilock.sheepish.compat.AlmostUnifiedCompat;
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.ExcessiveBuildingCompat;
-import cc.unilock.sheepish.module.Mc122477Fix;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
@@ -59,8 +58,6 @@ public class Sheepish {
         if (EXCESSIVE_BUILDING) {
             ExcessiveBuildingCompat.init();
         }
-
-		NeoForge.EVENT_BUS.register(new Mc122477Fix());
     }
 
 	private static void separate(Collection<ItemEntity> drops) {
