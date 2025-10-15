@@ -37,6 +37,7 @@
     "minecraft.EnchantmentHelperMixin",
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.ItemEntityMixin",
+    "minecraft.ItemStackMixin",
     "minecraft.MappedRegistryMixin",
     "minecraft.PlayerAdvancementsMixin",
     "minecraft.PlayerMixin",

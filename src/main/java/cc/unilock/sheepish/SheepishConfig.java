@@ -12,6 +12,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Allow players to eat food regardless of hunger bar fullness")
 	public final TrackedValue<Boolean> alwaysEat = value(false);
 
+	@Comment("Disable increasing repair cost on armor and tools")
+	public final TrackedValue<Boolean> disableRepairCost = value(false);
+
 	@Comment("Disable Sodium's core shader resource pack warning")
 	public final TrackedValue<Boolean> disableSodiumCoreShaderWarning = value(false);
 
