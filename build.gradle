@@ -133,6 +133,7 @@ dependencies {
     compileOnly 'maven.modrinth:modern-industrialization:2.3.15'
     compileOnly 'maven.modrinth:no-mans-land:1.4.3'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21'
+    compileOnly 'maven.modrinth:patchouli:1.21.1-92-neoforge'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
 

@@ -45,6 +45,7 @@
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
     "nomansland.CreativeModeTabHandlerMixin",
+    "patchouli.BookMixin",
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",
     "specter_serialization.LanguageMixin",
     "splinecart.EntityMixinSquared",
