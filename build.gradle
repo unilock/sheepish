@@ -1,7 +1,7 @@
 plugins {
     id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.107'
+    id 'net.neoforged.moddev' version '2.0.115'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -115,22 +115,23 @@ dependencies {
     implementation(jarJar('folk.sisby:kaleido-config:0.3.3+1.3.2'))
 
     implementation files('libs/org.sinytra.connector-2.0.0-beta.10+1.21.1-mod.jar')
-    implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.115.6+2.1.1+1.21.1'
+    implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.115.6+2.1.2+1.21.1'
 
     // NeoForge
     compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-29'
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.3.0:api'
     compileOnly 'maven.modrinth:armor-toughness-bar,-again:9473L0CF'
-    compileOnly 'maven.modrinth:biolith:4TK7ape6'
-    compileOnly 'maven.modrinth:blueprint:8.0.6'
+    compileOnly 'maven.modrinth:biolith:byVGeYWw'
+    compileOnly 'maven.modrinth:blueprint:8.0.7'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:emojiful:drIeVIkS'
-    compileOnly 'maven.modrinth:extended-industrialization:1.15.9-1.21.1'
+    compileOnly 'maven.modrinth:extended-industrialization:1.15.15-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.4-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
+    compileOnly 'maven.modrinth:immersiveengineering:12.4.2-194'
     compileOnly 'curse.maven:minestuck-224635:6421096'
-    compileOnly 'maven.modrinth:modern-industrialization:2.3.11'
-    compileOnly 'maven.modrinth:no-mans-land:1.4.1'
+    compileOnly 'maven.modrinth:modern-industrialization:2.3.15'
+    compileOnly 'maven.modrinth:no-mans-land:1.4.3'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'

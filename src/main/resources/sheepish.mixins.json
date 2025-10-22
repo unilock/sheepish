@@ -30,6 +30,7 @@
     "frozenlib.ShovelItemMixin",
     "frozenlib.accessor.HolderReferenceAccessor",
     "hexerei.LightManagerMixin",
+    "immersiveengineering.PotionHelperMixin",
     "joy.LivingEntityMixin",
     "minecraft.AbstractHorseMixin",
     "minecraft.BlockMixin",
@@ -75,7 +76,8 @@
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",
     "trailiertales.BoatRendererMixin",
-    "wilderwild.MultiPlayerGameModeMixin"
+    "wilderwild.MultiPlayerGameModeMixin",
+    "zeta.ForgeZetaClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
