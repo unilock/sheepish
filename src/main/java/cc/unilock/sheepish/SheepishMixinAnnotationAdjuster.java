@@ -75,6 +75,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("net.frozenblock.lib.item.mixin.bonemeal.BoneMealItemMixin".equals(mixinClassName) && "frozenLib$runBonemeal".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("net.frozenblock.lib.item.mixin.shovel.ShovelItemMixin".equals(mixinClassName) && "frozenlib$removeOtherBehaviorsB".equals(handlerNode.name)) {
 			return null;
 		}
@@ -88,10 +92,6 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 		}
 
 		if ("net.frozenblock.wilderwild.mixin.client.block_break.MultiPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
-			return null;
-		}
-
-		if ("net.frozenblock.wilderwild.mixin.snowlogging.BlockItemMixin".equals(mixinClassName) && "wilderWild$place".equals(handlerNode.name)) {
 			return null;
 		}
 

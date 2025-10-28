@@ -26,6 +26,7 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.lib.cape.mixin.client.CapeLayerMixin",
 			"net.frozenblock.lib.cape.mixin.client.ElytraLayerMixin",
 			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
+			"net.frozenblock.lib.item.mixin.axe.AxeItemMixin",
 			"net.frozenblock.lib.file.mixin.transfer.client.TextureManagerMixin",
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
 			"net.frozenblock.lib.resource_pack.mixin.client.PackRepositoryMixin",
@@ -34,6 +35,9 @@ public class SheepishMixinCanceller implements MixinCanceller {
 
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
 			"net.frozenblock.wilderwild.mixin.client.wind.SporeBlossomAirProviderMixin",
+			"net.frozenblock.wilderwild.mixin.entity.penguin.BlocksMixin",
+			"net.frozenblock.wilderwild.mixin.snowlogging.BlockItemMixin",
+			"net.frozenblock.wilderwild.mixin.snowlogging.client.SectionCompilerMixin", // TEMPORARY
 
 			"net.modfest.fireblanket.mixin.annoyances.MixinUtil"
 	);
