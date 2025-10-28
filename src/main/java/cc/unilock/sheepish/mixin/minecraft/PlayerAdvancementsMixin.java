@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 public class PlayerAdvancementsMixin {
 //	@WrapOperation(method = "award", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancements/AdvancementRewards;grant(Lnet/minecraft/server/level/ServerPlayer;)V"))
 	@WrapMethod(method = "award")
-	private static boolean award$wrap(AdvancementHolder advancement, String criterionKey, Operation<Boolean> original) {
+	private boolean award$wrap(AdvancementHolder advancement, String criterionKey, Operation<Boolean> original) {
 		try {
 			return original.call(advancement, criterionKey);
 		} catch (AbstractMethodError ignored) {
