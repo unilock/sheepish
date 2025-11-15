@@ -77,8 +77,7 @@
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",
     "trailiertales.BoatRendererMixin",
-    "wilderwild.MultiPlayerGameModeMixin",
-    "zeta.ForgeZetaClientMixin"
+    "wilderwild.MultiPlayerGameModeMixin"
   ],
   "injectors": {
     "defaultRequire": 1
