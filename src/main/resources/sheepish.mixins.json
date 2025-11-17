@@ -73,6 +73,7 @@
     "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
+    "platform.EmissiveModelWrapperImplMixin",
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",

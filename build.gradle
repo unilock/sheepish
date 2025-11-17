@@ -1,7 +1,7 @@
 plugins {
     id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.115'
+    id 'net.neoforged.moddev' version '2.0.116'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -125,15 +125,16 @@ dependencies {
     compileOnly 'maven.modrinth:blueprint:8.0.7'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'maven.modrinth:emojiful:drIeVIkS'
-    compileOnly 'maven.modrinth:extended-industrialization:1.15.15-1.21.1'
-    compileOnly 'maven.modrinth:forge-config-api-port:v21.1.4-1.21.1-NeoForge'
+    compileOnly 'maven.modrinth:extended-industrialization:1.15.21-1.21.1'
+    compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'maven.modrinth:immersiveengineering:12.4.2-194'
     compileOnly 'curse.maven:minestuck-224635:6421096'
     compileOnly 'maven.modrinth:modern-industrialization:2.3.15'
-    compileOnly 'maven.modrinth:no-mans-land:1.4.3'
+    compileOnly 'maven.modrinth:no-mans-land:1.4.4'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21'
     compileOnly 'maven.modrinth:patchouli:1.21.1-92-neoforge'
+    compileOnly 'maven.modrinth:platform:Idu0kQLR'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
 
