@@ -39,6 +39,7 @@
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.ItemEntityMixin",
     "minecraft.ItemStackMixin",
+    "minecraft.LootTableAccessor",
     "minecraft.MappedRegistryMixin",
     "minecraft.PlayerAdvancementsMixin",
     "minecraft.PlayerMixin",
