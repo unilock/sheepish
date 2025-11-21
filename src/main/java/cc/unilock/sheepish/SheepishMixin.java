@@ -10,6 +10,8 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import java.util.List;
 import java.util.Set;
 
+import static cc.unilock.sheepish.SheepishConfig.CONFIG;
+
 public class SheepishMixin implements IMixinConfigPlugin {
 	@Override
 	public void onLoad(String mixinPackage) {
@@ -25,6 +27,10 @@ public class SheepishMixin implements IMixinConfigPlugin {
 	@Override
 	public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
 		String id = mixinClassName.split("\\.")[4];
+
+		if ("emi".equals(id)) {
+			return LoadingModList.get().getModFileById(id) != null && CONFIG.emiHacks.value();
+		}
 
 		return LoadingModList.get().getModFileById(id) != null;
 	}

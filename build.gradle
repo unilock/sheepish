@@ -18,21 +18,61 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 repositories {
-    maven {
-        name = 'Bawnorton'
-        url = 'https://maven.bawnorton.com/releases/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Bawnorton'
+                url = 'https://maven.bawnorton.com/releases/'
+            }
+        }
+        filter {
+            includeGroup 'com.github.bawnorton.mixinsquared'
+        }
     }
-    maven {
-        name = 'BlameJared'
-        url = 'https://maven.blamejared.com/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'BlameJared'
+                url = 'https://maven.blamejared.com/'
+            }
+        }
+        filter {
+            includeGroup 'com.almostreliable.mods'
+        }
     }
-    maven {
-        name = 'Sinytra'
-        url = 'https://maven.su5ed.dev/releases/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Sinytra'
+                url = 'https://maven.su5ed.dev/releases/'
+            }
+        }
+        filter {
+            includeGroup 'org.sinytra'
+            includeGroup 'org.sinytra.forgified-fabric-api'
+        }
     }
-    maven {
-        name = 'Sleeping Town'
-        url = 'https://repo.sleeping.town/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Sleeping Town'
+                url = 'https://repo.sleeping.town/'
+            }
+        }
+        filter {
+            includeGroup 'folk.sisby'
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'TerraformersMC'
+                url = 'https://maven.terraformersmc.com/releases/'
+            }
+        }
+        filter {
+            includeGroup 'dev.emi'
+        }
     }
     exclusiveContent {
         forRepository {
@@ -124,6 +164,7 @@ dependencies {
     compileOnly 'maven.modrinth:biolith:byVGeYWw'
     compileOnly 'maven.modrinth:blueprint:8.0.7'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
+    compileOnly 'dev.emi:emi-neoforge:1.1.22+1.21.1'
     compileOnly 'maven.modrinth:emojiful:drIeVIkS'
     compileOnly 'maven.modrinth:extended-industrialization:1.15.21-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'

@@ -24,6 +24,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("From Fabrication: \"When dropping items of the same type they don't merge into a bigger stack.\"")
 	public final TrackedValue<Boolean> droppedItemsDoNotStack = value(false);
 
+	@Comment("Mixin to EMI impl to return the correct mod name for certain items (Enchanted Books, Potions, ...)")
+	public final TrackedValue<Boolean> emiHacks = value(false);
+
 	@Comment({
 			"Enable Emojiful's pixelated Twemoji set, without the \"Blobs\", \"Discord\", or \"Pepe\" categories",
 			"Requires \"Emojiful.EmojiTypes.custom = false\" in \"emojiful-client.toml\""
