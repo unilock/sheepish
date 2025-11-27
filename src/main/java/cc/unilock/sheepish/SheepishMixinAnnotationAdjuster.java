@@ -99,10 +99,6 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
-		if ("org.ladysnake.satin.mixin.client.gl.JsonEffectGlShaderMixin".equals(mixinClassName) && "constructProgramIdentifier".equals(handlerNode.name)) {
-			return null;
-		}
-
 		if ("net.modfest.fireblanket.mixin.zstd.MixinPersistentState".equals(mixinClassName)) {
 			AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
 			wrap.applyRefmap();

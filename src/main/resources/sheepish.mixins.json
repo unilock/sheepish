@@ -53,6 +53,7 @@
     "terraform_wood_api_v1.TerraformBoatTypeRegistryMixin",
     "tinkerers_smithing.ItemStackMixin",
     "wilderwild.BlockItemMixin",
+    "wilderwild.BlocksMixin",
     "wilderwild.EntityMixin",
     "wilderwild.ServerPlayerGameModeMixin"
   ],
