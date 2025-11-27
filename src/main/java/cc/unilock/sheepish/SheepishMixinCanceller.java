@@ -33,7 +33,6 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
 			"org.quiltmc.qsl.frozenblock.core.registry.mixin.MappedRegistryMixin",
 
-			"net.frozenblock.wilderwild.mixin.block.mesoglea.EntityMixin", // TEMPORARY
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
 			"net.frozenblock.wilderwild.mixin.client.wind.SporeBlossomAirProviderMixin",
 			"net.frozenblock.wilderwild.mixin.entity.penguin.BlocksMixin",
