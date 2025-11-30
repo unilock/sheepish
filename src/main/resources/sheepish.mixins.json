@@ -8,7 +8,6 @@
   },
   "mixins": [
     "affinity.EntityMixin",
-    "affinity.PotionContentsMixin",
     "alternate_current.MinecraftServerMixinSquared",
     "anthropophagy.AbstractFurnaceBlockEntityMixin",
     "biolith.NeoForgePlatformHelperMixin",
@@ -57,13 +56,6 @@
     "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
-    "affinity.client.HumanoidArmorLayerMixin",
-    "affinity.client.PostEffectBufferMixin",
-    "affinity.client.RenderBuffersMixin",
-    "affinity.client.RenderTypeMixin",
-    "affinity.client.SkyCaptureBufferMixin",
-    "affinity.client.VillagerArmsItemRenderer",
-    "affinity.client.accessor.VillagerProfessionLayerAccessor",
     "cerulean.MinecraftMixin",
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",

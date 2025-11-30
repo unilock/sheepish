@@ -20,9 +20,6 @@ public class SheepishMixinCanceller implements MixinCanceller {
 
 			"gay.pridecraft.joy.mixin.minecraft.MixinLivingEntity",
 
-			"io.wispforest.affinity.mixin.VillagerClothingFeatureRendererAccessor",
-			"io.wispforest.affinity.mixin.client.ArmorFeatureRendererMixin",
-			"io.wispforest.affinity.mixin.client.BufferBuilderStorageMixin",
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",
 
 			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
