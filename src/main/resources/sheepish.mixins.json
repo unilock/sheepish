@@ -31,6 +31,7 @@
     "hexerei.LightManagerMixin",
     "immersiveengineering.PotionHelperMixin",
     "joy.LivingEntityMixin",
+    "lovely_sparkle_pieces.PlayerJoinHandlerMixin",
     "minecraft.AbstractHorseMixin",
     "minecraft.BlockMixin",
     "minecraft.CommandsMixin",

@@ -170,6 +170,7 @@ dependencies {
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'maven.modrinth:immersiveengineering:12.4.2-194'
+    compileOnly 'curse.maven:lovely-sparkle-pieces-1274469:6657986'
     compileOnly 'curse.maven:minestuck-224635:6421096'
     compileOnly 'maven.modrinth:mirthdew-encore:0.2.0.3.neoforge'
     compileOnly 'maven.modrinth:modern-industrialization:2.3.15'
