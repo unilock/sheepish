@@ -34,7 +34,7 @@ public class RedStoneWireBlockMixin {
 			try {
 				if(!(boolean) IS_VALID.invoke(this, blockGetter, direction, pos, Direction.UP)) return false;
 			} catch (Throwable e) {
-				throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+				throw new RuntimeException("Failed to invoke handle for Electromechanic's RedStoneWireBlock#isValid mixin method", e);
 			}
 		}
 
@@ -47,7 +47,7 @@ public class RedStoneWireBlockMixin {
 			try {
 				if(!(boolean) IS_VALID.invoke(this, blockGetter, direction, pos, Direction.DOWN)) return false;
 			} catch (Throwable e) {
-				throw new RuntimeException("Failed to invoke handle Electromechanic's RedStoneWireBlock#isValid mixin method", e);
+				throw new RuntimeException("Failed to invoke handle for Electromechanic's RedStoneWireBlock#isValid mixin method", e);
 			}
 		}
 

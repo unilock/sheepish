@@ -23,13 +23,17 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"io.wispforest.affinity.mixin.client.ItemFrameEntityRendererMixin",
 
 			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
+			"net.frozenblock.lib.cape.mixin.client.CapeLayerMixin",
+			"net.frozenblock.lib.cape.mixin.client.ElytraLayerMixin",
 			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
+			"net.frozenblock.lib.file.mixin.transfer.client.TextureManagerMixin",
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
 			"net.frozenblock.lib.resource_pack.mixin.client.PackRepositoryMixin",
 			"net.frozenblock.lib.worldgen.biome.mixin.RegistryDataLoaderMixin",
 			"org.quiltmc.qsl.frozenblock.core.registry.mixin.MappedRegistryMixin",
 
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
+			"net.frozenblock.wilderwild.mixin.client.wind.SporeBlossomAirProviderMixin",
 
 			"net.modfest.fireblanket.mixin.annoyances.MixinUtil"
 	);
