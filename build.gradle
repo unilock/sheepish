@@ -182,7 +182,6 @@ dependencies {
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
 
     // Fabric
-    compileOnly 'folk.sisby:surveyor:1.0.0-alpha.10+1.21'
     compileOnly 'maven.modrinth:cerulean:1.1.5'
     compileOnly 'maven.modrinth:excessive-building:3.3.10'
     compileOnly 'maven.modrinth:tinkerers-smithing:2.7.1+1.21'
