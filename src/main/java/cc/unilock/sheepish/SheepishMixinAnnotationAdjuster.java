@@ -71,6 +71,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("net.bunten.enderscape.mixin.ItemStackMixin".equals(mixinClassName) && "Enderscape$hurtAndBreak".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("net.frozenblock.lib.item.mixin.shovel.ShovelItemMixin".equals(mixinClassName) && "frozenlib$removeOtherBehaviorsB".equals(handlerNode.name)) {
 			return null;
 		}
