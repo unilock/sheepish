@@ -24,8 +24,9 @@
   - Electromechanics
   - Excessive Building
   - FrozenLib (requires jar editing)
+    - Luna Slimes
     - Trailier Tales (requires jar editing)
-    - Wilder Wild
+    - Wilder Wild (requires jar editing)
   - Joy
   - Specter Serialization
   - Terraform Wood API v1

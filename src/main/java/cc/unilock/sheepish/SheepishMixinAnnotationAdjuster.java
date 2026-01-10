@@ -95,6 +95,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+		if ("net.lunade.slime.mixin.SlimeMixin".equals(mixinClassName) && "lunaSlimes$beforeSpawnNewSlime".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("org.ladysnake.satin.mixin.client.gl.JsonEffectGlShaderMixin".equals(mixinClassName) && "constructProgramIdentifier".equals(handlerNode.name)) {
 			return null;
 		}
