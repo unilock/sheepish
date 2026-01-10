@@ -83,6 +83,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
+//		if ("net.frozenblock.trailiertales.mixin.client.haunt.GuiMixin".equals(mixinClassName) && ("trailierTales$captureMaxHealthAttribute".equals(handlerNode.name) || "trailierTales$lerpBackHealth".equals(handlerNode.name))) {
+//			return null;
+//		}
+
 		if ("net.frozenblock.wilderwild.mixin.block.block_break.ServerPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
 			return null;
 		}

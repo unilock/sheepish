@@ -25,6 +25,7 @@
     "frozenlib.ItemValueMixin",
     "frozenlib.LivingEntityMixin",
     "frozenlib.MappedRegistryMixin",
+    "frozenlib.RegistryDataLoaderMixin",
     "frozenlib.ShovelItemMixin",
     "frozenlib.accessor.HolderReferenceAccessor",
     "hexerei.LightManagerMixin",
