@@ -78,6 +78,8 @@
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",
+    "trailiertales.BoatRendererMixin",
+    "trailiertales.GuiMixin",
     "wilderwild.MultiPlayerGameModeMixin",
     "wilderwild.SporeBlossomAirProviderMixin"
   ],

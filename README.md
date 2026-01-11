@@ -23,10 +23,10 @@
   - Cinderscapes
   - Electromechanics
   - Excessive Building
-  - FrozenLib (requires jar editing)
+  - FrozenLib
     - Luna Slimes
-    - Trailier Tales (requires jar editing)
-    - Wilder Wild (requires jar editing)
+    - Trailier Tales
+    - Wilder Wild
   - Joy
   - Specter Serialization
   - Terraform Wood API v1
