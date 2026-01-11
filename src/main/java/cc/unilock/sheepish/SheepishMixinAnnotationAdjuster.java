@@ -42,6 +42,10 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			}
 		}
 
+		if ("dev.enjarai.trickster.mixin.DataPackContentsMixin".equals(mixinClassName) && "enableDebug".equals(handlerNode.name)) {
+			return null;
+		}
+
 		if ("fmt.cerulean.mixin.client.MixinMinecraftClient".equals(mixinClassName) && "cerulean$starwellBreaking".equals(handlerNode.name)) {
 			// TODO: not working due to invalid parameters
 //			AdjustableInjectNode wrap = annotationNode.as(AdjustableInjectNode.class);
