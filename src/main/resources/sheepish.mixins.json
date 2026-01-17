@@ -45,6 +45,7 @@
     "minecraft.PlayerMixin",
     "minestuck.LandWorldInfoMixin",
     "modern_industrialization.MIArmorMaterialsMixin",
+    "morecreeps.MoreCreepsEventsMixin",
     "nomansland.CreativeModeTabHandlerMixin",
     "patchouli.BookMixin",
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",

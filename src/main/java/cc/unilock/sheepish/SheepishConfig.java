@@ -12,6 +12,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Allow players to eat food regardless of hunger bar fullness")
 	public final TrackedValue<Boolean> alwaysEat = value(false);
 
+	@Comment("Disable the welcome message from More Creeps and Weirdos Revival")
+	public final TrackedValue<Boolean> disableMoreCreepsWelcomeMsg = value(false);
+
 	@Comment("Disable increasing repair cost on armor and tools")
 	public final TrackedValue<Boolean> disableRepairCost = value(false);
 
