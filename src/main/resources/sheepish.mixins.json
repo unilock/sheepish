@@ -32,6 +32,7 @@
     "immersiveengineering.PotionHelperMixin",
     "joy.LivingEntityMixin",
     "knickknacks.ModCreativeTabsMixin",
+    "lovely_sparkle_pieces.BCEventsMixin",
     "lovely_sparkle_pieces.PlayerJoinHandlerMixin",
     "minecraft.AbstractHorseMixin",
     "minecraft.BlockMixin",
