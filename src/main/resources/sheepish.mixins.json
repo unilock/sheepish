@@ -45,6 +45,7 @@
     "minecraft.PlayerAdvancementsMixin",
     "minecraft.PlayerMixin",
     "minestuck.LandWorldInfoMixin",
+    "mirthdew_encore.TickRateManagerMixinSquared",
     "modern_industrialization.MIArmorMaterialsMixin",
     "morecreeps.MoreCreepsEventsMixin",
     "nomansland.CreativeModeTabHandlerMixin",
