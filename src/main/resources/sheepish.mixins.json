@@ -60,6 +60,7 @@
   ],
   "client": [
     "cerulean.MinecraftMixin",
+    "curvyrails.CurvyRailsClientMixin",
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "emi.EmiSearchMixin",
