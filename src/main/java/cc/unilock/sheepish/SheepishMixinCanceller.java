@@ -25,7 +25,7 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.lib.block.mixin.friction.LivingEntityMixin",
 			"net.frozenblock.lib.cape.mixin.client.CapeLayerMixin",
 			"net.frozenblock.lib.cape.mixin.client.ElytraLayerMixin",
-//			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
+			"net.frozenblock.lib.event.mixin.BuiltInRegistriesMixin",
 			"net.frozenblock.lib.item.mixin.axe.AxeItemMixin",
 			"net.frozenblock.lib.file.mixin.transfer.client.TextureManagerMixin",
 			"net.frozenblock.lib.recipe.mixin.ItemValueMixin",
