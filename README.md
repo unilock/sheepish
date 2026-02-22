@@ -22,7 +22,6 @@
   - Cerulean
   - Cinderscapes
   - Electromechanics
-  - Excessive Building
   - FrozenLib
     - Luna Slimes
     - Trailier Tales

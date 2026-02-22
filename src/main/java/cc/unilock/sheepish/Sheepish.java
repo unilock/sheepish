@@ -2,7 +2,6 @@ package cc.unilock.sheepish;
 
 import cc.unilock.sheepish.compat.AlmostUnifiedCompat;
 import cc.unilock.sheepish.compat.AnsharCompat;
-import cc.unilock.sheepish.compat.ExcessiveBuildingCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -36,7 +35,6 @@ public class Sheepish {
     protected static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
     protected static final boolean CERULEAN = LoadingModList.get().getModFileById("cerulean") != null;
     protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
-    protected static final boolean EXCESSIVE_BUILDING = LoadingModList.get().getModFileById("excessive_building") != null;
 	protected static final boolean LUNASLIMES = LoadingModList.get().getModFileById("lunaslimes") != null;
 
     public Sheepish() {
@@ -57,9 +55,6 @@ public class Sheepish {
         if (ANSHAR) {
             AnsharCompat.init();
 		}
-        if (EXCESSIVE_BUILDING) {
-            ExcessiveBuildingCompat.init();
-        }
 		if (LUNASLIMES) {
 			LunaSlimesCompat.init();
 		}

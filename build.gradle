@@ -187,7 +187,6 @@ dependencies {
 
     // Fabric
     compileOnly 'maven.modrinth:cerulean:1.1.5'
-    compileOnly 'maven.modrinth:excessive-building:3.3.10'
     compileOnly 'maven.modrinth:tinkerers-smithing:2.7.1+1.21'
 
     // Compile-time dependencies

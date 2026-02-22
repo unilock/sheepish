@@ -18,7 +18,6 @@
     "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
     "enderscape.ItemStackMixin",
-    "excessive_building.ExcessiveBuildingMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "frozenlib.AxeItemMixin",
     "frozenlib.BoneMealItemMixin",
