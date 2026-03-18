@@ -21,7 +21,7 @@ public class MappedRegistryMixin<T> {
 	private void preThrow(CallbackInfoReturnable<Registry<T>> cir) {
 		assert this.unregisteredIntrusiveHolders != null;
 		for (Holder.Reference<T> reference : this.unregisteredIntrusiveHolders.values()) {
-			Sheepish.LOGGER.info("UNREGISTERED INTRUSIVE HOLDER VALUE: {}", reference.value().getClass());
+			Sheepish.LOGGER.info("UNREGISTERED INTRUSIVE HOLDER FQCN: {}", reference.value().getClass());
 		}
 	}
 }

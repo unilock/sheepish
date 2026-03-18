@@ -36,6 +36,7 @@
     "minecraft.AbstractHorseMixin",
     "minecraft.BlockMixin",
     "minecraft.CommandsMixin",
+    "minecraft.EnchantmentHelperMixin",
     "minecraft.EnchantRandomlyFunctionMixin",
     "minecraft.ItemDisplayBuilderMixin",
     "minecraft.ItemEntityMixin",

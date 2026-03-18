@@ -14,7 +14,7 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 public abstract class ItemStackMixin implements DataComponentHolder {
 	@WrapMethod(method = "set")
 	private <T> T set(DataComponentType<? super T> component, T value, Operation<T> original) {
-		if (CONFIG.disableRepairCost.value() && DataComponents.REPAIR_COST.equals(component)) {
+		if (DataComponents.REPAIR_COST.equals(component) && CONFIG.disableRepairCost.value()) {
 			return original.call(component, 0);
 		} else {
 			return original.call(component, value);
