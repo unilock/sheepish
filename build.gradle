@@ -182,6 +182,7 @@ dependencies {
     compileOnly 'maven.modrinth:patchouli:1.21.1-92-neoforge'
     compileOnly 'maven.modrinth:platform:Idu0kQLR'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
+    compileOnly 'maven.modrinth:renderscale:Y7rNAruy'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
     compileOnly 'maven.modrinth:vestiges-of-the-present:1.6.4'
 

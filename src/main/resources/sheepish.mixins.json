@@ -80,6 +80,7 @@
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "mirthdew_encore.MirthdewEncoreDimensionEffectsMixin",
+    "renderscale.CommonClassMixin",
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
     "toughnessbar.ToughnessBarMixin",
