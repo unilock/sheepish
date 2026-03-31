@@ -29,6 +29,7 @@
     "frozenlib.ShovelItemMixin",
     "frozenlib.accessor.HolderReferenceAccessor",
     "hexerei.LightManagerMixin",
+    "immersive_cursedness.PlayerManagerMixin",
     "immersiveengineering.PotionHelperMixin",
     "joy.LivingEntityMixin",
     "lovely_sparkle_pieces.BCEventsMixin",
