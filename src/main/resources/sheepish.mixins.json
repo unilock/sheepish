@@ -71,7 +71,6 @@
     "emi.ModQueryMixin",
     "emi.RegexModQueryMixin",
     "enderscape.LevelRendererMixinSquared",
-    "fabric_resource_loader_v0.OptionsMixin",
     "frozenlib.CapeLayerMixin",
     "frozenlib.ElytraLayerMixin",
     "frozenlib.PackRepositoryMixin",
