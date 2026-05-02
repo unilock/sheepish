@@ -36,8 +36,10 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.trailiertales.mixin.client.boat.BoatRendererMixin",
 			"net.frozenblock.trailiertales.mixin.client.haunt.GuiMixin",
 
+			"net.frozenblock.wilderwild.mixin.block.block_break.ServerPlayerGameModeMixin",
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.EntityMixin",
 			"net.frozenblock.wilderwild.mixin.block.mesoglea.LivingEntityMixin",
+			"net.frozenblock.wilderwild.mixin.client.block_break.MultiPlayerGameModeMixin",
 			"net.frozenblock.wilderwild.mixin.client.wind.SporeBlossomAirProviderMixin",
 			"net.frozenblock.wilderwild.mixin.entity.penguin.BlocksMixin",
 			"net.frozenblock.wilderwild.mixin.snowlogging.BlockItemMixin",

@@ -87,14 +87,6 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			return null;
 		}
 
-		if ("net.frozenblock.wilderwild.mixin.block.block_break.ServerPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
-			return null;
-		}
-
-		if ("net.frozenblock.wilderwild.mixin.client.block_break.MultiPlayerGameModeMixin".equals(mixinClassName) && "wilderWild$destroyBlockB".equals(handlerNode.name)) {
-			return null;
-		}
-
 		if ("net.lunade.slime.mixin.SlimeMixin".equals(mixinClassName) && "lunaSlimes$beforeSpawnNewSlime".equals(handlerNode.name)) {
 			return null;
 		}
