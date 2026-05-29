@@ -1,7 +1,7 @@
 plugins {
     id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.116'
+    id 'net.neoforged.moddev' version '2.0.141'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -147,48 +147,47 @@ configurations {
 }
 
 dependencies {
-    compileOnly(annotationProcessor('io.github.llamalad7:mixinextras-neoforge:0.5.0'))
-    implementation(jarJar('io.github.llamalad7:mixinextras-neoforge:0.5.0'))
+    compileOnly(annotationProcessor('io.github.llamalad7:mixinextras-neoforge:0.5.4'))
+    implementation(jarJar('io.github.llamalad7:mixinextras-neoforge:0.5.4'))
     compileOnly(annotationProcessor('com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.4'))
     implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.4'))
 
     implementation(jarJar('folk.sisby:kaleido-config:0.3.3+1.3.2'))
 
-    implementation files('libs/org.sinytra.connector-2.0.0-beta.10+1.21.1-mod.jar')
-    implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.115.6+2.1.2+1.21.1'
+    implementation files('libs/org.sinytra.connector-2.0.0-beta.14+1.21.1-mod.jar')
+    implementation 'org.sinytra.forgified-fabric-api:forgified-fabric-api:0.116.7+2.2.4+1.21.1'
 
     // NeoForge
-    compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-29'
-    compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.3.0:api'
+    compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-30'
+    compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.4.2:api'
     compileOnly 'maven.modrinth:armor-toughness-bar,-again:9473L0CF'
-    compileOnly 'maven.modrinth:biolith:byVGeYWw'
-    compileOnly 'maven.modrinth:blueprint:8.0.7'
+    compileOnly 'maven.modrinth:biolith:1ZfKhpFg'
+    compileOnly 'maven.modrinth:blueprint:8.1.0'
     compileOnly 'maven.modrinth:curvy-rails:0.0.2'
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
-    compileOnly 'dev.emi:emi-neoforge:1.1.22+1.21.1'
-    compileOnly 'maven.modrinth:emojiful:drIeVIkS'
-    compileOnly 'maven.modrinth:extended-industrialization:1.15.21-1.21.1'
+    compileOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
+    compileOnly 'maven.modrinth:emojiful:1YlEixSY'
+    compileOnly 'maven.modrinth:extended-industrialization:1.15.37-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'maven.modrinth:immersiveengineering:12.4.2-194'
     compileOnly 'curse.maven:knickknacks-1095071:5711449'
     compileOnly 'curse.maven:lovely-sparkle-pieces-1274469:6657986'
-    compileOnly 'curse.maven:minestuck-224635:6421096'
+    compileOnly 'curse.maven:minestuck-224635:7923789'
     compileOnly 'maven.modrinth:mirthdew-encore:0.2.0.3.neoforge'
-    compileOnly 'maven.modrinth:modern-industrialization:2.3.15'
+    compileOnly 'maven.modrinth:modern-industrialization:2.4.3'
     compileOnly 'maven.modrinth:more-creeps-revival:1.0.1'
-    compileOnly 'maven.modrinth:no-mans-land:1.4.4'
+    compileOnly 'maven.modrinth:no-mans-land:1.5.1'
     compileOnly 'maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21'
-    compileOnly 'maven.modrinth:patchouli:1.21.1-92-neoforge'
-    compileOnly 'maven.modrinth:platform:Idu0kQLR'
+    compileOnly 'maven.modrinth:patchouli:1.21.1-93-neoforge'
+    compileOnly 'maven.modrinth:platform:v7P0nBi2'
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:renderscale:Y7rNAruy'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
-    compileOnly 'maven.modrinth:vestiges-of-the-present:1.6.4'
+    compileOnly 'maven.modrinth:vestiges-of-the-present:1.6.6'
 
     // Fabric
     compileOnly 'maven.modrinth:cerulean:1.1.5'
-    compileOnly 'maven.modrinth:tinkerers-smithing:2.7.1+1.21'
 
     // Compile-time dependencies
     compileOnly 'com.esotericsoftware.yamlbeans:yamlbeans:1.15'

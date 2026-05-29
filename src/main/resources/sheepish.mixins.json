@@ -75,6 +75,7 @@
     "frozenlib.ElytraLayerMixin",
     "frozenlib.PackRepositoryMixin",
     "frozenlib.TextureManagerMixin",
+    "immersiveminimaps.GuiMixin",
     "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",

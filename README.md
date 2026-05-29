@@ -31,7 +31,6 @@
   - Joy
   - Specter Serialization
   - Terraform Wood API v1
-  - Tinkerer's Smithing
 - Fixes bugs in various mods:
   - Akashic Tome: fixes left-clicking the tome not reverting it
   - Alternate Current: adds null checks
@@ -48,7 +47,6 @@
   - Rapscallions and Rockhoppers: prevents crashes due to `RapscallionsAndRockhoppers.biomePopulationPenguinTypeRegistry` being null
   - RenderScale: adds null checks
   - Splinecart: adds null checks
-  - Surveyor: adds null checks
 - Assorted features:
   - Allows loading Emojiful's pixelated emoji set without the "Blobs", "Discord", or "Pepe" categories
   - Allows disabling splash text modification from Blueprint, FrozenLib, and NeoForge
