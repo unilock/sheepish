@@ -1,6 +1,5 @@
 package cc.unilock.sheepish;
 
-import cc.unilock.sheepish.compat.AlmostUnifiedCompat;
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
 import com.mojang.logging.LogUtils;
@@ -31,7 +30,6 @@ public class Sheepish {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     protected static final boolean AKASHICTOME = LoadingModList.get().getModFileById("akashictome") != null;
-    protected static final boolean ALMOSTUNIFIED = LoadingModList.get().getModFileById("almostunified") != null;
     protected static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
     protected static final boolean CERULEAN = LoadingModList.get().getModFileById("cerulean") != null;
     protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
@@ -49,9 +47,6 @@ public class Sheepish {
 			if (CONFIG.droppedItemsDoNotStack.value()) separate(event.getDrops());
 		});
 
-        if (ALMOSTUNIFIED) {
-            AlmostUnifiedCompat.init();
-        }
         if (ANSHAR) {
             AnsharCompat.init();
 		}
