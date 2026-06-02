@@ -1,7 +1,7 @@
 package net.bunten.enderscape.item.component;
 
-import net.minecraft.world.item.ItemStack;
 import net.bunten.enderscape.item.ItemStackContext;
+import net.minecraft.world.item.ItemStack;
 
 public class FueledTool {
 	public static boolean is(ItemStack stack) {

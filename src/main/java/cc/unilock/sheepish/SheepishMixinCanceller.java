@@ -14,6 +14,10 @@ public class SheepishMixinCanceller implements MixinCanceller {
 
 			"de.maxhenkel.wiretap.mixin.AnvilMenuMixin",
 
+			"dev.enjarai.trickster.mixin.chunk_pinning.ServerWorldMixin",
+			"dev.enjarai.trickster.mixin.client.ClientPlayerInteractionManagerMixin",
+			"dev.enjarai.trickster.mixin.ServerPlayerInteractionManagerMixin",
+
 			"dev.spiritstudios.specter.mixin.serialization.LanguageMixin",
 
 			"fmt.cerulean.mixin.MixinEntity",
