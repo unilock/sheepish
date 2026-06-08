@@ -31,6 +31,9 @@ public class SheepishMixin implements IMixinConfigPlugin {
 		if ("emi".equals(id)) {
 			return LoadingModList.get().getModFileById(id) != null && CONFIG.emiHacks.value();
 		}
+		if ("fabric_transfer_api_v1".equals(id)) {
+			return LoadingModList.get().getModFileById(id) != null && CONFIG.fabricTransferApiHacks.value();
+		}
 
 		return LoadingModList.get().getModFileById(id) != null;
 	}

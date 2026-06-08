@@ -19,6 +19,7 @@
     "enderio_base.AlphaWarningMixin",
     "enderscape.ItemStackMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
+    "fabric_transfer_api_v1.TransferApiNeoCompatMixin",
     "frozenlib.AxeItemMixin",
     "frozenlib.BoneMealItemMixin",
     "frozenlib.GameDataMixin",

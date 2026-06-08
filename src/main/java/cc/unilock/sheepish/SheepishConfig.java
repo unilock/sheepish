@@ -36,6 +36,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	})
 	public final TrackedValue<Boolean> emojifulPixelatedTwemoji = value(false);
 
+	@Comment("Mixin to Forgified Fabric Transfer API impl to only ignore vanilla BlockEntities when registering fallback item storage behavior")
+	public final TrackedValue<Boolean> fabricTransferApiHacks = value(false);
+
 	@Comment("Prevent AbstractHorse offspring from having lesser stats than either of its parents")
 	public final TrackedValue<Boolean> horseStonks = value(false);
 
