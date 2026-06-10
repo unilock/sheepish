@@ -86,6 +86,7 @@
     "renderscale.CommonClassMixin",
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
+    "toughnessbar.EventHandlerClientMixin",
     "toughnessbar.ToughnessBarMixin",
     "trailiertales.BoatRendererMixin",
     "trailiertales.GuiMixin",
