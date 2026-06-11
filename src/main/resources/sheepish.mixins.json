@@ -83,6 +83,7 @@
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
     "mirthdew_encore.MirthdewEncoreDimensionEffectsMixin",
+    "overloadedarmorbar.OverlayRendererMixin",
     "overloadedarmorbar.OverloadedArmorBarNeoForgeMixin",
     "renderscale.CommonClassMixin",
     "sodium.ResourcePackScannerMixin",

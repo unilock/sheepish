@@ -67,6 +67,7 @@
   - Allows the player to always eat (configurable)
   - Silences OpenGL errors
   - Disables More Creeps and Weirdo's on-join chat messages
+  - Prevents Overloaded Armor Bar from increasing the GUI left height without rendering anything
   - Adjusts the layer that Overloaded Armor Bar renders on, allowing it to work with mods like RainbowHealth
   - Allows disabling Sodium's core shader resource pack warnings (configurable)
   - Pushes up right-aligned HUD elements when Armor Toughness Bar is visible
