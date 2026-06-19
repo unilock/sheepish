@@ -74,7 +74,4 @@ public class SheepishConfig extends ReflectiveConfig {
 
 	@Comment("Change the global spawn point to this biome (tag). Leave blank to disable")
 	public final TrackedValue<String> biomeSpawn = value("");
-
-	@Comment("If biomeSpawn is used, only allow spawning on this block (tag). Leave blank to disable")
-	public final TrackedValue<String> blockSpawn = value("");
 }

@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -23,35 +22,31 @@ public class BiomeSpawn {
 	private static final int ATTEMPTS = 24;
 
 	private Either<Holder<Biome>, TagKey<Biome>> biome;
-	private Either<Holder<Block>, TagKey<Block>> block;
-	private boolean skipBlockCheck;
 
 	@SubscribeEvent
 	public void serverStarted(ServerStartedEvent event) {
 		if (!CONFIG.biomeSpawn.value().isBlank()) {
-			String cfgBiome = CONFIG.biomeSpawn.value();
-			boolean cfgBiomeIsTag = cfgBiome.startsWith("#");
-			ResourceLocation rlBiome = ResourceLocation.tryParse(cfgBiomeIsTag ? cfgBiome.substring(1) : cfgBiome);
-			this.biome = cfgBiomeIsTag ? Either.right(TagKey.create(Registries.BIOME, rlBiome)) : Either.left(event.getServer().registryAccess().holderOrThrow(ResourceKey.create(Registries.BIOME, rlBiome)));
+			String cfg = CONFIG.biomeSpawn.value();
 
-			if (!CONFIG.blockSpawn.value().isBlank()) {
-				this.skipBlockCheck = false;
-				String cfgBlock = CONFIG.blockSpawn.value();
-				boolean cfgBlockIsTag = cfgBlock.startsWith("#");
-				ResourceLocation rlBlock = ResourceLocation.tryParse(cfgBlockIsTag ? cfgBlock.substring(1) : cfgBlock);
-				this.block = cfgBlockIsTag ? Either.right(TagKey.create(Registries.BLOCK, rlBlock)) : Either.left(event.getServer().registryAccess().holderOrThrow(ResourceKey.create(Registries.BLOCK, rlBlock)));
-			} else {
-				this.skipBlockCheck = true;
+			boolean isTag = cfg.startsWith("#");
+			cfg = isTag ? cfg.substring(1) : cfg;
+
+			ResourceLocation rl = ResourceLocation.tryParse(cfg);
+			if (rl == null) {
+				throw new RuntimeException("Failed to parse ResourceLocation: "+ cfg);
 			}
+
+			this.biome = isTag ? Either.right(TagKey.create(Registries.BIOME, rl)) : Either.left(event.getServer().registryAccess().holderOrThrow(ResourceKey.create(Registries.BIOME, rl)));
 
 			ServerLevel overworld = event.getServer().overworld();
 			BlockPos oldSpawnPos = overworld.getSharedSpawnPos();
+			BlockPos origin = BlockPos.ZERO.above(64);
 			if (!isValidBiome(overworld, oldSpawnPos)) {
 				for (int attempt = 0; attempt < ATTEMPTS; attempt++) {
-					Pair<BlockPos, Holder<Biome>> location = overworld.findClosestBiome3d(holder -> biome.map(holder::is, holder::is), oldSpawnPos, SEARCH_RADIUS, 32, 64);
+					Pair<BlockPos, Holder<Biome>> location = overworld.findClosestBiome3d(this::isValidBiome, origin, SEARCH_RADIUS, 32, 64);
 					if (location != null) {
 						BlockPos biomePos = location.getFirst();
-						if (Math.abs(biomePos.getX()) <= (Math.abs(oldSpawnPos.getX()) - MAX_RADIUS) && Math.abs(biomePos.getZ()) <= (Math.abs(oldSpawnPos.getZ()) - MAX_RADIUS)) {
+						if (Math.abs(biomePos.getX()) <= MAX_RADIUS && Math.abs(biomePos.getZ()) <= MAX_RADIUS) {
 							BlockPos newSpawnPos = findValidPos(overworld, biomePos);
 							if (newSpawnPos != null) {
 								overworld.setDefaultSpawnPos(newSpawnPos, overworld.getSharedSpawnAngle());
@@ -65,18 +60,18 @@ public class BiomeSpawn {
 	}
 
 	private boolean isValidBiome(ServerLevel level, BlockPos pos) {
+		return isValidBiome(level.getBiome(pos));
+	}
+
+	private boolean isValidBiome(Holder<Biome> holder) {
 		return biome.map(
-				holder -> level.getBiome(pos).is(holder),
-				tag -> level.getBiome(pos).is(tag)
+				holder::is,
+				holder::is
 		);
 	}
 
 	private boolean isValidBlock(ServerLevel level, BlockPos pos) {
-		BlockPos ground = pos.below();
-		return block.map(
-				holder -> level.getBlockState(ground).is(holder),
-				tag -> level.getBlockState(ground).is(tag)
-		) && level.getFluidState(ground).isEmpty() && level.getFluidState(pos).isEmpty();
+		return level.getFluidState(pos.below()).isEmpty() && level.getFluidState(pos).isEmpty();
 	}
 
 	private BlockPos findValidPos(ServerLevel level, BlockPos center) {
@@ -89,7 +84,7 @@ public class BiomeSpawn {
 						level.getChunk(x >> 4, z >> 4);
 						int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
 						BlockPos validPos = new BlockPos(x, y, z);
-						if (skipBlockCheck || isValidBlock(level, validPos)) {
+						if (isValidBlock(level, validPos)) {
 							return validPos;
 						}
 					}
