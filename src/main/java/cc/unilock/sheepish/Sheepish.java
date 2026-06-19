@@ -2,6 +2,7 @@ package cc.unilock.sheepish;
 
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
+import cc.unilock.sheepish.module.BiomeSpawn;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
@@ -53,6 +54,8 @@ public class Sheepish {
 		if (LUNASLIMES) {
 			LunaSlimesCompat.init();
 		}
+
+		NeoForge.EVENT_BUS.register(new BiomeSpawn());
     }
 
 	private static void separate(Collection<ItemEntity> drops) {
