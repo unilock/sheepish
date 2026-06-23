@@ -29,6 +29,7 @@
     "frozenlib.RegistryDataLoaderMixin",
     "frozenlib.ShovelItemMixin",
     "frozenlib.accessor.HolderReferenceAccessor",
+    "grapplemod.NeoForgeResourcePackPlatformMixin",
     "hexerei.LightManagerMixin",
     "immersive_cursedness.PlayerManagerMixin",
     "immersiveengineering.PotionHelperMixin",

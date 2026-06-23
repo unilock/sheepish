@@ -169,6 +169,7 @@ dependencies {
     compileOnly 'maven.modrinth:emojiful:1YlEixSY'
     compileOnly 'maven.modrinth:extended-industrialization:1.15.37-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'
+    compileOnly 'maven.modrinth:grapplemod-skybound:v1.1+1.21.1-neoforge'
     compileOnly 'maven.modrinth:hexerei:0.5.0.3'
     compileOnly 'maven.modrinth:immersiveengineering:12.4.2-194'
     compileOnly 'curse.maven:knickknacks-1095071:5711449'
