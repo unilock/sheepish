@@ -72,5 +72,4 @@
   - Allows disabling Sodium's core shader resource pack warnings (configurable)
   - Pushes up right-aligned HUD elements when Armor Toughness Bar is visible
   - Adjusts the layer that Armor Toughness Bar renders on, allowing it to work with mods like Extended Hotbar
-  - Disables Vestiges of the Present's on-join chat messages
   - Attempts to fix [MC-122477](https://bugs.mojang.com/browse/MC/issues/MC-122477)
