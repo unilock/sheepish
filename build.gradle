@@ -187,6 +187,7 @@ dependencies {
     compileOnly 'maven.modrinth:rapscallions-and-rockhoppers:2.0.6+1.21.1-neoforge'
     compileOnly 'maven.modrinth:renderscale:Y7rNAruy'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
+    compileOnly 'maven.modrinth:yigd:Axk4bfXT'
 
     // Fabric
     compileOnly 'maven.modrinth:cerulean:1.1.5'

@@ -39,6 +39,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Mixin to Forgified Fabric Transfer API impl to only ignore vanilla BlockEntities when registering fallback item storage behavior")
 	public final TrackedValue<Boolean> fabricTransferApiHacks = value(false);
 
+	@Comment("Force You're In Grave Danger's Curios compatibility to be enabled even with Accessories Compat Layer installed")
+	public final TrackedValue<Boolean> forceYigdCuriosCompat = value(false);
+
 	@Comment("Prevent AbstractHorse offspring from having lesser stats than either of its parents")
 	public final TrackedValue<Boolean> horseStonks = value(false);
 
