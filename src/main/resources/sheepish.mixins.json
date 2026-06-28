@@ -58,8 +58,6 @@
     "specter_serialization.LanguageMixin",
     "splinecart.EntityMixinSquared",
     "terraform_wood_api_v1.TerraformBoatTypeRegistryMixin",
-    "trickster.ServerLevelMixin",
-    "trickster.ServerPlayerGameModeMixin",
     "wilderwild.BlockItemMixin",
     "wilderwild.BlocksMixin",
     "wilderwild.EntityMixin",
@@ -94,7 +92,6 @@
     "toughnessbar.ToughnessBarMixin",
     "trailiertales.BoatRendererMixin",
     "trailiertales.GuiMixin",
-    "trickster.MultiPlayerGameModeMixin",
     "wilderwild.MultiPlayerGameModeMixin",
     "wilderwild.SporeBlossomAirProviderMixin"
   ],

@@ -31,7 +31,6 @@
   - Joy
   - Specter Serialization
   - Terraform Wood API v1
-  - Trickster (requires jar editing or [this fork](https://github.com/unilock/trickster))
 - Fixes bugs in various mods:
   - Akashic Tome: fixes left-clicking the tome not reverting it
   - Alternate Current: adds null checks
