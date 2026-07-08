@@ -50,12 +50,12 @@
   - RenderScale: adds null checks
   - Splinecart: adds null checks
 - Assorted features:
-  - Allows loading Emojiful's pixelated emoji set without the "Blobs", "Discord", or "Pepe" categories
-  - Allows disabling splash text modification from Blueprint, FrozenLib, and NeoForge
+  - Allows loading Emojiful's pixelated emoji set without the "Blobs", "Discord", or "Pepe" categories (configurable)
+  - Allows disabling splash text modification from Blueprint, FrozenLib, and NeoForge (configurable)
   - Disables Curvy Rail's on-join chat messages
-  - Hacks EMI to show the correct mod name in the tooltip of certain items (Enchanted Books, Potions, etc.)
-  - Allows disabling Ender IO's alpha warning message
-  - Hacks Forgified Fabric Transfer API to hopefully have better compatibility with certain Containers from Fabric mods
+  - Hacks EMI to show the correct mod name in the tooltip of certain items (Enchanted Books, Potions, etc.) (configurable)
+  - Disables Ender IO's alpha warning message
+  - Hacks Forgified Fabric Transfer API to hopefully have better compatibility with certain Containers from Fabric mods (configurable)
   - Pushes the status effect HUD out of the way of Immersive Minimaps
   - Disables Lovely Sparkle Pieces' on-join chat messages
   - Makes horse offspring always have equal or better stats compared to their parents (configurable)
@@ -67,11 +67,11 @@
   - Shows more debug info for advancements that fail to be awarded
   - Allows the player to always eat (configurable)
   - Silences OpenGL errors
-  - Disables More Creeps and Weirdo's on-join chat messages
+  - Disables More Creeps and Weirdo's on-join chat messages (configurable)
   - Prevents Overloaded Armor Bar from increasing the GUI left height without rendering anything
   - Adjusts the layer that Overloaded Armor Bar renders on, allowing it to work with mods like RainbowHealth
   - Allows disabling Sodium's core shader resource pack warnings (configurable)
   - Pushes up right-aligned HUD elements when Armor Toughness Bar is visible
   - Adjusts the layer that Armor Toughness Bar renders on, allowing it to work with mods like Extended Hotbar
-  - Allows forcibly enabling You're In Grave Danger's Curios compatibility code, even when Accessories Compatibility Layer is installed
+  - Allows forcibly enabling You're In Grave Danger's Curios compatibility code, even when Accessories Compatibility Layer is installed (configurable)
   - Attempts to fix [MC-122477](https://bugs.mojang.com/browse/MC/issues/MC-122477)
