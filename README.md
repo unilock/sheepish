@@ -34,9 +34,11 @@
 - Fixes bugs in various mods:
   - Akashic Tome: fixes left-clicking the tome not reverting it
   - Alternate Current: adds null checks
+  - Caverns & Chasms: prevents crashes by rerouting attempts to read client-side configs on the dedicated server
   - Dynamic Surroundings: prevents crashes by disabling the village bell sound
   - Enderscape: adds null checks
   - Extended Industrialization + Modern Industrialization: properly returns `Ingredient.EMPTY` as a repair material
+  - Grappling Hook Mod Skybound: fixes optional data packs being enabled by default
   - Hexerei: disables dynamic lights to allow using with LambDynamicLights
   - Immersive Engineering: skips applying potion recipes with unbound inputs / outputs
   - Minecraft: prevents crashes from duplicate creative tab items
@@ -71,4 +73,5 @@
   - Allows disabling Sodium's core shader resource pack warnings (configurable)
   - Pushes up right-aligned HUD elements when Armor Toughness Bar is visible
   - Adjusts the layer that Armor Toughness Bar renders on, allowing it to work with mods like Extended Hotbar
+  - Allows forcibly enabling You're In Grave Danger's Curios compatibility code, even when Accessories Compatibility Layer is installed
   - Attempts to fix [MC-122477](https://bugs.mojang.com/browse/MC/issues/MC-122477)
