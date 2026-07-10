@@ -13,6 +13,6 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 public class FilteringBehaviourMixin {
 	@WrapOperation(method = "getMaxStackSize(Lnet/minecraft/world/item/ItemStack;)I", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getMaxStackSize()I", remap = true))
 	private int getMaxStackSize$getMaxStackSize(ItemStack instance, Operation<Integer> original) {
-		return Math.max(original.call(instance), CONFIG.createFilterMaxStackSize.value());
+		return Math.min(original.call(instance), CONFIG.createFilterMaxStackSize.value());
 	}
 }
