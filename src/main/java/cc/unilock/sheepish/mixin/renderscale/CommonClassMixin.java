@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = CommonClass.class, remap = false)
 public class CommonClassMixin {
-	@WrapWithCondition(method = "onResolutionChanged", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/LevelRenderer;resize(II)V"))
+	@WrapWithCondition(method = "onResolutionChanged", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/LevelRenderer;resize(II)V", remap = true))
 	private boolean onResolutionChanged$resize(LevelRenderer instance, int width, int height) {
 		return instance != null;
 	}

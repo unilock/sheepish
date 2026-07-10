@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = CreativeModeTabHandler.class, remap = false)
 public class CreativeModeTabHandlerMixin {
-	@ModifyExpressionValue(method = "onBuildCreativeModeTabContents", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/flag/FeatureFlagSet;contains(Lnet/minecraft/world/flag/FeatureFlag;)Z"))
+	@ModifyExpressionValue(method = "onBuildCreativeModeTabContents", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/flag/FeatureFlagSet;contains(Lnet/minecraft/world/flag/FeatureFlag;)Z", remap = true))
 	private boolean onBuildCreativeModeTabContents$contains(boolean original) {
 		return original || ModList.get().isLoaded("ported");
 	}

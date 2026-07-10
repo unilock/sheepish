@@ -10,7 +10,7 @@ import vazkii.patchouli.common.book.Book;
 
 @Mixin(value = Book.class, remap = false)
 public class BookMixin {
-	@WrapOperation(method = "lambda$new$1", at = @At(value = "INVOKE", target = "Lnet/minecraft/data/registries/VanillaRegistries;createLookup()Lnet/minecraft/core/HolderLookup$Provider;"))
+	@WrapOperation(method = "lambda$new$1", at = @At(value = "INVOKE", target = "Lnet/minecraft/data/registries/VanillaRegistries;createLookup()Lnet/minecraft/core/HolderLookup$Provider;", remap = true))
 	private static HolderLookup.Provider lambda$createLookup(Operation<HolderLookup.Provider> original) {
 		try {
 			return Sheepish.getRegistryAccess();

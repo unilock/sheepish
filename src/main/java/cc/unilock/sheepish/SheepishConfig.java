@@ -12,6 +12,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Allow players to eat food regardless of hunger bar fullness")
 	public final TrackedValue<Boolean> alwaysEat = value(false);
 
+	@Comment("The max stack size to be displayed in Create's various filter UIs")
+	public final TrackedValue<Integer> createFilterMaxStackSize = value(64);
+
 	@Comment("Disable the welcome message from More Creeps and Weirdos Revival")
 	public final TrackedValue<Boolean> disableMoreCreepsWelcomeMsg = value(false);
 

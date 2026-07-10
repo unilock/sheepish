@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = PlayerJoinHandler.class, remap = false)
 public class PlayerJoinHandlerMixin {
-	@Redirect(method = "onPlayerJoin", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;sendSystemMessage(Lnet/minecraft/network/chat/Component;)V"))
+	@Redirect(method = "onPlayerJoin", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;sendSystemMessage(Lnet/minecraft/network/chat/Component;)V", remap = true))
 	private static void onPlayerJoin$sendSystemMessage(Player instance, Component component) {
 		// NO-OP
 	}

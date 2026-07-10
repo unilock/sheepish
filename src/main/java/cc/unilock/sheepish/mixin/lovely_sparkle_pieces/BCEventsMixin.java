@@ -16,7 +16,7 @@ public class BCEventsMixin {
 		throw new AssertionError();
 	}
 
-	@WrapWithCondition(method = "onTrySleep", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerPlayer;displayClientMessage(Lnet/minecraft/network/chat/Component;Z)V"))
+	@WrapWithCondition(method = "onTrySleep", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerPlayer;displayClientMessage(Lnet/minecraft/network/chat/Component;Z)V", remap = true))
 	private static boolean onTrySleep$displayClientMessage(ServerPlayer instance, Component chatComponent, boolean actionBar) {
 		return hasBlasphemousContract(instance);
 	}

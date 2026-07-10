@@ -15,6 +15,7 @@
     "caverns_and_chasms.CCCreativeTabsMixin",
     "cerulean.EntityMixin",
     "cinderscapes.AlterGroundDecoratorMixin",
+    "create.FilteringBehaviourMixin",
     "electromechanics.IBlockStateExtensionMixin",
     "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
