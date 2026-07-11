@@ -13,6 +13,6 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 public class SpecialLootModifierMixin {
 	@WrapOperation(method = "doApply", at = @At(value = "INVOKE", target = "Lnet/minecraft/nbt/CompoundTag;contains(Ljava/lang/String;)Z", ordinal = 0))
 	private boolean doApply$contains(CompoundTag instance, String key, Operation<Boolean> original) {
-		return original.call(instance, key) && !CONFIG.disableEnigmaticEye.value();
+		return original.call(instance, key) || CONFIG.disableEnigmaticEye.value();
 	}
 }
