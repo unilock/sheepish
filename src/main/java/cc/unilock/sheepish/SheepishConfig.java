@@ -15,6 +15,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("The max stack size to be displayed in Create's various filter UIs")
 	public final TrackedValue<Integer> createFilterMaxStackSize = value(64);
 
+	@Comment("Disable the god-forsaken Enigmatic Eye from Enigmatic Legacy Plus")
+	public final TrackedValue<Boolean> disableEnigmaticEye = value(false);
+
 	@Comment("Disable the welcome message from More Creeps and Weirdos Revival")
 	public final TrackedValue<Boolean> disableMoreCreepsWelcomeMsg = value(false);
 

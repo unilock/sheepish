@@ -169,6 +169,7 @@ dependencies {
     compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
     compileOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
     compileOnly 'maven.modrinth:emojiful:1YlEixSY'
+    compileOnly 'curse.maven:enigmatic-legacy-plus-1391021:8403819'
     compileOnly 'maven.modrinth:extended-industrialization:1.15.42-1.21.1'
     compileOnly 'maven.modrinth:forge-config-api-port:v21.1.6-1.21.1-NeoForge'
     compileOnly 'maven.modrinth:grapplemod-skybound:v1.1+1.21.1-neoforge'

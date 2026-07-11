@@ -20,6 +20,7 @@
     "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
     "enderscape.ItemStackMixin",
+    "enigmaticlegacyplus.SpecialLootModifierMixin",
     "extended_industrialization.EIArmorMaterialsMixin",
     "fabric_transfer_api_v1.TransferApiNeoCompatMixin",
     "frozenlib.AxeItemMixin",
