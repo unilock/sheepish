@@ -1,7 +1,7 @@
 package cc.unilock.sheepish.mixin.naturesaura;
 
+import cc.unilock.sheepish.compat.NoMansLandCompat;
 import cc.unilock.sheepish.compat.WilderWildCompat;
-import com.farcr.nomansland.common.registry.worldgen.NMLFeatures;
 import com.llamalad7.mixinextras.sugar.Local;
 import de.ellpeck.naturesaura.blocks.BlockOakGenerator;
 import net.minecraft.data.worldgen.features.TreeFeatures;
@@ -17,10 +17,10 @@ public class BlockOakGeneratorMixin {
 	@SuppressWarnings("UnresolvedLocalCapture")
 	@Inject(method = "getReplacement", at = @At(value = "INVOKE_ASSIGN", target = "Ljava/util/Optional;get()Ljava/lang/Object;"), cancellable = true)
 	private static void getReplacement(CallbackInfoReturnable<ResourceKey<ConfiguredFeature<?, ?>>> cir, @Local(name = "feature") ResourceKey<ConfiguredFeature<?, ?>> feature) {
-		if (feature == NMLFeatures.FANCY_OAK_APPLE_01) {
-			cir.setReturnValue(NMLFeatures.OAK_APPLE_01);
-		} else if (feature == NMLFeatures.FANCY_OAK_APPLE_05) {
-			cir.setReturnValue(NMLFeatures.OAK_APPLE_05);
+		if (feature == NoMansLandCompat.FANCY_OAK_APPLE_01) {
+			cir.setReturnValue(NoMansLandCompat.OAK_APPLE_01);
+		} else if (feature == NoMansLandCompat.FANCY_OAK_APPLE_05) {
+			cir.setReturnValue(NoMansLandCompat.OAK_APPLE_05);
 		} else if (feature == WilderWildCompat.FANCY_OAK || feature == WilderWildCompat.FANCY_OAK_BEES) {
 			cir.setReturnValue(WilderWildCompat.OAK);
 		} else if (feature == WilderWildCompat.FANCY_OAK_BEES_0004) {
