@@ -3,13 +3,14 @@ package cc.unilock.sheepish.mixin.rapscallionsandrockhoppers;
 import cc.unilock.sheepish.Sheepish;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import house.greenhouse.rapscallionsandrockhoppers.RapscallionsAndRockhoppers;
 import house.greenhouse.rapscallionsandrockhoppers.entity.PenguinVariant;
 import house.greenhouse.rapscallionsandrockhoppers.util.RockhoppersResourceKeys;
 import net.minecraft.core.Registry;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
 
-@Mixin(value = RapscallionsAndRockhoppers.class, remap = false)
+@Mixin(targets = "house/greenhouse/rapscallionsandrockhoppers/RapscallionsAndRockhoppers")
+@Pseudo
 public class RapscallionsAndRockhoppersMixin {
 	@WrapMethod(method = "getBiomePopulationPenguinTypeRegistry")
 	private static Registry<PenguinVariant> getBiomePopulationPenguinTypeRegistry(Operation<Registry<PenguinVariant>> original) {
