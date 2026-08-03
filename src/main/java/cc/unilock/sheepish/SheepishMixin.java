@@ -36,11 +36,6 @@ public class SheepishMixin implements IMixinConfigPlugin {
 		if ("fabric_transfer_api_v1".equals(id)) {
 			return modFile != null && CONFIG.fabricTransferApiHacks.value();
 		}
-		if ("trickster".equals(id)) {
-			// Trickster 2.0.0-beta.34 is the latest version that works without our fixes
-			// Don't bother accounting for older versions. I'm not JiJ'ing FlexVer
-			return modFile != null && !modFile.versionString().equals("2.0.0-beta.34");
-		}
 
 		return modFile != null;
 	}

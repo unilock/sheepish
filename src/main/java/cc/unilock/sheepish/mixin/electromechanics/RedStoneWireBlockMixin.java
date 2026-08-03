@@ -22,7 +22,7 @@ public class RedStoneWireBlockMixin {
 	private static final MethodHandle IS_VALID;
 	static {
 		try {
-			IS_VALID = MethodHandles.privateLookupIn(RedStoneWireBlock.class, MethodHandles.lookup()).findVirtual(RedStoneWireBlock.class, "isValid", MethodType.methodType(boolean.class, new Class[]{BlockGetter.class, Direction.class, BlockPos.class, Direction.class}));
+			IS_VALID = MethodHandles.privateLookupIn(RedStoneWireBlock.class, MethodHandles.lookup()).findVirtual(RedStoneWireBlock.class, "isValid", MethodType.methodType(boolean.class, BlockGetter.class, Direction.class, BlockPos.class, Direction.class));
 		} catch (IllegalAccessException | NoSuchMethodException e) {
 			throw new RuntimeException("Failed to find handle for Electromechanic's RedStoneWireBlock#isValid mixin method", e);
 		}
