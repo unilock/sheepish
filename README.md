@@ -20,6 +20,7 @@
   - Anthropohagy
   - Biolith (NeoForge version with Fabric mods)
   - Cerulean
+  - Charm (requires setting `Wood.Enabled = false` in ".minecraft/config/charm-common.toml")
   - Cinderscapes
   - Electromechanics
   - Enderscape (Fabric version)

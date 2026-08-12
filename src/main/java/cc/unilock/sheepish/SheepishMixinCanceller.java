@@ -48,7 +48,10 @@ public class SheepishMixinCanceller implements MixinCanceller {
 			"net.frozenblock.wilderwild.mixin.entity.penguin.BlocksMixin",
 			"net.frozenblock.wilderwild.mixin.snowlogging.BlockItemMixin",
 
-			"net.modfest.fireblanket.mixin.annoyances.MixinUtil"
+			"net.modfest.fireblanket.mixin.annoyances.MixinUtil",
+
+			"svenhjol.charm.charmony.common.mixin.event.anvil_update.AnvilMenuMixin",
+			"svenhjol.charm.charmony.common.mixin.event.grindstone.GrindstoneMenuOutputMixin"
 	);
 	static {
 		if (CONFIG.disableSplashes.value()) {

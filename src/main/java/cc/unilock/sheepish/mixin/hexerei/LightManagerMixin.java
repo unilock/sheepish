@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class LightManagerMixin {
 	/**
 	 * @author unilock
-	 * @reason disable dynamic light; @Overwrite to fail hard
+	 * @reason disable dynamic light
 	 */
 	@Overwrite
 	public static boolean shouldUpdateDynamicLight() {
