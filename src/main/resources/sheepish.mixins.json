@@ -22,6 +22,7 @@
     "charm.GrindstoneMenuOutputSlotMixin",
     "cinderscapes.AlterGroundDecoratorMixin",
     "create.FilteringBehaviourMixin",
+    "destroy.HangoverMobEffectMixin",
     "electromechanics.IBlockStateExtensionMixin",
     "electromechanics.RedStoneWireBlockMixin",
     "enderio_base.AlphaWarningMixin",
