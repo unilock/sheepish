@@ -15,6 +15,7 @@
     "caverns_and_chasms.CCCreativeTabsMixin",
     "cerulean.EntityMixin",
     "charm.AnvilMenuMixin",
+    "charm.BeaconsHealMobsHandlerMixin",
     "charm.CommonInitializerMixin",
     "charm.CommonRegistryMixin",
     "charm.CoreMixin",
