@@ -99,6 +99,7 @@
     "overloadedarmorbar.OverlayRendererMixin",
     "overloadedarmorbar.OverloadedArmorBarNeoForgeMixin",
     "renderscale.CommonClassMixin",
+    "rgbcraft.RgbCraftMixin",
     "sodium.ResourcePackScannerMixin",
     "splinecart.CameraMixinSquared",
     "toughnessbar.EventHandlerClientMixin",

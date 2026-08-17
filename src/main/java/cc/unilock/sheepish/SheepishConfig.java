@@ -24,6 +24,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Disable increasing repair cost on armor and tools")
 	public final TrackedValue<Boolean> disableRepairCost = value(false);
 
+	@Comment("Disable RGBCraft's photosensitivity warning")
+	public final TrackedValue<Boolean> disableRgbCraftStartupWarning = value(false);
+
 	@Comment("Disable Sodium's core shader resource pack warning")
 	public final TrackedValue<Boolean> disableSodiumCoreShaderWarning = value(false);
 

@@ -188,6 +188,7 @@ dependencies {
     compileOnly 'maven.modrinth:patchouli:1.21.1-93-neoforge'
     compileOnly 'maven.modrinth:platform:v7P0nBi2'
     compileOnly 'maven.modrinth:renderscale:Y7rNAruy'
+    compileOnly 'curse.maven:rgbcraft-1633349:8574465'
     compileOnly 'maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge'
     compileOnly 'maven.modrinth:yigd:Axk4bfXT'
 
