@@ -63,6 +63,7 @@
     "modern_industrialization.MIArmorMaterialsMixin",
     "morecreeps.MoreCreepsEventsMixin",
     "naturesaura.BlockOakGeneratorMixin",
+    "nomansland.CommonSetupEventsMixin",
     "nomansland.CreativeModeTabHandlerMixin",
     "patchouli.BookMixin",
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",
