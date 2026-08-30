@@ -160,6 +160,7 @@ dependencies {
     // NeoForge
     compileOnly 'maven.modrinth:akashic-tome:1.21.1-1.8-30'
     compileOnly 'com.almostreliable.mods:almostunified-neoforge:1.21.1-1.4.2:api'
+    compileOnly 'maven.modrinth:anvilcraft:1.21.1-1.6.0+snapshot.2220'
     compileOnly 'maven.modrinth:armor-toughness-bar,-again:9473L0CF'
     compileOnly 'maven.modrinth:biolith:xaeaSA9Q'
     compileOnly 'maven.modrinth:blueprint:8.1.0'
