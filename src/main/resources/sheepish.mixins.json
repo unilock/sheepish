@@ -95,6 +95,7 @@
     "frozenlib.PackRepositoryMixin",
     "frozenlib.TextureManagerMixin",
     "immersiveminimaps.GuiMixin",
+    "lavender.ClientHooksMixin",
     "minecraft.SplashManagerMixin",
     "minecraft.WindowMixin",
     "minestuck.GoButtonMixin",
