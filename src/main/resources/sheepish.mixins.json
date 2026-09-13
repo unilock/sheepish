@@ -75,8 +75,7 @@
     "wilderwild.BlockItemMixin",
     "wilderwild.BlocksMixin",
     "wilderwild.EntityMixin",
-    "wilderwild.ServerPlayerGameModeMixin",
-    "yigd.InvModCompatMixin"
+    "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
     "cerulean.MinecraftMixin",
