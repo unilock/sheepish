@@ -13,7 +13,7 @@ public class SoundEngineMixinSquared {
 			mixin = "org.orecruncher.dsurround.mixins.audio.MixinSoundEngine",
 			name = "dsurround$play(Lnet/minecraft/client/resources/sounds/SoundInstance;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V"
 	)
-	@Redirect(method = "@MixinSquared:Handler", at = @At(value = "INVOKE", target = "Lorg/orecruncher/dsurround/lib/logging/IModLog;warn(Ljava/lang/String;[Ljava/lang/Object;)V"))
+	@Redirect(method = "@MixinSquared:Handler", at = @At(value = "INVOKE", target = "Lorg/orecruncher/dsurround/lib/logging/IModLog;warn(Ljava/lang/String;[Ljava/lang/Object;)V", remap = false))
 	private void play(IModLog instance, String msg, Object[] parms) {
 		// NO-OP
 	}
