@@ -81,6 +81,7 @@
     "charm.ClientInitializerMixin",
     "charm.CoreClientMixin",
     "curvyrails.CurvyRailsClientMixin",
+    "dsurround.SoundEngineMixinSquared",
     "dsurround.VillageScannerMixin",
     "electromechanics.ColoredVariantsModelLoaderMixin",
     "emi.EmiSearchMixin",

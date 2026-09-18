@@ -167,7 +167,7 @@ dependencies {
     compileOnly 'maven.modrinth:caverns-and-chasms:3.0.0'
     compileOnly 'maven.modrinth:create:6.0.10+mc1.21.1'
     compileOnly 'maven.modrinth:curvy-rails:0.0.2'
-    compileOnly 'maven.modrinth:dynamicsurroundingsfabric:aFsN201L'
+    compileOnly 'maven.modrinth:dynamicsurroundingsfabric:69xM7CM7'
     compileOnly 'dev.emi:emi-neoforge:1.1.24+1.21.1'
     compileOnly 'maven.modrinth:emojiful:rY17Eh56'
     compileOnly 'curse.maven:enigmatic-legacy-plus-1391021:8827648'
