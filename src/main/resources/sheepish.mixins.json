@@ -66,7 +66,6 @@
     "morecreeps.MoreCreepsEventsMixin",
     "naturesaura.BlockOakGeneratorMixin",
     "nomansland.CommonSetupEventsMixin",
-    "nomansland.CreativeModeTabHandlerMixin",
     "patchouli.BookMixin",
     "rapscallionsandrockhoppers.RapscallionsAndRockhoppersMixin",
     "specter_serialization.LanguageMixin",
