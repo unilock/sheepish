@@ -2,6 +2,7 @@ package cc.unilock.sheepish;
 
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
+import cc.unilock.sheepish.module.PVPCommand;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
@@ -12,6 +13,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.LoadingModList;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -45,6 +47,10 @@ public class Sheepish {
 //		});
 		NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, LivingDropsEvent.class, event -> {
 			if (CONFIG.droppedItemsDoNotStack.value()) separate(event.getDrops());
+		});
+
+		NeoForge.EVENT_BUS.addListener(EventPriority.NORMAL, RegisterCommandsEvent.class, event -> {
+			PVPCommand.registerCommand(event.getDispatcher());
 		});
 
         if (ANSHAR) {
