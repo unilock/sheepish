@@ -1,16 +1,14 @@
 package cc.unilock.sheepish.mixin.minecraft;
 
-import cc.unilock.sheepish.module.PVPCommand;
+import cc.unilock.sheepish.module.SheepishPVP;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.mojang.authlib.GameProfile;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 import static cc.unilock.sheepish.SheepishConfig.CONFIG;
@@ -22,9 +20,6 @@ public abstract class PlayerMixin extends LivingEntity {
 		throw new AssertionError();
 	}
 
-	@Shadow
-	public abstract GameProfile getGameProfile();
-
 	@WrapMethod(method = "canEat")
 	private boolean canEat$wrap(boolean canAlwaysEat, Operation<Boolean> original) {
 		return original.call(canAlwaysEat) || CONFIG.alwaysEat.value();
@@ -33,8 +28,8 @@ public abstract class PlayerMixin extends LivingEntity {
 	@ModifyReturnValue(method = "canHarmPlayer", at = @At("RETURN"))
 	private boolean canHarmPlayer(boolean original, Player other) {
 		if (!this.is(other)) {
-			boolean thisPvpDisabled = !PVPCommand.pvpWhitelist.isWhiteListed(this.getGameProfile());
-			boolean otherPvpDisabled = !PVPCommand.pvpWhitelist.isWhiteListed(other.getGameProfile());
+			boolean thisPvpDisabled = !this.getData(SheepishPVP.DATA);
+			boolean otherPvpDisabled = !other.getData(SheepishPVP.DATA);
 
 			if (thisPvpDisabled || otherPvpDisabled) {
 				return false;

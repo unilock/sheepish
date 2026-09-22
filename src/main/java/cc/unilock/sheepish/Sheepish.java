@@ -2,18 +2,18 @@ package cc.unilock.sheepish;
 
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
-import cc.unilock.sheepish.module.PVPCommand;
+import cc.unilock.sheepish.module.SheepishPVP;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.LoadingModList;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -37,7 +37,9 @@ public class Sheepish {
     protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
 	protected static final boolean LUNASLIMES = LoadingModList.get().getModFileById("lunaslimes") != null;
 
-    public Sheepish() {
+    public Sheepish(IEventBus modEventBus) {
+		SheepishPVP.register(modEventBus);
+
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, BlockEvent.FarmlandTrampleEvent.class, event -> {
             if (CONFIG.noTrample.value()) event.setCanceled(true);
         });
@@ -47,10 +49,6 @@ public class Sheepish {
 //		});
 		NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, LivingDropsEvent.class, event -> {
 			if (CONFIG.droppedItemsDoNotStack.value()) separate(event.getDrops());
-		});
-
-		NeoForge.EVENT_BUS.addListener(EventPriority.NORMAL, RegisterCommandsEvent.class, event -> {
-			PVPCommand.registerCommand(event.getDispatcher());
 		});
 
         if (ANSHAR) {
