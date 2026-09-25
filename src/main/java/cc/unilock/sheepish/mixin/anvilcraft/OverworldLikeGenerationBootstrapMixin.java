@@ -1,6 +1,5 @@
 package cc.unilock.sheepish.mixin.anvilcraft;
 
-import cc.unilock.sheepish.mixin.minecraft.WorldBorderAccessor;
 import dev.dubhe.anvilcraft.mixin.accessor.DelegateBorderChangeListenerAccessor;
 import dev.dubhe.anvilcraft.worldgen.OverworldLikeGenerationBootstrap;
 import net.minecraft.server.MinecraftServer;

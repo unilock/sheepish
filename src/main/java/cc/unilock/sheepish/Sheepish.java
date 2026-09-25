@@ -1,5 +1,6 @@
 package cc.unilock.sheepish;
 
+import cc.unilock.sheepish.compat.AlloyForgeryCompat;
 import cc.unilock.sheepish.compat.AnsharCompat;
 import cc.unilock.sheepish.compat.LunaSlimesCompat;
 import cc.unilock.sheepish.module.SheepishPVP;
@@ -28,21 +29,22 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 
 @Mod(Sheepish.MOD_ID)
 public class Sheepish {
-    public static final String MOD_ID = "sheepish";
-    public static final Logger LOGGER = LogUtils.getLogger();
+	public static final String MOD_ID = "sheepish";
+	public static final Logger LOGGER = LogUtils.getLogger();
 
-    protected static final boolean AKASHICTOME = LoadingModList.get().getModFileById("akashictome") != null;
-    protected static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
-    protected static final boolean CERULEAN = LoadingModList.get().getModFileById("cerulean") != null;
-    protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
+	protected static final boolean AKASHICTOME = LoadingModList.get().getModFileById("akashictome") != null;
+	protected static final boolean ALLOY_FORGERY = LoadingModList.get().getModFileById("alloy_forgery") != null;
+	protected static final boolean ANSHAR = LoadingModList.get().getModFileById("anshar") != null;
+	protected static final boolean CERULEAN = LoadingModList.get().getModFileById("cerulean") != null;
+	protected static final boolean EMOJIFUL = LoadingModList.get().getModFileById("emojiful") != null;
 	protected static final boolean LUNASLIMES = LoadingModList.get().getModFileById("lunaslimes") != null;
 
-    public Sheepish(IEventBus modEventBus) {
+	public Sheepish(IEventBus modEventBus) {
 		SheepishPVP.register(modEventBus);
 
-        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, BlockEvent.FarmlandTrampleEvent.class, event -> {
-            if (CONFIG.noTrample.value()) event.setCanceled(true);
-        });
+		NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, BlockEvent.FarmlandTrampleEvent.class, event -> {
+			if (CONFIG.noTrample.value()) event.setCanceled(true);
+		});
 
 //		NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, BlockDropsEvent.class, event -> {
 //			if (CONFIG.droppedItemsDoNotStack.value()) separate(event.getDrops());
@@ -51,13 +53,16 @@ public class Sheepish {
 			if (CONFIG.droppedItemsDoNotStack.value()) separate(event.getDrops());
 		});
 
-        if (ANSHAR) {
-            AnsharCompat.init();
+		if (ALLOY_FORGERY) {
+			AlloyForgeryCompat.init();
+		}
+		if (ANSHAR) {
+			AnsharCompat.init();
 		}
 		if (LUNASLIMES) {
 			LunaSlimesCompat.init();
 		}
-    }
+	}
 
 	private static void separate(Collection<ItemEntity> drops) {
 		List<ItemEntity> singleItemEntities = new ArrayList<>();
@@ -79,14 +84,14 @@ public class Sheepish {
 		drops.addAll(singleItemEntities);
 	}
 
-    public static RegistryAccess getRegistryAccess() {
-        if (ServerLifecycleHooks.getCurrentServer() == null) {
-            if (FMLLoader.getDist().isClient() && Minecraft.getInstance().level != null) {
-                return Minecraft.getInstance().level.registryAccess();
-            }
-        } else {
-            return ServerLifecycleHooks.getCurrentServer().registryAccess();
-        }
-        throw new IllegalStateException();
-    }
+	public static RegistryAccess getRegistryAccess() {
+		if (ServerLifecycleHooks.getCurrentServer() == null) {
+			if (FMLLoader.getDist().isClient() && Minecraft.getInstance().level != null) {
+				return Minecraft.getInstance().level.registryAccess();
+			}
+		} else {
+			return ServerLifecycleHooks.getCurrentServer().registryAccess();
+		}
+		throw new IllegalStateException();
+	}
 }

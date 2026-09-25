@@ -1,4 +1,4 @@
-package cc.unilock.sheepish.mixin.minecraft;
+package cc.unilock.sheepish.mixin.anvilcraft;
 
 import net.minecraft.world.level.border.BorderChangeListener;
 import net.minecraft.world.level.border.WorldBorder;
