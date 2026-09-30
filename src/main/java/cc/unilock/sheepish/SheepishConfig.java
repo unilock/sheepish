@@ -18,6 +18,9 @@ public class SheepishConfig extends ReflectiveConfig {
 	@Comment("Disable the god-forsaken Enigmatic Eye from Enigmatic Legacy Plus")
 	public final TrackedValue<Boolean> disableEnigmaticEye = value(false);
 
+	@Comment("Disable the ambient / idle sounds of entities from More Creeps and Weirdos Revival")
+	public final TrackedValue<Boolean> disableMoreCreepsAmbientSounds = value(false);
+
 	@Comment("Disable the welcome message from More Creeps and Weirdos Revival")
 	public final TrackedValue<Boolean> disableMoreCreepsWelcomeMsg = value(false);
 

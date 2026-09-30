@@ -38,7 +38,7 @@ import java.util.List;
 import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 import static com.hrznstudio.emojiful.ClientEmojiHandler.CATEGORIES;
 
-public class EmojifulCompat {
+public class EmojifulClientCompat {
 	public static void init() {
 		if (CONFIG.emojifulPixelatedTwemoji.value()) {
 			loadPixelatedTwemojis();

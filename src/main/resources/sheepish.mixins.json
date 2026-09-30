@@ -63,6 +63,7 @@
     "minestuck.LandWorldInfoMixin",
     "mirthdew_encore.TickRateManagerMixinSquared",
     "modern_industrialization.MIArmorMaterialsMixin",
+    "morecreeps.MobMixin",
     "morecreeps.MoreCreepsEventsMixin",
     "naturesaura.BlockOakGeneratorMixin",
     "nomansland.CommonSetupEventsMixin",
