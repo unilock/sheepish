@@ -10,6 +10,8 @@ import static cc.unilock.sheepish.SheepishConfig.CONFIG;
 
 public class SheepishMixinCanceller implements MixinCanceller {
 	private static final HashSet<String> CANCEL = Sets.newHashSet(
+			"com.ashaxolotl.partytrick.mixin.triggers.ItemStackMixin",
+
 			"com.terraformersmc.cinderscapes.mixin.MixinAlterGroundTreeDecorator",
 
 			"de.maxhenkel.wiretap.mixin.AnvilMenuMixin",

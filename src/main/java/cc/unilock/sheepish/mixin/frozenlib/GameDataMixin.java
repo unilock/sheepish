@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = GameData.class, remap = false)
+@Mixin(GameData.class)
 public class GameDataMixin {
 	@Inject(method = "freezeData", at = @At("HEAD"))
 	private static void freezeData$head(CallbackInfo ci) {
