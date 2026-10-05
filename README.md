@@ -3,10 +3,10 @@
 ## Building
 
 1. Create a folder "libs" in the project root directory (next to "gradle", "src", etc.)
-2. Download Sinytra Connector: https://modrinth.com/mod/connector/version/2.0.0-beta.14+1.21.1
+2. Download Sinytra Connector: https://modrinth.com/mod/connector/version/2.0.0-beta.17+1.21.1
 3. Open or extract the Sinytra Connector JAR as a ZIP file
 4. Navigate to `<SinytraConnector.jar>/META-INF/jarjar`
-5. Copy "org.sinytra.connector-2.0.0-beta.14+1.21.1-mod.jar" and paste into the "libs" folder created in step 1
+5. Copy "org.sinytra.connector-2.0.0-beta.17+1.21.1-mod.jar" and paste into the "libs" folder created in step 1
 6. Open a command prompt or terminal window in the project root directory and execute:
    - Linux: `./gradlew build`
    - macOS: `./gradlew build`
@@ -30,11 +30,14 @@
     - Wilder Wild
   - Immersive Cursedness (requires [this fork](https://github.com/unilock/ImmersiveCursedness/tree/1.21.1))
   - Joy
+  - Lavender
+  - Party Trick (requires [this fork](https://codeberg.org/unilock/trickster) of Trickster, from which the keybinding mixins must be deleted)
   - Specter Serialization
   - Terraform Wood API v1
 - Fixes bugs in various mods:
   - Akashic Tome: fixes left-clicking the tome not reverting it
   - Alternate Current: adds null checks
+  - AnvilCraft: various things...
   - Caverns & Chasms: prevents crashes by rerouting attempts to read client-side configs on the dedicated server
   - Dynamic Surroundings: prevents crashes by disabling the village bell sound
   - Enderscape: adds null checks
@@ -51,6 +54,7 @@
   - RenderScale: adds null checks
   - Splinecart: adds null checks
 - Assorted features:
+  - Automatically registers all furnace fuels as Alloy Forgery fuels
   - Allows loading Emojiful's pixelated emoji set without the "Blobs", "Discord", or "Pepe" categories (configurable)
   - Allows disabling splash text modification from Blueprint, FrozenLib, and NeoForge (configurable)
   - Disables Curvy Rail's on-join chat messages
@@ -68,11 +72,14 @@
   - Shows more debug info for advancements that fail to be awarded
   - Allows the player to always eat (configurable)
   - Silences OpenGL errors
-  - Disables More Creeps and Weirdo's on-join chat messages (configurable)
+  - Disables More Creeps and Weirdos' on-join chat messages (configurable)
+  - Disable More Creeps and Weirdos' entities' ambient noises (configurable)
   - Prevents Overloaded Armor Bar from increasing the GUI left height without rendering anything
   - Adjusts the layer that Overloaded Armor Bar renders on, allowing it to work with mods like RainbowHealth
+  - Disables RGBCraft's photosensitivity warning screen (configurable)
   - Allows disabling Sodium's core shader resource pack warnings (configurable)
   - Pushes up right-aligned HUD elements when Armor Toughness Bar is visible
   - Adjusts the layer that Armor Toughness Bar renders on, allowing it to work with mods like Extended Hotbar
   - Allows forcibly enabling You're In Grave Danger's Curios compatibility code, even when Accessories Compatibility Layer is installed (configurable)
   - Attempts to fix [MC-122477](https://bugs.mojang.com/browse/MC/issues/MC-122477)
+  - Allows players to toggle PVP individually (`/pvp`)
