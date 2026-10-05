@@ -80,6 +80,7 @@
     "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
+    "anvilcraft.ItemRendererMixin",
     "cerulean.MinecraftMixin",
     "charm.ClientInitializerMixin",
     "charm.CoreClientMixin",
