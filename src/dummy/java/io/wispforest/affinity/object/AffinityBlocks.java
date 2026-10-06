@@ -1,9 +1,11 @@
 package io.wispforest.affinity.object;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
+import io.wispforest.affinity.misc.ArcaneFadeFluid;
+import net.minecraft.world.level.material.FlowingFluid;
 
 public class AffinityBlocks {
-	public static final LiquidBlock ARCANE_FADE = new LiquidBlock(null, null);
-	public static final Block THE_SKY = new Block(null);
+	public static class Fluids {
+		public static final FlowingFluid ARCANE_FADE = new ArcaneFadeFluid.Still();
+		public static final FlowingFluid ARCANE_FADE_FLOWING = new ArcaneFadeFluid.Flowing();
+	}
 }

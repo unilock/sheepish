@@ -15,7 +15,7 @@
 ## What does it do!?
 
 - Fixes Fabric mods to make them work under Sinytra Connector:
-  - Affinity (requires jar editing or [this fork](https://github.com/unilock/affinity))
+  - Affinity (requires [this fork](https://github.com/unilock/affinity))
   - Anshar
   - Anthropohagy
   - Biolith (NeoForge version with Fabric mods)
