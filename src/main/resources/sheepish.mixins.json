@@ -14,6 +14,7 @@
     "anvilcraft.WorldBorderAccessor",
     "biolith.NeoForgePlatformHelperMixin",
     "blueprint.BlueprintSplashManagerMixin",
+    "c2me.CheckedThreadLocalRandomMixin",
     "caverns_and_chasms.CCCreativeTabsMixin",
     "cerulean.EntityMixin",
     "charm.AnvilMenuMixin",
