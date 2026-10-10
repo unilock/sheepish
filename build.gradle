@@ -147,8 +147,6 @@ configurations {
 }
 
 dependencies {
-    compileOnly(annotationProcessor('io.github.llamalad7:mixinextras-neoforge:0.5.4'))
-    implementation(jarJar('io.github.llamalad7:mixinextras-neoforge:0.5.4'))
     compileOnly(annotationProcessor('com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.4'))
     implementation(jarJar('com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.4'))
 
@@ -164,6 +162,7 @@ dependencies {
     compileOnly 'maven.modrinth:armor-toughness-bar,-again:9473L0CF'
     compileOnly 'maven.modrinth:biolith:EAjbdreT'
     compileOnly 'maven.modrinth:blueprint:8.2.0'
+    compileOnly 'maven.modrinth:bountifulbaublesreforked:1.2.5'
     compileOnly 'maven.modrinth:caverns-and-chasms:3.0.0'
     compileOnly 'maven.modrinth:create:6.0.10+mc1.21.1'
     compileOnly 'maven.modrinth:curvy-rails:0.0.2'
@@ -198,6 +197,7 @@ dependencies {
     // Compile-time dependencies
     compileOnly 'com.esotericsoftware.yamlbeans:yamlbeans:1.15'
     compileOnly 'com.github.luben:zstd-jni:1.5.7-3'
+    compileOnly 'maven.modrinth:curios:9.5.1+1.21.1'
 
     jarJar project(":sheepish-asm")
 }
