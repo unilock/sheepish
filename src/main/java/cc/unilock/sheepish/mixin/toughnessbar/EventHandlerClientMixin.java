@@ -1,6 +1,10 @@
 package cc.unilock.sheepish.mixin.toughnessbar;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
@@ -18,6 +22,13 @@ public class EventHandlerClientMixin {
 	@Shadow
 	@Final
 	private static Minecraft mc;
+
+	@WrapMethod(method = "render")
+	private static void render(GuiGraphics graphics, DeltaTracker delta, Operation<Void> original) {
+		if (!mc.options.hideGui) {
+			original.call(graphics, delta);
+		}
+	}
 
 	@ModifyVariable(method = "render", at = @At("LOAD"), name = "rightHeight")
 	private static int modifyRightHeight(int original) {
