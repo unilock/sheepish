@@ -7,7 +7,6 @@
     "minVersion": "0.5.0"
   },
   "mixins": [
-    "affinity.ClientPayloadHandlerMixin",
     "affinity.EntityMixin",
     "alternate_current.MinecraftServerMixinSquared",
     "anthropophagy.AbstractFurnaceBlockEntityMixin",
@@ -83,6 +82,7 @@
     "wilderwild.ServerPlayerGameModeMixin"
   ],
   "client": [
+    "affinity.ClientPayloadHandlerMixin",
     "anvilcraft.ItemRendererMixin",
     "cerulean.MinecraftMixin",
     "charm.ClientInitializerMixin",
