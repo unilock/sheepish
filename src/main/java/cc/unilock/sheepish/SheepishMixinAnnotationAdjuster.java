@@ -2,6 +2,7 @@ package cc.unilock.sheepish;
 
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAnnotationNode;
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableAtNode;
+import com.bawnorton.mixinsquared.adjuster.tools.AdjustableModifyReturnValueNode;
 import com.bawnorton.mixinsquared.adjuster.tools.AdjustableWrapOperationNode;
 import com.bawnorton.mixinsquared.api.MixinAnnotationAdjuster;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -42,10 +43,6 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			}
 		}
 
-		if ("dev.enjarai.trickster.mixin.DataPackContentsMixin".equals(mixinClassName) && "enableDebug".equals(handlerNode.name)) {
-			return null;
-		}
-
 		if ("fmt.cerulean.mixin.client.MixinMinecraftClient".equals(mixinClassName) && "cerulean$starwellBreaking".equals(handlerNode.name)) {
 			// TODO: not working due to invalid parameters
 //			AdjustableInjectNode wrap = annotationNode.as(AdjustableInjectNode.class);
@@ -65,6 +62,19 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 
 		if ("io.wispforest.affinity.mixin.EntityMixin".equals(mixinClassName) && ("invokeFadeTickEvent".equals(handlerNode.name) || "updateFadeState".equals(handlerNode.name))) {
 			return null;
+		}
+
+		if ("io.wispforest.owo.mixin.neoforge.NetworkRegistryMixin".equals(mixinClassName) && "owo$unpackSidedCodec".equals(handlerNode.name)) {
+			AdjustableModifyReturnValueNode wrap = annotationNode.as(AdjustableModifyReturnValueNode.class);
+
+			return wrap.withAt(ats -> {
+				AdjustableAtNode at = ats.getFirst();
+
+				at.setOrdinal(-1);
+
+				ats.set(0, at);
+				return ats;
+			});
 		}
 
 		if ("moriyashiine.anthropophagy.mixin.AbstractFurnaceBlockEntityMixin".equals(mixinClassName) && "anthropophagy$persistFleshOwner".equals(handlerNode.name)) {
@@ -91,19 +101,20 @@ public class SheepishMixinAnnotationAdjuster implements MixinAnnotationAdjuster 
 			AdjustableWrapOperationNode wrap = annotationNode.as(AdjustableWrapOperationNode.class);
 			wrap.applyRefmap();
 
-			return wrap.withMethod(methods -> {
-				methods.set(0, "lambda$save$0");
-				return methods;
-			})
-			.withAt(ats -> {
-				AdjustableAtNode at = ats.getFirst();
-				at.applyRefmap();
-
-				at.setTarget("Lnet/neoforged/neoforge/common/IOUtilities;writeNbtCompressed(Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V");
-
-				ats.set(0, at);
-				return ats;
-			});
+			return wrap
+					.withMethod(methods -> {
+						methods.set(0, "lambda$save$0");
+						return methods;
+					})
+					.withAt(ats -> {
+						AdjustableAtNode at = ats.getFirst();
+						at.applyRefmap();
+		
+						at.setTarget("Lnet/neoforged/neoforge/common/IOUtilities;writeNbtCompressed(Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V");
+		
+						ats.set(0, at);
+						return ats;
+					});
 		}
 
 		if ("xyz.nucleoid.fantasy.mixin.ServerWorldMixin".equals(mixinClassName) && "dontSendRainPacketsToAllWorlds".equals(handlerNode.name)) {
